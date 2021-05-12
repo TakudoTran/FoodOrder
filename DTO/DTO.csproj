@@ -45,6 +45,7 @@
     <Compile Include="CBBItem.cs" />
     <Compile Include="DanhMuc.cs" />
     <Compile Include="Mon.cs" />
+    <Compile Include="MonOrder.cs" />
     <Compile Include="MonView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

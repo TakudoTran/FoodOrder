@@ -125,7 +125,7 @@ namespace DAL
             {
                 foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                 {
-                    if (i.IdDanhMuc == idDanhMuc && (i.TenMon.ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString()).Contains(st) == true)) data.Add(i);
+                    if (i.IdDanhMuc == idDanhMuc && ((i.TenMon.ToLower().Contains(st.ToLower())) || (((i.GiaTien).ToString()).Contains(st) == true))) data.Add(i);
                 }
             }
 

@@ -22,6 +22,14 @@ namespace BLL
             }
         }
         private BusinessLogicLayer() { }
+        public void setColumnHeaderDataGridView(DataGridView dgv)
+        {
+            dgv.Columns["IdMon"].HeaderText = "Id Món";
+            dgv.Columns["TenMon"].HeaderText = "Tên Món";
+            dgv.Columns["GiaTien"].HeaderText = "Giá Tiền";
+            dgv.Columns["SoLanGoimon"].HeaderText = "Số Lần Gọi Món";
+            dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
+        }
         /// <summary>
         /// Phan nay danh cho combobox
         /// </summary>
@@ -80,7 +88,6 @@ namespace BLL
                     mv.IdMon = m.IdMon;
                     mv.TenMon = m.TenMon;
                     mv.GiaTien = m.GiaTien;
-                    mv.SoLuong = 1000;
                     mv.SoLanGoiMon = m.SoLanGoiMon;
                     mv.DanhMuc = i.TenDanhMuc;
                     break;
