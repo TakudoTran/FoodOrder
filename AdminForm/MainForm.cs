@@ -19,7 +19,11 @@ namespace AdminForm
             dgvDanhSachMon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
             Show(0, null);
+<<<<<<< HEAD
+            BusinessLogicLayer.Instance.SetColumnHeader(dgvDanhSachMon);
+=======
             BusinessLogicLayer.Instance.setColumnHeaderDataGridView(dgvDanhSachMon);
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         }
 
         private void Show(int idDanhmuc, string tenMon)
@@ -41,5 +45,38 @@ namespace AdminForm
             Show(idDanhMuc,st);
 
         }
+<<<<<<< HEAD
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            DetailForm f = new DetailForm(0);
+            f.actionAfterOk += new DetailForm.Mydel(Show);
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Thêm thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            MonView mv = dgvDanhSachMon.CurrentRow.DataBoundItem as MonView;
+            int idMon = mv.IdMon;
+            DetailForm f2 = new DetailForm(idMon);
+            f2.actionAfterOk += new DetailForm.Mydel(Show);
+            if (f2.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Sửa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+=======
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
     }
 }

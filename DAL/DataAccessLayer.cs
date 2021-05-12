@@ -117,7 +117,11 @@ namespace DAL
                 {
                     foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                     {
+<<<<<<< HEAD
+                        if (i.TenMon.ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString()) == st) data.Add(i);
+=======
                         if (i.TenMon.ToLower().Contains(st.ToLower())) data.Add(i);
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
                     }
                 }
             }
@@ -125,15 +129,32 @@ namespace DAL
             {
                 foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                 {
+<<<<<<< HEAD
+                    if (i.IdDanhMuc == idDanhMuc && (i.TenMon.ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString())==st)) data.Add(i);
+=======
                     if (i.IdDanhMuc == idDanhMuc && ((i.TenMon.ToLower().Contains(st.ToLower())) || (((i.GiaTien).ToString()).Contains(st) == true))) data.Add(i);
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
                 }
             }
 
             return data;
         }
+<<<<<<< HEAD
+        public int GetMaxIdMon()
+        {
+            return DBHelper.Instance.GetMaxValueOf("IdMon");
+        }
+        
+        /// <summary>
+        /// ///////// CRUD
+        /// </summary>
+        /// <param name="IdMon"></param>
+        /// <returns></returns>
+=======
 
         
 
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         public bool XoaMonTheoIdMon(int IdMon)
         {
             try
@@ -172,9 +193,15 @@ namespace DAL
         {
             try
             {
+<<<<<<< HEAD
+                string query = "insert into Mon(TenMon, GiaTien, SoLanGoiMon, IdDanhMuc, IdAnh)" +
+                                   "values ( @name , @gia , @solangoi , @idDm , @idAnh )";
+                object[] prams = {Mon.TenMon, Mon.GiaTien, Mon.SoLanGoiMon, Mon.IdDanhMuc, Mon.IdAnh };
+=======
                 string query = "insert into Mon( IdMon, TenMon, GiaTien, SoLanGoiMon, IdDanhMuc, IdAnh)" +
                                    "values ( @idmon , @name , @gia , @solangoi , @idDm , @idAnh )";
                 object[] prams = { Mon.IdMon, Mon.TenMon, Mon.SoLanGoiMon, Mon.IdDanhMuc, Mon.IdAnh };
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
                 return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
             }
             catch (Exception)
@@ -189,7 +216,11 @@ namespace DAL
             {
                 string query = "update Mon set TenMon = @name , GiaTien = @gia ," +
                         " SoLanGoiMon = @solangoi , IdDanhMuc = @idDm , IdAnh = @idAnh where IdMon = @idmon ";
+<<<<<<< HEAD
+                object[] prams = { Mon.TenMon, Mon.GiaTien, Mon.SoLanGoiMon, Mon.IdDanhMuc, Mon.IdAnh, Mon.IdMon };
+=======
                 object[] prams = { Mon.TenMon, Mon.GiaTien, Mon.SoLanGoiMon, Mon.IdDanhMuc, Mon.IdAnh };
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
                 return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
 
             }

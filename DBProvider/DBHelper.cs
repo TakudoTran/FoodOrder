@@ -80,6 +80,27 @@ namespace DBProvider
 
             return data;
         }
+<<<<<<< HEAD
+        public int GetMaxValueOf(string columnHeaderName)
+        {
+            string query = "select max(" + columnHeaderName + ") from Mon";
+            int max = 0;
+            using(SqlConnection con = new SqlConnection(conStr))
+            {
 
+                SqlCommand command = new SqlCommand(query, con);
+                con.Open();
+                command.CommandType = CommandType.Text;
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    max = int.Parse(reader[0].ToString());
+                }
+            }
+            return max;
+        }
+=======
+
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
     }
 }

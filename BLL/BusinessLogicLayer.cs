@@ -22,6 +22,8 @@ namespace BLL
             }
         }
         private BusinessLogicLayer() { }
+<<<<<<< HEAD
+=======
         public void setColumnHeaderDataGridView(DataGridView dgv)
         {
             dgv.Columns["IdMon"].HeaderText = "Id Món";
@@ -30,6 +32,7 @@ namespace BLL
             dgv.Columns["SoLanGoimon"].HeaderText = "Số Lần Gọi Món";
             dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
         }
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         /// <summary>
         /// Phan nay danh cho combobox
         /// </summary>
@@ -59,9 +62,36 @@ namespace BLL
             cb.SelectedIndex = 0;
         }
        
+<<<<<<< HEAD
+        public void SetCbbDetailForm(ComboBox cb)
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (DanhMuc i in GetAllDanhMuc())
+            {
+                data.Add(new CBBItem
+                {
+                    Value = i.IdDanhMuc,
+                    Text = i.TenDanhMuc
+                });
+            }
+            cb.Items.AddRange(data.ToArray());
+            cb.SelectedIndex = 0;
+        }
+        public void SetColumnHeader(DataGridView dgv)
+        {
+            dgv.Columns["IdMon"].HeaderText = "Id Món";
+            dgv.Columns["TenMon"].HeaderText = "Tên Món";
+            dgv.Columns["GiaTien"].HeaderText = "Giá Tiền";
+            dgv.Columns["SoLanGoiMon"].HeaderText = "Số Lần Gọi Món";
+            dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
+        }
+        /// <summary>
+        /// //////////////////// all Funcs of Mon
+=======
 
         /// <summary>
         /// 
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         /// </summary>
         /// <returns></returns>
         public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon,string st)
@@ -70,6 +100,22 @@ namespace BLL
             data = ConvertToListMonview(DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(idMon, st));
             return data;
         }
+<<<<<<< HEAD
+        public Mon GetMonByIdMon(int idMon)
+        {
+            Mon m = new Mon();
+            foreach(Mon i in GetAllMon())
+            {
+                if(idMon == i.IdMon)
+                {
+                    m = i;
+                }
+            }
+            return m;
+        }
+
+=======
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         public List<Mon> GetAllMon()
         {
             return DataAccessLayer.Instance.GetAllMon_DAL();
@@ -104,6 +150,35 @@ namespace BLL
             }
             return mv;
         }
+<<<<<<< HEAD
+        public int GetMaxIdMon()
+        {
+            return DataAccessLayer.Instance.GetMaxIdMon();
+        }
+
+        /// <summary>
+        /// ////////// del, add, update
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <returns></returns>
+        public bool XoaMon(int idmon)
+        {
+            return DataAccessLayer.Instance.XoaMonTheoIdMon(idmon);
+
+        }
+        public bool ExcuteDB_BLL(Mon mon, int idMonDetailForm)
+        {
+            if (idMonDetailForm != 0)
+            {
+                return DataAccessLayer.Instance.EditMon(mon);
+            }
+            else
+            {
+                return DataAccessLayer.Instance.ThemMon(mon);
+            }
+        }
+=======
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
 
     }
 }
