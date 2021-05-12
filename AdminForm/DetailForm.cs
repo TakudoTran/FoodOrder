@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using BLL;
 using DTO;
+=======
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
 
 namespace AdminForm
 {
     public partial class DetailForm : Form
     {
+<<<<<<< HEAD
         public int idMonOfMainForm { get; set; }
         public delegate void Mydel(int idDanhMuc, string tenMon);
         public Mydel actionAfterOk { get; set; }
@@ -82,6 +86,11 @@ namespace AdminForm
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+=======
+        public DetailForm()
+        {
+            InitializeComponent();
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
         }
     }
 }

@@ -80,6 +80,7 @@ namespace DBProvider
 
             return data;
         }
+<<<<<<< HEAD
         public int GetMaxValueOf(string columnHeaderName)
         {
             string query = "select max(" + columnHeaderName + ") from Mon";
@@ -98,5 +99,8 @@ namespace DBProvider
             }
             return max;
         }
+=======
+
+>>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
     }
 }
