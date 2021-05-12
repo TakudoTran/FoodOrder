@@ -28,3 +28,16 @@ F:\PBL3new\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 F:\PBL3new\BLL\obj\Debug\BLL.csproj.CopyComplete
 F:\PBL3new\BLL\obj\Debug\BLL.dll
 F:\PBL3new\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DBProvider.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\DBProvider.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\obj\Debug\BLL.pdb
