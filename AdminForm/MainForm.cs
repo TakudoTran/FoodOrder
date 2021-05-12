@@ -19,11 +19,9 @@ namespace AdminForm
             dgvDanhSachMon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
             Show(0, null);
-<<<<<<< HEAD
             BusinessLogicLayer.Instance.SetColumnHeader(dgvDanhSachMon);
-=======
-            BusinessLogicLayer.Instance.setColumnHeaderDataGridView(dgvDanhSachMon);
->>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
+
+
         }
 
         private void Show(int idDanhmuc, string tenMon)
@@ -45,7 +43,7 @@ namespace AdminForm
             Show(idDanhMuc,st);
 
         }
-<<<<<<< HEAD
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -76,7 +74,5 @@ namespace AdminForm
                 MessageBox.Show("Sửa thất bại");
             }
         }
-=======
->>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
     }
 }
