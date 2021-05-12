@@ -107,17 +107,17 @@ namespace DAL
 
             };
         }
-        public List<Mon> GetMonByIdDanhMucAndTenMon(int idDanhMuc, string tenMon)
+        public List<Mon> GetMonByIdDanhMucAndTenMon(int idDanhMuc, string st)
         {
             List<Mon> data = new List<Mon>();
             if (idDanhMuc == 0)
             {
-                if (string.IsNullOrEmpty(tenMon)) data = DataAccessLayer.Instance.GetAllMon_DAL();
+                if (string.IsNullOrEmpty(st)) data = DataAccessLayer.Instance.GetAllMon_DAL();
                 else
                 {
                     foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                     {
-                        if (i.TenMon.ToLower().Contains(tenMon.ToLower())) data.Add(i);
+                        if (i.TenMon.ToLower().Contains(st.ToLower())) data.Add(i);
                     }
                 }
             }
@@ -125,7 +125,7 @@ namespace DAL
             {
                 foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                 {
-                    if (i.IdDanhMuc == idDanhMuc && i.TenMon.ToLower().Contains(tenMon.ToLower())) data.Add(i);
+                    if (i.IdDanhMuc == idDanhMuc && (i.TenMon.ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString()).Contains(st) == true)) data.Add(i);
                 }
             }
 

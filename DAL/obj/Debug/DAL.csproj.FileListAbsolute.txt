@@ -31,3 +31,14 @@ F:\PBL3new\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 F:\PBL3new\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\PBL3new\DAL\obj\Debug\DAL.dll
 F:\PBL3new\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DBProvider.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DBProvider.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\DAL\obj\Debug\DAL.pdb
