@@ -71,10 +71,8 @@ namespace AdminForm
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-=======
->>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
+
             // 
             // label2
             // 
@@ -132,10 +130,8 @@ namespace AdminForm
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-=======
->>>>>>> 8427e432013a2a606a6e5eb8f025492c5ab11221
+
             // 
             // label5
             // 
