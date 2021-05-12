@@ -17,3 +17,23 @@ C:\Users\XUAN TRONG\Desktop\PBL3\AdminForm\obj\Debug\AdminForm.csproj.CoreCompil
 C:\Users\XUAN TRONG\Desktop\PBL3\AdminForm\obj\Debug\AdminForm.csproj.CopyComplete
 C:\Users\XUAN TRONG\Desktop\PBL3\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\XUAN TRONG\Desktop\PBL3\AdminForm\obj\Debug\AdminForm.pdb
+F:\PBL3new\AdminForm\bin\Debug\AdminForm.exe.config
+F:\PBL3new\AdminForm\bin\Debug\AdminForm.exe
+F:\PBL3new\AdminForm\bin\Debug\AdminForm.pdb
+F:\PBL3new\AdminForm\bin\Debug\BLL.dll
+F:\PBL3new\AdminForm\bin\Debug\DTO.dll
+F:\PBL3new\AdminForm\bin\Debug\DAL.dll
+F:\PBL3new\AdminForm\bin\Debug\DBProvider.dll
+F:\PBL3new\AdminForm\bin\Debug\BLL.pdb
+F:\PBL3new\AdminForm\bin\Debug\DTO.pdb
+F:\PBL3new\AdminForm\bin\Debug\DAL.pdb
+F:\PBL3new\AdminForm\bin\Debug\DBProvider.pdb
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.csprojAssemblyReference.cache
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.DetailForm.resources
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.MainForm.resources
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.Properties.Resources.resources
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.csproj.GenerateResource.cache
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.csproj.CoreCompileInputs.cache
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.csproj.CopyComplete
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.exe
+F:\PBL3new\AdminForm\obj\Debug\AdminForm.pdb

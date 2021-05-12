@@ -27,7 +27,10 @@ namespace AdminForm
         }
         private void btnXem_Click(object sender, EventArgs e)
         {
-
+            CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
+            int idDanhMuc = cbi.Value;
+            Show(idDanhMuc, ""); 
+            
         }
     }
 }

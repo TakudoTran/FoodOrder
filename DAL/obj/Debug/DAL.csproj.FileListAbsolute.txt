@@ -20,3 +20,14 @@ E:\GitHub\PBL3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\GitHub\PBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\GitHub\PBL3\DAL\obj\Debug\DAL.dll
 E:\GitHub\PBL3\DAL\obj\Debug\DAL.pdb
+F:\PBL3new\DAL\bin\Debug\DAL.dll
+F:\PBL3new\DAL\bin\Debug\DAL.pdb
+F:\PBL3new\DAL\bin\Debug\DBProvider.dll
+F:\PBL3new\DAL\bin\Debug\DTO.dll
+F:\PBL3new\DAL\bin\Debug\DBProvider.pdb
+F:\PBL3new\DAL\bin\Debug\DTO.pdb
+F:\PBL3new\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\PBL3new\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\PBL3new\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\PBL3new\DAL\obj\Debug\DAL.dll
+F:\PBL3new\DAL\obj\Debug\DAL.pdb
