@@ -32,5 +32,13 @@ namespace AdminForm
             Show(idDanhMuc, ""); 
             
         }
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
+            int idDanhMuc = cbi.Value;
+            string st = txtSearch.Text;
+            Show(idDanhMuc,st);
+
+        }
     }
 }

@@ -56,9 +56,11 @@ namespace BLL
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<Mon> GetMonByIdDanhMucAndTenMon(int idMon,string tenMon)
+        public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon,string st)
         {
-            return DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(idMon, tenMon);
+            List<MonView> data = new List<MonView>();
+            data = ConvertToListMonview(DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(idMon, st));
+            return data;
         }
         public List<Mon> GetAllMon()
         {
@@ -67,6 +69,33 @@ namespace BLL
         public List<DanhMuc> GetAllDanhMuc()
         {
             return DataAccessLayer.Instance.GetAllDanhMuc_DAL();
+        }
+        public MonView ConvertToMonView(Mon m)
+        {
+            MonView mv = new MonView();
+            foreach (DanhMuc i in GetAllDanhMuc())
+            {
+                if (m.IdDanhMuc == i.IdDanhMuc)
+                {
+                    mv.IdMon = m.IdMon;
+                    mv.TenMon = m.TenMon;
+                    mv.GiaTien = m.GiaTien;
+                    mv.SoLuong = 1000;
+                    mv.SoLanGoiMon = m.SoLanGoiMon;
+                    mv.DanhMuc = i.TenDanhMuc;
+                    break;
+                }
+            }
+            return mv;
+        }
+        public List<MonView> ConvertToListMonview(List<Mon> m)
+        {
+            List<MonView> mv = new List<MonView>();
+            foreach (Mon i in m)
+            {
+                mv.Add(ConvertToMonView(i));
+            }
+            return mv;
         }
 
     }
