@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using DTO;
-
+using System.Drawing;
 
 namespace BLL
 {
@@ -84,11 +85,32 @@ namespace BLL
             dgv.Columns["SoLanGoiMon"].HeaderText = "Số Lần Gọi Món";
             dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
         }
+
+        public MemoryStream GetByteValuesOfAnh(int idAnh)
+        {
+            byte[] bAnh = null;
+            bAnh = DataAccessLayer.Instance.GetAnhMinhHoaByIdAnh(idAnh).Anh;
+            MemoryStream ms = new MemoryStream(bAnh, 0, bAnh.Length);
+            ms.Write(bAnh, 0, bAnh.Length);
+            return ms;
+        }
+        public AnhMinhHoa GetIdAnhByIdAnh(int idAnh)
+        {
+            return DataAccessLayer.Instance.GetAnhMinhHoaByIdAnh(idAnh);
+        }
+        public int GetMaxIdAnh()
+        {
+            return DataAccessLayer.Instance.GetMaxIdAnh();
+        }
+        public bool ThemAnhVaoDb(string tenAnh, byte[] Anh)
+        {
+            return DataAccessLayer.Instance.ThemAnhVaoDB(tenAnh, Anh);
+        }
+
         /// <summary>
         /// //////////////////// all Funcs of Mon
         /// <summary>
         /// 
-
         /// </summary>
         /// <returns></returns>
         public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon,string st)
