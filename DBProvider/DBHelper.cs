@@ -81,9 +81,9 @@ namespace DBProvider
             return data;
         }
 
-        public int GetMaxValueOf(string columnHeaderName)
+        public int GetMaxValueOf(string columnHeaderName, string tableName)
         {
-            string query = "select max(" + columnHeaderName + ") from Mon";
+            string query = "select max(" + columnHeaderName + ") from " + tableName;
             int max = 0;
             using(SqlConnection con = new SqlConnection(conStr))
             {

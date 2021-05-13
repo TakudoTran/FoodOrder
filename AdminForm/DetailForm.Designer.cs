@@ -41,10 +41,10 @@ namespace AdminForm
             this.btnCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cboDanhMuc = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picHinhAnh = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +72,6 @@ namespace AdminForm
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-
             // 
             // label2
             // 
@@ -131,7 +130,6 @@ namespace AdminForm
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-
             // 
             // label5
             // 
@@ -150,13 +148,15 @@ namespace AdminForm
             this.cboDanhMuc.Size = new System.Drawing.Size(263, 28);
             this.cboDanhMuc.TabIndex = 4;
             // 
-            // pictureBox1
+            // picHinhAnh
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(533, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 207);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.picHinhAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picHinhAnh.Location = new System.Drawing.Point(533, 122);
+            this.picHinhAnh.Name = "picHinhAnh";
+            this.picHinhAnh.Size = new System.Drawing.Size(237, 207);
+            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHinhAnh.TabIndex = 5;
+            this.picHinhAnh.TabStop = false;
             // 
             // label6
             // 
@@ -175,13 +175,14 @@ namespace AdminForm
             this.button3.TabIndex = 3;
             this.button3.Text = "Upload";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 448);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picHinhAnh);
             this.Controls.Add(this.cboDanhMuc);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCancel);
@@ -200,7 +201,7 @@ namespace AdminForm
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DetailForm";
             this.Text = "DetailForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +221,7 @@ namespace AdminForm
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboDanhMuc;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picHinhAnh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
     }

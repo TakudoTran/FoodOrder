@@ -22,10 +22,11 @@ namespace DAL
             }
         }
         private DataAccessLayer() { }
+
         /// <summary>
-        /// lay anh minh hoa tu DataTable
+        /// //////////anh minh hoa cho mon an
         /// </summary>
-        /// <param name="i">1 data row of datatable</param>
+        /// <param name="i"></param>
         /// <returns></returns>
         private AnhMinhHoa GetAnh(DataRow i)
         {
@@ -58,6 +59,50 @@ namespace DAL
                 return null;
             }
         }
+
+        public AnhMinhHoa GetAnhMinhHoaByIdAnh(int idAnh) {
+            AnhMinhHoa anh = new AnhMinhHoa();
+            foreach(AnhMinhHoa i in GetListAnhMinhHoa())
+            {
+                if(idAnh == i.IdAnh)
+                {
+                    anh = i;
+                }
+            }
+            return anh;
+        }
+        public bool ThemAnhVaoDB(string tenAnh, byte[] Anh)
+        {
+            try
+            {
+                string query = "insert into AnhMinhHoa(TenAnh,Anh) values( @ten , @anh )";
+                object[] param = { tenAnh, Anh };
+                DBHelper.Instance.ExecuteNonQuery(query, param);
+                return true;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return false;
+            }
+        }
+        public int GetMaxIdAnh()
+        {
+            try
+            {
+                return DBHelper.Instance.GetMaxValueOf("IdAnh", "AnhMinhHoa");
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return -1;
+
+            }
+        }
+        /// <summary>
+        /// ////////danh muc here
+        /// </summary>
+        /// <returns></returns>
         public List<DanhMuc> GetAllDanhMuc_DAL()
         {
             string query = "select * from DanhMuc";
@@ -133,7 +178,15 @@ namespace DAL
 
         public int GetMaxIdMon()
         {
-            return DBHelper.Instance.GetMaxValueOf("IdMon");
+            try
+            {
+                return DBHelper.Instance.GetMaxValueOf("IdMon", "Mon");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return -1;
+            }
         }
         
         /// <summary>
