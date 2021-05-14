@@ -28,6 +28,9 @@ namespace AdminForm
             setCBB();
             setUI();
         }
+
+
+        #region support menthod
         private void setUI()
         {
             if (this.idMonOfMainForm != 0)
@@ -64,9 +67,26 @@ namespace AdminForm
         {
             BusinessLogicLayer.Instance.SetCbbDetailForm(cboDanhMuc);
         }
+        private bool ValidValues()
+        {
+            int intValue;
+            if(string.IsNullOrEmpty(txtTenMon.Text) || string.IsNullOrEmpty(txtSoLanGoiMon.Text)|| string.IsNullOrEmpty(txtGiaTien.Text))
+            {
+                return false;
+            }
 
+            if (int.TryParse(txtGiaTien.Text, out intValue) || int.TryParse(txtSoLanGoiMon.Text, out intValue) || (picHinhAnh.Image.Tag == null)){
+                return false;
+            }
+            return true;
+        }
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if (!ValidValues())
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                return;
+            }
             Mon mon = new Mon
             {
                 IdMon = int.Parse(txtIdMon.Text),
@@ -85,13 +105,14 @@ namespace AdminForm
 
             actionAfterOk(0, null);
         }
+        #endregion
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnUpload_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -106,13 +127,18 @@ namespace AdminForm
                     string teAnh = openFileDialog.FileName.Substring(openFileDialog.FileName.LastIndexOf("\\"));
 
                     FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs); 
+                    BinaryReader br = new BinaryReader(fs);
                     byte[] anh = br.ReadBytes((int)fs.Length);
                     BusinessLogicLayer.Instance.ThemAnhVaoDb(teAnh, anh);
                     picHinhAnh.Image.Tag = BusinessLogicLayer.Instance.GetMaxIdAnh();
 
-                }                        
+                }
             }
+        }
+
+        private void btnPull_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

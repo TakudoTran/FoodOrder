@@ -43,14 +43,15 @@ namespace AdminForm
             this.cboDanhMuc = new System.Windows.Forms.ComboBox();
             this.picHinhAnh = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.btnPull = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 71);
+            this.label1.Location = new System.Drawing.Point(60, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@ namespace AdminForm
             // 
             // txtIdMon
             // 
-            this.txtIdMon.Location = new System.Drawing.Point(191, 68);
+            this.txtIdMon.Location = new System.Drawing.Point(192, 55);
             this.txtIdMon.Name = "txtIdMon";
             this.txtIdMon.Size = new System.Drawing.Size(264, 26);
             this.txtIdMon.TabIndex = 1;
@@ -76,7 +77,7 @@ namespace AdminForm
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 125);
+            this.label2.Location = new System.Drawing.Point(60, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 0;
@@ -84,7 +85,7 @@ namespace AdminForm
             // 
             // txtTenMon
             // 
-            this.txtTenMon.Location = new System.Drawing.Point(191, 122);
+            this.txtTenMon.Location = new System.Drawing.Point(191, 114);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(264, 26);
             this.txtTenMon.TabIndex = 1;
@@ -92,7 +93,7 @@ namespace AdminForm
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 184);
+            this.label3.Location = new System.Drawing.Point(60, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 0;
@@ -100,7 +101,7 @@ namespace AdminForm
             // 
             // txtGiaTien
             // 
-            this.txtGiaTien.Location = new System.Drawing.Point(191, 181);
+            this.txtGiaTien.Location = new System.Drawing.Point(191, 173);
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.Size = new System.Drawing.Size(264, 26);
             this.txtGiaTien.TabIndex = 1;
@@ -108,7 +109,7 @@ namespace AdminForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 236);
+            this.label4.Location = new System.Drawing.Point(60, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 0;
@@ -116,7 +117,7 @@ namespace AdminForm
             // 
             // txtSoLanGoiMon
             // 
-            this.txtSoLanGoiMon.Location = new System.Drawing.Point(191, 233);
+            this.txtSoLanGoiMon.Location = new System.Drawing.Point(191, 232);
             this.txtSoLanGoiMon.Name = "txtSoLanGoiMon";
             this.txtSoLanGoiMon.Size = new System.Drawing.Size(264, 26);
             this.txtSoLanGoiMon.TabIndex = 1;
@@ -134,7 +135,7 @@ namespace AdminForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 293);
+            this.label5.Location = new System.Drawing.Point(60, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 0;
@@ -143,7 +144,7 @@ namespace AdminForm
             // cboDanhMuc
             // 
             this.cboDanhMuc.FormattingEnabled = true;
-            this.cboDanhMuc.Location = new System.Drawing.Point(192, 293);
+            this.cboDanhMuc.Location = new System.Drawing.Point(192, 291);
             this.cboDanhMuc.Name = "cboDanhMuc";
             this.cboDanhMuc.Size = new System.Drawing.Size(263, 28);
             this.cboDanhMuc.TabIndex = 4;
@@ -161,21 +162,31 @@ namespace AdminForm
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(529, 68);
+            this.label6.Location = new System.Drawing.Point(529, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Hình ảnh minh họa:";
             // 
-            // button3
+            // btnUpload
             // 
-            this.button3.Location = new System.Drawing.Point(533, 357);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 48);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Upload";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnUpload.Location = new System.Drawing.Point(533, 357);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(109, 48);
+            this.btnUpload.TabIndex = 3;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnPull
+            // 
+            this.btnPull.Location = new System.Drawing.Point(533, 55);
+            this.btnPull.Name = "btnPull";
+            this.btnPull.Size = new System.Drawing.Size(237, 32);
+            this.btnPull.TabIndex = 3;
+            this.btnPull.Text = "Chọn ảnh từ CSDL";
+            this.btnPull.UseVisualStyleBackColor = true;
+            this.btnPull.Click += new System.EventHandler(this.btnPull_Click);
             // 
             // DetailForm
             // 
@@ -184,7 +195,8 @@ namespace AdminForm
             this.ClientSize = new System.Drawing.Size(813, 448);
             this.Controls.Add(this.picHinhAnh);
             this.Controls.Add(this.cboDanhMuc);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnPull);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtSoLanGoiMon);
@@ -223,6 +235,7 @@ namespace AdminForm
         private System.Windows.Forms.ComboBox cboDanhMuc;
         private System.Windows.Forms.PictureBox picHinhAnh;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.Button btnPull;
     }
 }
