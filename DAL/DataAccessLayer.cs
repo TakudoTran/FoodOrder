@@ -188,7 +188,18 @@ namespace DAL
                 return -1;
             }
         }
-        
+        public int GetMaxIdDanhMuc()
+        {
+            try
+            {
+                return DBHelper.Instance.GetMaxValueOf("IdDanhMuc", "DanhMuc");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return -1;
+            }
+        }
         /// <summary>
         /// ///////// CRUD
         /// </summary>
@@ -205,6 +216,21 @@ namespace DAL
             }
             catch (Exception)
             {
+                return false;
+            }
+
+        }
+        public bool XoaDanhMucTheoIdDanhMuc(int IdDanhMuc)
+        {
+            try
+            {
+                string query = "delete from DanhMuc where IdDanhMuc = @id ";
+                object[] prams = { IdDanhMuc };
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message);
                 return false;
             }
 
@@ -262,5 +288,39 @@ namespace DAL
                 return false;
             }
         }
+        public bool ThemDanhMuc(DanhMuc dm)
+        {
+            try
+            {
+                string query = "insert into DanhMuc(TenDanhMuc)" +
+                                   "values ( @tendm )";
+                object[] prams = { dm.TenDanhMuc };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi" + e.Message);
+                return false;
+            }
+        }
+        public bool SuaDanhMuc(DanhMuc dm)
+        {
+            try
+            {
+                string query = "update DanhMuc set TenDanhMuc = @tendm " +
+                                   "where IdDanhMuc = @iddm ";
+
+                object[] prams = { dm.TenDanhMuc, dm.IdDanhMuc };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }
