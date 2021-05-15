@@ -26,3 +26,9 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\DTO\obj\Debug\DTO.csprojAssemblyReference.
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DTO\obj\Debug\DTO.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DTO\obj\Debug\DTO.pdb
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\bin\Debug\DTO.dll
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\bin\Debug\DTO.pdb
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\obj\Debug\DTO.dll
+C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DTO\obj\Debug\DTO.pdb

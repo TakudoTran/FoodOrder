@@ -85,7 +85,11 @@ namespace BLL
             dgv.Columns["SoLanGoiMon"].HeaderText = "Số Lần Gọi Món";
             dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
         }
-
+        public void SetColumnHeaderDM(DataGridView dgv)
+        {
+            dgv.Columns["IdDanhMuc"].HeaderText = "ID Danh Mục";
+            dgv.Columns["TenDanhMuc"].HeaderText = "Tên Danh Mục";
+        }
         public MemoryStream GetByteValuesOfAnh(int idAnh)
         {
             byte[] bAnh = null;
@@ -170,7 +174,10 @@ namespace BLL
         {
             return DataAccessLayer.Instance.GetMaxIdMon();
         }
-
+        public int GetMaxIdDanhMuc()
+        {
+            return DataAccessLayer.Instance.GetMaxIdMon();
+        }
         /// <summary>
         /// ////////// del, add, update
         /// </summary>
@@ -180,6 +187,18 @@ namespace BLL
         {
             return DataAccessLayer.Instance.XoaMonTheoIdMon(idmon);
 
+        }
+        public bool ThemDanhMuc(DanhMuc dm)
+        {
+            return DataAccessLayer.Instance.ThemDanhMuc(dm);
+        }
+        public bool SuaDanhMuc(DanhMuc dm)
+        {
+            return DataAccessLayer.Instance.SuaDanhMuc(dm);
+        }
+        public bool XoaDanhMuc(int iddanhmuc)
+        {
+            return DataAccessLayer.Instance.XoaDanhMucTheoIdDanhMuc(iddanhmuc);
         }
         public bool ExcuteDB_BLL(Mon mon, int idMonDetailForm)
         {
