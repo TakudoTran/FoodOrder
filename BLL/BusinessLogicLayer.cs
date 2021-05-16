@@ -23,20 +23,8 @@ namespace BLL
             }
         }
         private BusinessLogicLayer() { }
+        #region UI
 
-        public void setColumnHeaderDataGridView(DataGridView dgv)
-        {
-            dgv.Columns["IdMon"].HeaderText = "Id Món";
-            dgv.Columns["TenMon"].HeaderText = "Tên Món";
-            dgv.Columns["GiaTien"].HeaderText = "Giá Tiền";
-            dgv.Columns["SoLanGoimon"].HeaderText = "Số Lần Gọi Món";
-            dgv.Columns["DanhMuc"].HeaderText = "Danh Mục";
-        }
-
-        /// <summary>
-        /// Phan nay danh cho combobox
-        /// </summary>
-        /// <returns></returns>
         private List<CBBItem> GetCBBItems()
         {
             List<CBBItem> data = new List<CBBItem>();
@@ -77,7 +65,7 @@ namespace BLL
             cb.Items.AddRange(data.ToArray());
             cb.SelectedIndex = 0;
         }
-        public void SetColumnHeader(DataGridView dgv)
+        public void SetColumnHeaderMon(DataGridView dgv)
         {
             dgv.Columns["IdMon"].HeaderText = "Id Món";
             dgv.Columns["TenMon"].HeaderText = "Tên Món";
@@ -98,6 +86,9 @@ namespace BLL
             ms.Write(bAnh, 0, bAnh.Length);
             return ms;
         }
+        #endregion
+
+        #region Anh minh hoa
         public AnhMinhHoa GetIdAnhByIdAnh(int idAnh)
         {
             return DataAccessLayer.Instance.GetAnhMinhHoaByIdAnh(idAnh);
@@ -110,14 +101,29 @@ namespace BLL
         {
             return DataAccessLayer.Instance.ThemAnhVaoDB(tenAnh, Anh);
         }
+        public List<AnhMinhHoa> GetAllAnhMinhHoa()
+        {
+            return DataAccessLayer.Instance.GetListAnhMinhHoa();
+        }
+        public List<AnhMinhHoa> GetAnhMinhHoaByTenAnh(string tenAnh)
+        {
+            List<AnhMinhHoa> anhMinhHoas = new List<AnhMinhHoa>();
+            if (string.IsNullOrEmpty(tenAnh)) anhMinhHoas = GetAllAnhMinhHoa();
+            foreach (AnhMinhHoa i in BusinessLogicLayer.Instance.GetAllAnhMinhHoa())
+            {
+                if (i.TenAnh.ToLower().Contains(tenAnh.ToLower()))
+                {
+                    anhMinhHoas.Add(i);
+                }
+            }
+            return anhMinhHoas;
+        }
+        #endregion
 
-        /// <summary>
-        /// //////////////////// all Funcs of Mon
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon,string st)
+        #region Mon
+
+
+        public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon, string st)
         {
             List<MonView> data = new List<MonView>();
             data = ConvertToListMonview(DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(idMon, st));
@@ -126,9 +132,9 @@ namespace BLL
         public Mon GetMonByIdMon(int idMon)
         {
             Mon m = new Mon();
-            foreach(Mon i in GetAllMon())
+            foreach (Mon i in GetAllMon())
             {
-                if(idMon == i.IdMon)
+                if (idMon == i.IdMon)
                 {
                     m = i;
                 }
@@ -139,10 +145,6 @@ namespace BLL
         public List<Mon> GetAllMon()
         {
             return DataAccessLayer.Instance.GetAllMon_DAL();
-        }
-        public List<DanhMuc> GetAllDanhMuc()
-        {
-            return DataAccessLayer.Instance.GetAllDanhMuc_DAL();
         }
         public MonView ConvertToMonView(Mon m)
         {
@@ -174,19 +176,32 @@ namespace BLL
         {
             return DataAccessLayer.Instance.GetMaxIdMon();
         }
-        public int GetMaxIdDanhMuc()
+        public bool ExcuteDB_BLL(Mon mon, int idMonDetailForm)
         {
-            return DataAccessLayer.Instance.GetMaxIdMon();
+            if (idMonDetailForm != 0)
+            {
+                return DataAccessLayer.Instance.EditMon(mon);
+            }
+            else
+            {
+                return DataAccessLayer.Instance.ThemMon(mon);
+            }
         }
-        /// <summary>
-        /// ////////// del, add, update
-        /// </summary>
-        /// <param name="mssv"></param>
-        /// <returns></returns>
         public bool XoaMon(int idmon)
         {
             return DataAccessLayer.Instance.XoaMonTheoIdMon(idmon);
 
+        }
+        #endregion
+
+        #region Danh muc
+        public List<DanhMuc> GetAllDanhMuc()
+        {
+            return DataAccessLayer.Instance.GetAllDanhMuc_DAL();
+        }
+        public int GetMaxIdDanhMuc()
+        {
+            return DataAccessLayer.Instance.GetMaxIdMon();
         }
         public bool ThemDanhMuc(DanhMuc dm)
         {
@@ -200,17 +215,7 @@ namespace BLL
         {
             return DataAccessLayer.Instance.XoaDanhMucTheoIdDanhMuc(iddanhmuc);
         }
-        public bool ExcuteDB_BLL(Mon mon, int idMonDetailForm)
-        {
-            if (idMonDetailForm != 0)
-            {
-                return DataAccessLayer.Instance.EditMon(mon);
-            }
-            else
-            {
-                return DataAccessLayer.Instance.ThemMon(mon);
-            }
-        }
 
+        #endregion
     }
 }

@@ -10,6 +10,7 @@ namespace DTO
     {
         public int IdAnh { get; set; }
         public string TenAnh { get; set; }
+
         public byte[] Anh { get; set; }
         public override string ToString()
         {
