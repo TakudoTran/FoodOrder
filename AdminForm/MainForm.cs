@@ -19,7 +19,7 @@ namespace AdminForm
             dgvDanhSachMon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
             Show(0, null);
-            BusinessLogicLayer.Instance.SetColumnHeader(dgvDanhSachMon);
+            BusinessLogicLayer.Instance.SetColumnHeaderMon(dgvDanhSachMon);
 
             dgvDSDanhMuc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ShowDanhMuc();

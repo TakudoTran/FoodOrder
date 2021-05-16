@@ -31,18 +31,24 @@ namespace AdminForm
 
 
         #region support menthod
+        private void ShowAnh(int idAnh)
+        {
+            AnhMinhHoa anh = BusinessLogicLayer.Instance.GetIdAnhByIdAnh(idAnh);
+            picHinhAnh.Image = Image.FromStream(BusinessLogicLayer.Instance.GetByteValuesOfAnh(anh.IdAnh), true);
+            picHinhAnh.Image.Tag = anh.IdAnh;
+        }
         private void setUI()
         {
             if (this.idMonOfMainForm != 0)
             {
+                
                 Mon mon = BusinessLogicLayer.Instance.GetMonByIdMon(this.idMonOfMainForm);
                 txtIdMon.Text = mon.IdMon +"";
                 txtTenMon.Text = mon.TenMon;
                 txtGiaTien.Text = mon.GiaTien + "";
                 txtSoLanGoiMon.Text = mon.SoLanGoiMon + "";
-                AnhMinhHoa anh = BusinessLogicLayer.Instance.GetIdAnhByIdAnh(mon.IdAnh);
-                picHinhAnh.Image = Image.FromStream(BusinessLogicLayer.Instance.GetByteValuesOfAnh(anh.IdAnh), true);
-                picHinhAnh.Image.Tag = anh.IdAnh;
+                ShowAnh(mon.IdAnh);
+
                 //  cboLSH.SelectedIndex = s.ID_Lop - 1 ;
                 int index = 0;
                 foreach (CBBItem i in cboDanhMuc.Items)
@@ -70,15 +76,12 @@ namespace AdminForm
         private bool ValidValues()
         {
             int intValue;
-            if(string.IsNullOrEmpty(txtTenMon.Text) || string.IsNullOrEmpty(txtSoLanGoiMon.Text)|| string.IsNullOrEmpty(txtGiaTien.Text))
+            if(!string.IsNullOrEmpty(txtTenMon.Text) && !string.IsNullOrEmpty(txtSoLanGoiMon.Text) && !string.IsNullOrEmpty(txtGiaTien.Text)
+                && int.TryParse(txtGiaTien.Text, out int n) && int.TryParse(txtSoLanGoiMon.Text, out int m))
             {
-                return false;
+                return true;
             }
-
-            if (int.TryParse(txtGiaTien.Text, out intValue) || int.TryParse(txtSoLanGoiMon.Text, out intValue) || (picHinhAnh.Image.Tag == null)){
-                return false;
-            }
-            return true;
+            return false;
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -138,7 +141,12 @@ namespace AdminForm
 
         private void btnPull_Click(object sender, EventArgs e)
         {
-            
+            ImagesForm f = new ImagesForm();
+            f.afterOk += new ImagesForm.MyDel(ShowAnh);
+            if(f.ShowDialog() == DialogResult.OK)
+            {
+                ShowAnh((int)picHinhAnh.Image.Tag);
+            }
         }
     }
 }

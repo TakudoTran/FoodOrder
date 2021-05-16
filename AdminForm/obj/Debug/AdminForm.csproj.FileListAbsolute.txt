@@ -97,3 +97,4 @@ C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\AdminForm\obj\Debug\Adm
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.ImagesForm.resources

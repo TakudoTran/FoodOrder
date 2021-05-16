@@ -23,11 +23,8 @@ namespace DAL
         }
         private DataAccessLayer() { }
 
-        /// <summary>
-        /// //////////anh minh hoa cho mon an
-        /// </summary>
-        /// <param name="i"></param>
-        /// <returns></returns>
+
+        #region Anh minh hoa
         private AnhMinhHoa GetAnh(DataRow i)
         {
             return new AnhMinhHoa
@@ -37,10 +34,7 @@ namespace DAL
                 Anh = (byte[])i["Anh"]
             };
         }
-        /// <summary>
-        /// Lay toan bo anh minh hoa tu DB => List<Anhminhhoa>
-        /// </summary>
-        /// <returns>List<AnhMinhHoa></returns>
+
         public List<AnhMinhHoa> GetListAnhMinhHoa()
         {
             try
@@ -99,10 +93,9 @@ namespace DAL
 
             }
         }
-        /// <summary>
-        /// ////////danh muc here
-        /// </summary>
-        /// <returns></returns>
+        #endregion
+      
+        #region Danh muc
         public List<DanhMuc> GetAllDanhMuc_DAL()
         {
             string query = "select * from DanhMuc";
@@ -115,12 +108,77 @@ namespace DAL
         }
         private DanhMuc GetDanhMuc(DataRow i)
         {
+            string tenDanhMuc = "No Name";
+            if (!DBNull.Value.Equals(i["TenDanhMuc"])) tenDanhMuc = i["TenDanhMuc"].ToString();
             return new DanhMuc
             {
-                TenDanhMuc = i["TenDanhMuc"].ToString(),
+                TenDanhMuc = tenDanhMuc,
                 IdDanhMuc = int.Parse(i["IdDanhMuc"].ToString())
             };
         }
+        public int GetMaxIdDanhMuc()
+        {
+            try
+            {
+                return DBHelper.Instance.GetMaxValueOf("IdDanhMuc", "DanhMuc");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return -1;
+            }
+        }
+        public bool XoaDanhMucTheoIdDanhMuc(int IdDanhMuc)
+        {
+            try
+            {
+                string query = "delete from DanhMuc where IdDanhMuc = @id ";
+                object[] prams = { IdDanhMuc };
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message);
+                return false;
+            }
+
+        }
+        public bool ThemDanhMuc(DanhMuc dm)
+        {
+            try
+            {
+                string query = "insert into DanhMuc(TenDanhMuc)" +
+                                   "values ( @tendm )";
+                object[] prams = { dm.TenDanhMuc };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi" + e.Message);
+                return false;
+            }
+        }
+        public bool SuaDanhMuc(DanhMuc dm)
+        {
+            try
+            {
+                string query = "update DanhMuc set TenDanhMuc = @tendm " +
+                                   "where IdDanhMuc = @iddm ";
+
+                object[] prams = { dm.TenDanhMuc, dm.IdDanhMuc };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region Mon an
         public List<Mon> GetAllMon_DAL()
         {
             try
@@ -140,14 +198,24 @@ namespace DAL
         }
         private Mon getMon(DataRow i)
         {
+            string ten = "No Name";
+            int soLanGoiMon = 0;
+            int gia = 0;
+            int idDanhMuc = 1;
+            int idAnh = 1;
+            if (!DBNull.Value.Equals(i["TenMon"])) ten = i["TenMon"].ToString();
+            if (!DBNull.Value.Equals(i["SoLanGoiMon"])) soLanGoiMon = int.Parse(i["SoLanGoiMon"].ToString());
+            if (!DBNull.Value.Equals(i["GiaTien"])) gia = int.Parse(i["GiaTien"].ToString());
+            if (!DBNull.Value.Equals(i["IdDanhMuc"])) idDanhMuc = Convert.ToInt32(i["IdDanhMuc"].ToString());
+            if (!DBNull.Value.Equals(i["IdAnh"])) idAnh = int.Parse(i["IdAnh"].ToString());
             return new Mon
             {
                 IdMon = int.Parse(i["IdMon"].ToString()),
-                TenMon = i["TenMon"].ToString(),
-                SoLanGoiMon = int.Parse(i["SoLanGoiMon"].ToString()),
-                GiaTien = int.Parse(i["GiaTien"].ToString()),
-                IdDanhMuc = Convert.ToInt32(i["IdDanhMuc"].ToString()),
-                IdAnh = int.Parse(i["IdAnh"].ToString())
+                TenMon = ten,
+                SoLanGoiMon = soLanGoiMon,
+                GiaTien = gia,
+                IdDanhMuc = idDanhMuc,
+                IdAnh = idAnh
 
             };
         }
@@ -188,24 +256,6 @@ namespace DAL
                 return -1;
             }
         }
-        public int GetMaxIdDanhMuc()
-        {
-            try
-            {
-                return DBHelper.Instance.GetMaxValueOf("IdDanhMuc", "DanhMuc");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi: " + e.Message);
-                return -1;
-            }
-        }
-        /// <summary>
-        /// ///////// CRUD
-        /// </summary>
-        /// <param name="IdMon"></param>
-        /// <returns></returns>
-
         public bool XoaMonTheoIdMon(int IdMon)
         {
             try
@@ -220,21 +270,7 @@ namespace DAL
             }
 
         }
-        public bool XoaDanhMucTheoIdDanhMuc(int IdDanhMuc)
-        {
-            try
-            {
-                string query = "delete from DanhMuc where IdDanhMuc = @id ";
-                object[] prams = { IdDanhMuc };
-                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
-            }
-            catch (Exception e)
-            {
-                //MessageBox.Show(e.Message);
-                return false;
-            }
 
-        }
         public bool checkMon(int IdMon)
         {
             try
@@ -288,39 +324,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool ThemDanhMuc(DanhMuc dm)
-        {
-            try
-            {
-                string query = "insert into DanhMuc(TenDanhMuc)" +
-                                   "values ( @tendm )";
-                object[] prams = { dm.TenDanhMuc };
-
-                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi" + e.Message);
-                return false;
-            }
-        }
-        public bool SuaDanhMuc(DanhMuc dm)
-        {
-            try
-            {
-                string query = "update DanhMuc set TenDanhMuc = @tendm " +
-                                   "where IdDanhMuc = @iddm ";
-
-                object[] prams = { dm.TenDanhMuc, dm.IdDanhMuc };
-
-                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
-
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
+        #endregion
 
     }
 }
