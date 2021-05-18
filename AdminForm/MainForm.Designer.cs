@@ -67,7 +67,13 @@ namespace AdminForm
             this.dgvDSDanhMuc = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLoadDefaultImg = new System.Windows.Forms.Button();
+            this.picAnh = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFolder = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,6 +84,8 @@ namespace AdminForm
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDanhMuc)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -462,7 +470,12 @@ namespace AdminForm
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.txtFolder);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Controls.Add(this.btnOK);
+            this.tabPage5.Controls.Add(this.btnBrowse);
+            this.tabPage5.Controls.Add(this.btnLoadDefaultImg);
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -471,15 +484,72 @@ namespace AdminForm
             this.tabPage5.Text = "Ảnh minh họa";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnLoadDefaultImg
             // 
-            this.button3.Location = new System.Drawing.Point(352, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 110);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnLoadDefaultImg.Location = new System.Drawing.Point(577, 37);
+            this.btnLoadDefaultImg.Name = "btnLoadDefaultImg";
+            this.btnLoadDefaultImg.Size = new System.Drawing.Size(248, 110);
+            this.btnLoadDefaultImg.TabIndex = 0;
+            this.btnLoadDefaultImg.Text = "Load Default Img";
+            this.btnLoadDefaultImg.UseVisualStyleBackColor = true;
+            this.btnLoadDefaultImg.Click += new System.EventHandler(this.btnLoadDefaultImg_Click);
+            // 
+            // picAnh
+            // 
+            this.picAnh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picAnh.Location = new System.Drawing.Point(3, 22);
+            this.picAnh.Name = "picAnh";
+            this.picAnh.Size = new System.Drawing.Size(501, 455);
+            this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAnh.TabIndex = 1;
+            this.picAnh.TabStop = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(796, 382);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(145, 85);
+            this.btnBrowse.TabIndex = 0;
+            this.btnBrowse.Text = "Browse Folder";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.picAnh);
+            this.groupBox4.Location = new System.Drawing.Point(23, 15);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(507, 480);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Hình ảnh";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(573, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Folder:";
+            // 
+            // txtFolder
+            // 
+            this.txtFolder.Location = new System.Drawing.Point(577, 331);
+            this.txtFolder.Name = "txtFolder";
+            this.txtFolder.ReadOnly = true;
+            this.txtFolder.Size = new System.Drawing.Size(364, 26);
+            this.txtFolder.TabIndex = 4;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(577, 382);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(165, 85);
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // MainForm
             // 
@@ -504,6 +574,9 @@ namespace AdminForm
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDanhMuc)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,7 +621,13 @@ namespace AdminForm
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvDSDanhMuc;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnLoadDefaultImg;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.PictureBox picAnh;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtFolder;
+        private System.Windows.Forms.Button btnOK;
     }
 }
 
