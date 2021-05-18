@@ -64,6 +64,7 @@ namespace AdminForm
             else
             {
                 txtIdMon.Text = BusinessLogicLayer.Instance.GetMaxIdMon() + 1 + "";
+                if (picHinhAnh.Image == null) ShowAnh(0);
                 txtIdMon.Enabled = false;
                 btnOk.Text = "Add";
             }

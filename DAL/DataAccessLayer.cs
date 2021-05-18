@@ -7,6 +7,7 @@ using DTO;
 using DBProvider;
 using System.Data;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -74,9 +75,10 @@ namespace DAL
                 DBHelper.Instance.ExecuteNonQuery(query, param);
                 return true;
             }
-            catch(Exception e)
+            catch(SqlException e)
             {
-                MessageBox.Show("Lỗi: " + e.Message);
+                if(e.Number == 2627) MessageBox.Show("Ảnh vừa chọn đã tồn tại ở CSDL");
+                else MessageBox.Show("Lỗi: " + e.Message);
                 return false;
             }
         }
@@ -202,7 +204,7 @@ namespace DAL
             int soLanGoiMon = 0;
             int gia = 0;
             int idDanhMuc = 1;
-            int idAnh = 1;
+            int idAnh = 0;
             if (!DBNull.Value.Equals(i["TenMon"])) ten = i["TenMon"].ToString();
             if (!DBNull.Value.Equals(i["SoLanGoiMon"])) soLanGoiMon = int.Parse(i["SoLanGoiMon"].ToString());
             if (!DBNull.Value.Equals(i["GiaTien"])) gia = int.Parse(i["GiaTien"].ToString());
