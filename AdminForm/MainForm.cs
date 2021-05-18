@@ -150,5 +150,10 @@ namespace AdminForm
                 txtTenDanhMuc.Text = row.Cells["TenDanhMuc"].Value.ToString();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BusinessLogicLayer.Instance.DefaultImages();
+        }
     }
 }

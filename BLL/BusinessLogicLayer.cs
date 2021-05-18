@@ -118,6 +118,15 @@ namespace BLL
             }
             return anhMinhHoas;
         }
+        public void DefaultImages()
+        {
+            string path = Directory.GetCurrentDirectory();
+            string defaultImgPath = path + "\\DefaultImage.jpg";
+            FileStream fs = new FileStream(defaultImgPath, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            byte[] anh = br.ReadBytes((int)fs.Length);
+            BusinessLogicLayer.Instance.ThemAnhVaoDb("DefaultImage", anh);
+        }
         #endregion
 
         #region Mon
