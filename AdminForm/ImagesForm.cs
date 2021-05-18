@@ -56,7 +56,7 @@ namespace AdminForm
             DialogResult = DialogResult.Cancel;
             this.Dispose();
         }
-        //changr somthoing
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             dgvDanhSachAnh.DataSource = BusinessLogicLayer.Instance.GetAnhMinhHoaByTenAnh(txtSearch.Text);
