@@ -44,7 +44,7 @@ namespace DAL
                 string query = "select * from AnhMinhHoa";
                 foreach (DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
                 {
-                    if(i !=  null) anhMinhHoas.Add(GetAnh(i));
+                    anhMinhHoas.Add(GetAnh(i));
                 }
                 return anhMinhHoas;
             }

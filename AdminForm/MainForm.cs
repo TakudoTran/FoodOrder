@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -152,6 +153,47 @@ namespace AdminForm
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFolder.Text))
+            {
+                MessageBox.Show("Chưa chọn folder hình ảnh!");
+                return;
+            }
+            string folderPath = txtFolder.Text;
+            foreach (string imgPath in Directory.GetFiles(folderPath))
+            {
+                byte[] Anh = null;
+                FileStream fileStream = new FileStream(imgPath, FileMode.Open, FileAccess.Read);
+                BinaryReader binaryReader = new BinaryReader(fileStream);
+                Anh = binaryReader.ReadBytes((int)fileStream.Length);
+                string imgName = imgPath.Substring(imgPath.LastIndexOf(@"\"));
+                BusinessLogicLayer.Instance.ThemAnhVaoDb(imgName, Anh);
+
+                Image img = Image.FromFile(imgPath);
+                picAnh.Image = img;
+
+            }
+        }
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog())
+            {
+                if (fbd.ShowDialog() == DialogResult.OK)
+                {
+                    string folderPath = fbd.SelectedPath;
+                    txtFolder.Text = folderPath;
+                    //MessageBox.Show(folderPath);
+                }
+
+            }
+        }
+
+        private void btnLoadDefaultImg_Click(object sender, EventArgs e)
         {
             BusinessLogicLayer.Instance.DefaultImages();
         }
