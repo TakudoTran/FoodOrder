@@ -77,6 +77,7 @@ namespace BLL
         {
             dgv.Columns["IdDanhMuc"].HeaderText = "ID Danh Mục";
             dgv.Columns["TenDanhMuc"].HeaderText = "Tên Danh Mục";
+            dgv.Columns["Loai"].HeaderText = "Loại";
         }
         public MemoryStream GetByteValuesOfAnh(int idAnh)
         {
@@ -225,6 +226,12 @@ namespace BLL
             return DataAccessLayer.Instance.XoaDanhMucTheoIdDanhMuc(iddanhmuc);
         }
 
+        #endregion
+        #region Loai
+        public List<string> GetDataLoai()
+        {
+            return DataAccessLayer.Instance.DataLoai();
+        }
         #endregion
     }
 }

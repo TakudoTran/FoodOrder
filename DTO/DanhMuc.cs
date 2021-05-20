@@ -10,6 +10,8 @@ namespace DTO
     {
         public int IdDanhMuc { get; set; }
         public string TenDanhMuc { get; set; }
+        public string Loai { get; set; }
+
         public override string ToString()
         {
             return TenDanhMuc;

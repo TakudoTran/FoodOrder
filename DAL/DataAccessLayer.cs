@@ -112,10 +112,13 @@ namespace DAL
         {
             string tenDanhMuc = "No Name";
             if (!DBNull.Value.Equals(i["TenDanhMuc"])) tenDanhMuc = i["TenDanhMuc"].ToString();
+            string loai = "No Name";
+            if (!DBNull.Value.Equals(i["Loai"])) loai = i["Loai"].ToString();
             return new DanhMuc
             {
                 TenDanhMuc = tenDanhMuc,
-                IdDanhMuc = int.Parse(i["IdDanhMuc"].ToString())
+                IdDanhMuc = int.Parse(i["IdDanhMuc"].ToString()),
+                Loai = loai
             };
         }
         public int GetMaxIdDanhMuc()
@@ -149,9 +152,9 @@ namespace DAL
         {
             try
             {
-                string query = "insert into DanhMuc(TenDanhMuc)" +
-                                   "values ( @tendm )";
-                object[] prams = { dm.TenDanhMuc };
+                string query = "insert into DanhMuc(TenDanhMuc ,Loai ) " +
+                                   "values ( @tendm , @loai )";
+                object[] prams = { dm.TenDanhMuc,dm.Loai };
 
                 return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
             }
@@ -165,10 +168,10 @@ namespace DAL
         {
             try
             {
-                string query = "update DanhMuc set TenDanhMuc = @tendm " +
+                string query = "update DanhMuc set TenDanhMuc = @tendm , Loai = @loai " +
                                    "where IdDanhMuc = @iddm ";
 
-                object[] prams = { dm.TenDanhMuc, dm.IdDanhMuc };
+                object[] prams = { dm.TenDanhMuc,dm.Loai, dm.IdDanhMuc };
 
                 return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
 
@@ -177,6 +180,17 @@ namespace DAL
             {
                 return false;
             }
+        }
+        #endregion
+
+        #region Loai Danh Muc
+        public List<string> DataLoai()
+        {
+            List<string> list = new List<string>();
+            list.Add("DA");
+            list.Add("DU");
+            list.Add("Kh");
+            return list;
         }
         #endregion
 
@@ -327,6 +341,8 @@ namespace DAL
             }
         }
         #endregion
+
+
 
     }
 }

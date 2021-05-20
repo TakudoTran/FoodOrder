@@ -64,3 +64,14 @@ C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DAL\obj\Debug\DAL.cspro
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DAL\obj\Debug\DAL.dll
 C:\Users\hobat\OneDrive\Desktop\thanhFoodOrder\FoodOrder\DAL\obj\Debug\DAL.pdb
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DAL.dll
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DAL.pdb
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DBProvider.dll
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DTO.dll
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DBProvider.pdb
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\bin\Debug\DTO.pdb
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\obj\Debug\DAL.dll
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\DAL\obj\Debug\DAL.pdb
