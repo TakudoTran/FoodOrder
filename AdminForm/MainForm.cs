@@ -25,6 +25,7 @@ namespace AdminForm
             dgvDSDanhMuc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ShowDanhMuc();
             BusinessLogicLayer.Instance.SetColumnHeaderDM(dgvDSDanhMuc);
+            SetComboboxLoai();
         }
 
         private void Show(int idDanhmuc, string tenMon)
@@ -34,6 +35,10 @@ namespace AdminForm
         private void ShowDanhMuc()
         {
             dgvDSDanhMuc.DataSource = BusinessLogicLayer.Instance.GetAllDanhMuc();
+        }
+        private void SetComboboxLoai()
+        {
+            cbLoaiDM.Items.AddRange(BusinessLogicLayer.Instance.GetDataLoai().ToArray());
         }
         private void btnXem_Click(object sender, EventArgs e)
         {
@@ -84,12 +89,18 @@ namespace AdminForm
 
         private void btnThemDM_Click(object sender, EventArgs e)
         {
+            if(cbLoaiDM.SelectedIndex == -1)
+            {
+                MessageBox.Show("Chưa chọn Loại !!!");
+                return;
+            }
             txtMaDanhMuc.Text = BusinessLogicLayer.Instance.GetMaxIdDanhMuc() + 1 + "";
             txtMaDanhMuc.Enabled = true;
             DanhMuc dm = new DanhMuc
             {
                 IdDanhMuc = int.Parse(txtMaDanhMuc.Text),
                 TenDanhMuc = txtTenDanhMuc.Text,
+                Loai = cbLoaiDM.SelectedItem.ToString()
             };
 
             BusinessLogicLayer.Instance.ThemDanhMuc(dm);
@@ -108,7 +119,8 @@ namespace AdminForm
             DanhMuc dm = new DanhMuc
             {
                 IdDanhMuc = int.Parse(txtMaDanhMuc.Text),
-                TenDanhMuc = txtTenDanhMuc.Text
+                TenDanhMuc = txtTenDanhMuc.Text,
+                Loai = cbLoaiDM.SelectedItem.ToString()
             };
 
 
@@ -149,6 +161,19 @@ namespace AdminForm
                 DataGridViewRow row = dgvDSDanhMuc.Rows[e.RowIndex];
                 txtMaDanhMuc.Text = row.Cells["IdDanhMuc"].Value.ToString();
                 txtTenDanhMuc.Text = row.Cells["TenDanhMuc"].Value.ToString();
+
+                int index = -1;
+                foreach (string i in cbLoaiDM.Items)
+                {
+                    if (row.Cells["Loai"].Value.ToString() == i)
+                    {
+                        break;
+                    }
+                    index++;
+                }
+                if (index == -1) cbLoaiDM.SelectedIndex = -1;
+                else cbLoaiDM.SelectedIndex = index+1;
+
             }
         }
 
