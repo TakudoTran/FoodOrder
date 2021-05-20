@@ -162,18 +162,17 @@ namespace AdminForm
                 txtMaDanhMuc.Text = row.Cells["IdDanhMuc"].Value.ToString();
                 txtTenDanhMuc.Text = row.Cells["TenDanhMuc"].Value.ToString();
 
-                int index = -1;
+                int index = 0;
                 foreach (string i in cbLoaiDM.Items)
                 {
-                    if (row.Cells["Loai"].Value.ToString() == i)
+                    if (row.Cells["Loai"].Value.ToString().Equals(i))
                     {
                         break;
                     }
                     index++;
                 }
-                if (index == -1) cbLoaiDM.SelectedIndex = -1;
-                else cbLoaiDM.SelectedIndex = index+1;
-
+                if (index == cbLoaiDM.Items.Count) cbLoaiDM.SelectedIndex = -1;
+                else cbLoaiDM.SelectedIndex = index;
             }
         }
 
