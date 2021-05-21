@@ -119,3 +119,4 @@ C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj.C
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.OrderForm.resources
