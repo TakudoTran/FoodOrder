@@ -90,6 +90,7 @@ namespace AdminForm
             this.txtuser.TabIndex = 9;
             this.txtuser.Text = "Username";
             this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // panel1
             // 
@@ -119,6 +120,7 @@ namespace AdminForm
             this.txtpw.TabIndex = 12;
             this.txtpw.Text = "Password";
             this.txtpw.Click += new System.EventHandler(this.txtpw_Click);
+            this.txtpw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpw_KeyPress);
             // 
             // ptpw
             // 

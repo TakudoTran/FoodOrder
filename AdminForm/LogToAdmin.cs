@@ -71,5 +71,24 @@ namespace AdminForm
                 txtpw.Clear();
             }
         }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                txtpw.Focus();
+                txtpw.SelectionStart = txtpw.TextLength;
+                txtpw.Clear();
+                txtpw.PasswordChar = '*';
+            }
+        }
+
+        private void txtpw_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btlog_Click(sender, new EventArgs());
+            }
+        }
     }
 }
