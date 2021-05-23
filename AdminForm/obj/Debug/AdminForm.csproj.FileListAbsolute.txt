@@ -120,3 +120,7 @@ C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj.C
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.OrderForm.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.ImagesForm.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.LoginForm.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.LogToAdmin.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.OrderForm.resources
