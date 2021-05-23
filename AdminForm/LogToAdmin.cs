@@ -16,8 +16,8 @@ namespace AdminForm
         {
             InitializeComponent();
         }
-        private string UserName = "pbl3";
-        private string Password = "123456";
+        private string UserName = "";
+        private string Password = "";
 
         private void ptEixt_Click(object sender, EventArgs e)
         {

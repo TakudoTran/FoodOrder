@@ -49,6 +49,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UC_Mon">
+      <HintPath>..\User_Controls\UC_Mon\UC_Mon\bin\Debug\UC_Mon.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetailForm.cs">
