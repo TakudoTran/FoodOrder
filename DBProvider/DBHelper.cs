@@ -14,7 +14,7 @@ namespace DBProvider
         //private string conStr = "Server = XUANTRONG\\SQLEXPRESS2019; database = PBL3; user id = sa; pwd = 06112000";
         //private string conStr = @"Data Source = ADMIN;Initial Catalog = PBL3; Integrated Security = True";
         //private string conStr = "Server = DESKTOP-P1RUVPS\\SQLEXPRESS; database = PBL3; user id = sa; pwd = 290901";
-        private string conStr = "Data Source=LAPTOP-3A87UQ1T;Initial Catalog=FOOD;Integrated Security=True";
+        private string conStr = "Data Source=LAPTOP-3A87UQ1T;Initial Catalog=PBL3;Integrated Security=True";
 
 
         public static DBHelper Instance

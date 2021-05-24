@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using MyAlgo;
 namespace AdminForm
 {
     public partial class MainForm : Form
@@ -26,16 +27,15 @@ namespace AdminForm
             ShowDanhMuc();
             BusinessLogicLayer.Instance.SetColumnHeaderDM(dgvDSDanhMuc);
             SetComboboxLoai();
+
+            BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
         }
 
         private void Show(int idDanhmuc, string tenMon)
         {
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetMonByIdDanhMucAndTenMon(idDanhmuc, tenMon);
         }
-        private void ShowAll()
-        {
-            dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetAllMon();
-        }
+      
         private void ShowDanhMuc()
         {
             dgvDSDanhMuc.DataSource = BusinessLogicLayer.Instance.GetAllDanhMuc();
@@ -225,7 +225,6 @@ namespace AdminForm
         {
             BusinessLogicLayer.Instance.DefaultImages();
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dgvDanhSachMon.SelectedRows.Count == 0)
@@ -248,7 +247,23 @@ namespace AdminForm
                     else MessageBox.Show("Lỗi xóa! ");
                 }
             }
-            ShowAll();
+            int id = ((CBBItem)cboDanhMuc.SelectedItem).Value;
+            Show(id, "");
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cboSortType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Chọn kiểu sắp xếp!");
+                return;
+            }
+            string name = txtSearch.Text;
+            CBBItem cbLop = cboDanhMuc.SelectedItem as CBBItem;
+            int IDLop = cbLop.Value;
+            CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
+            int idSort = cbSort.Value;
+            dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
         }
     }
 }

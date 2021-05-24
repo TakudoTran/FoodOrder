@@ -257,6 +257,7 @@ namespace AdminForm
             this.btnSort.TabIndex = 3;
             this.btnSort.Text = "Sắp xếp theo:";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnXoa
             // 
@@ -322,7 +323,7 @@ namespace AdminForm
             this.cboSortType.FormattingEnabled = true;
             this.cboSortType.Location = new System.Drawing.Point(740, 480);
             this.cboSortType.Name = "cboSortType";
-            this.cboSortType.Size = new System.Drawing.Size(176, 28);
+            this.cboSortType.Size = new System.Drawing.Size(193, 28);
             this.cboSortType.TabIndex = 1;
             // 
             // cboDanhMuc

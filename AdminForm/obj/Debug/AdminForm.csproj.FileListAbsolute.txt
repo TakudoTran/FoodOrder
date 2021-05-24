@@ -154,3 +154,5 @@ C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.csproj.CopyComplete
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
+C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\bin\Debug\MyAlgo.dll
+C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb

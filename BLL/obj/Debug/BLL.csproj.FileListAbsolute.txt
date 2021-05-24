@@ -93,3 +93,5 @@ C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompile
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.dll
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.pdb
+C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\MyAlgo.dll
+C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\MyAlgo.pdb

@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using DTO;
+using MyAlgo;
 using System.Drawing;
 
 namespace BLL
 {
     public class BusinessLogicLayer
     {
+       // public delegate bool MyCompare(string str);
         private static BusinessLogicLayer _Instance;
         public static BusinessLogicLayer Instance
         {
@@ -42,6 +44,32 @@ namespace BLL
                 });
             }
             return data;
+        }
+        public void setCbbSortType(ComboBox cb)
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            data.Add(new CBBItem
+            {
+                Value = 1,
+                Text = "Giá tiền tăng"
+            });
+            data.Add(new CBBItem
+            {
+                Value = 2,
+                Text = "Giá tiền giảm"
+            });
+            data.Add(new CBBItem
+            {
+                Value = 3,
+                Text = "Gọi ít"
+            });
+            data.Add(new CBBItem
+            {
+                Value = 4,
+                Text = "Gọi nhiều"
+            });
+
+            cb.Items.AddRange(data.ToArray());
         }
 
         public void setCbbDanhMuc(ComboBox cb)
@@ -151,7 +179,6 @@ namespace BLL
             }
             return m;
         }
-
         public List<Mon> GetAllMon()
         {
             return DataAccessLayer.Instance.GetAllMon_DAL();
@@ -201,6 +228,28 @@ namespace BLL
         {
             return DataAccessLayer.Instance.XoaMonTheoIdMon(idmon);
 
+        }
+        public List<MonView> Sort(int idSort, int IDLop, string name)
+        {
+            List<MonView> list = GetMonByIdDanhMucAndTenMon(IDLop, name);
+            MonView[] arr = list.ToArray();
+            switch (idSort)
+            {
+                case 1:
+                    MyAlgorithms.Instance.SapXep(arr, MonView.DesGiaTien);
+                    break;
+                case 2:
+                    MyAlgorithms.Instance.SapXep(arr, MonView.AscGiaTien);
+                    break;
+                case 3:
+                    MyAlgorithms.Instance.SapXep(arr, MonView.DesSoLanGoi);
+                    break;
+                case 4:
+                    MyAlgorithms.Instance.SapXep(arr, MonView.AscSoLanGoi);
+                    break;
+            }
+
+            return arr.ToList();
         }
         #endregion
 
