@@ -17,6 +17,22 @@ namespace DTO
         {
             return TenMon;
         }
+        public static bool AscGiaTien(MonView m1, MonView m2)
+        {
+            return m1.GiaTien < m2.GiaTien;
+        }
+        public static bool DesGiaTien(MonView m1, MonView m2)
+        {
+            return m1.GiaTien > m2.GiaTien;
+        }
+        public static bool AscSoLanGoi(MonView m1, MonView m2)
+        {
+            return m1.SoLanGoiMon < m2.SoLanGoiMon;
+        }
+        public static bool DesSoLanGoi(MonView m1, MonView m2)
+        {
+            return m1.SoLanGoiMon > m2.SoLanGoiMon;
+        }
     }
 }
 

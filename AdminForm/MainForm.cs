@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using MyAlgo;
 namespace AdminForm
 {
     public partial class MainForm : Form
@@ -26,12 +27,15 @@ namespace AdminForm
             ShowDanhMuc();
             BusinessLogicLayer.Instance.SetColumnHeaderDM(dgvDSDanhMuc);
             SetComboboxLoai();
+
+            BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
         }
 
         private void Show(int idDanhmuc, string tenMon)
         {
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetMonByIdDanhMucAndTenMon(idDanhmuc, tenMon);
         }
+      
         private void ShowDanhMuc()
         {
             dgvDSDanhMuc.DataSource = BusinessLogicLayer.Instance.GetAllDanhMuc();
@@ -220,6 +224,46 @@ namespace AdminForm
         private void btnLoadDefaultImg_Click(object sender, EventArgs e)
         {
             BusinessLogicLayer.Instance.DefaultImages();
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSachMon.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Chọn ít nhất 1 món để xóa!");
+                return;
+            }
+            foreach (DataGridViewRow i in dgvDanhSachMon.SelectedRows)
+            {
+                MonView mon = i.DataBoundItem as MonView;
+                int IdMon = mon.IdMon;
+                DialogResult result = MessageBox.Show("Muốn xóa Món: " + mon.TenMon + "?",
+                    "Hỏi xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (BusinessLogicLayer.Instance.XoaMon(IdMon))
+                    {
+                        MessageBox.Show("Đã xóa Món: " + mon.TenMon);
+                    }
+                    else MessageBox.Show("Lỗi xóa! ");
+                }
+            }
+            int id = ((CBBItem)cboDanhMuc.SelectedItem).Value;
+            Show(id, "");
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cboSortType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Chọn kiểu sắp xếp!");
+                return;
+            }
+            string name = txtSearch.Text;
+            CBBItem cbLop = cboDanhMuc.SelectedItem as CBBItem;
+            int IDLop = cbLop.Value;
+            CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
+            int idSort = cbSort.Value;
+            dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
         }
     }
 }
