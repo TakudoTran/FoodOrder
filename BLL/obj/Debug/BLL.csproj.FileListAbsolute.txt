@@ -80,18 +80,3 @@ C:\Users\hobat\OneDrive\Desktop\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompileIn
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\BLL\obj\Debug\BLL.dll
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\BLL\obj\Debug\BLL.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\BLL.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\BLL.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DAL.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DTO.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DBProvider.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DAL.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DTO.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\DBProvider.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\obj\Debug\BLL.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\MyAlgo.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\BLL\bin\Debug\MyAlgo.pdb
