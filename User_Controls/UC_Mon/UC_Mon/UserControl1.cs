@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UC_Mon
 {
-    public partial class UCMon: UserControl
+    public partial class UCMon : UserControl
     {
         public int GiaTien
         {
@@ -63,8 +63,15 @@ namespace UC_Mon
         public UCMon()
         {
             InitializeComponent();
+            this.btnOrder.Click += new EventHandler(childControls_Click);
+            this.gunaShadowPanel1.Click += new EventHandler(childControls_Click);
+            this.lblTen.Click += new EventHandler(childControls_Click);
+
         }
 
-
+        private void childControls_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
     }
 }

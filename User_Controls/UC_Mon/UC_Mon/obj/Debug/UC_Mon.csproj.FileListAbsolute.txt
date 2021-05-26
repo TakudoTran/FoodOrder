@@ -20,3 +20,14 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_M
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.CopyComplete
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.pdb
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\bin\Debug\UC_Mon.dll
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\bin\Debug\UC_Mon.pdb
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\bin\Debug\Guna.UI.dll
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csprojAssemblyReference.cache
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.Properties.Resources.resources
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.UCMon.resources
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.GenerateResource.cache
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.CoreCompileInputs.cache
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.CopyComplete
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.dll
+C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.pdb
