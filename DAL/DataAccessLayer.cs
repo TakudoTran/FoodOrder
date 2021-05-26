@@ -212,19 +212,6 @@ namespace DAL
                 return null;
             }
         }
-        public bool SortMon(string str )
-        {
-            try
-            {
-                string query = "SELECT * FROM Mon ORDER BY str ";
-                object[] prams = { str };
-                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
         private Mon getMon(DataRow i)
         {
             string ten = "No Name";

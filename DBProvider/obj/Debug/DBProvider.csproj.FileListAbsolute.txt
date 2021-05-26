@@ -38,9 +38,3 @@ C:\Users\hobat\OneDrive\Desktop\FoodOrder\DBProvider\obj\Debug\DBProvider.csproj
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\DBProvider\obj\Debug\DBProvider.csproj.CoreCompileInputs.cache
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\DBProvider\obj\Debug\DBProvider.dll
 C:\Users\hobat\OneDrive\Desktop\FoodOrder\DBProvider\obj\Debug\DBProvider.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\bin\Debug\DBProvider.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\bin\Debug\DBProvider.pdb
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\obj\Debug\DBProvider.csprojAssemblyReference.cache
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\obj\Debug\DBProvider.csproj.CoreCompileInputs.cache
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\obj\Debug\DBProvider.dll
-C:\Users\USER\OneDrive\Máy tính\FoodOrder\DBProvider\obj\Debug\DBProvider.pdb

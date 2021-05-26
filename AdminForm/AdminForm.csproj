@@ -142,10 +142,6 @@
       <Project>{4294c7e7-86ba-469d-80b7-dd958d52b6a1}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyAlgo\MyAlgo.csproj">
-      <Project>{2e02f674-da8b-4da5-8739-9f34c9987272}</Project>
-      <Name>MyAlgo</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user2.png" />
