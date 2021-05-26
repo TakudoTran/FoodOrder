@@ -167,6 +167,10 @@ namespace BLL
             data = ConvertToListMonview(DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(idMon, st));
             return data;
         }
+        public List<Mon> GetMonByIDDanhMuc(int id)
+        {
+            return DataAccessLayer.Instance.GetMonByIdDanhMucAndTenMon(id, "");
+        }
         public Mon GetMonByIdMon(int idMon)
         {
             Mon m = new Mon();
@@ -276,6 +280,7 @@ namespace BLL
         }
 
         #endregion
+
         #region Loai
         public List<string> GetDataLoai()
         {

@@ -125,7 +125,6 @@
             this.Controls.Add(this.gunaLinePanel1);
             this.Name = "UCMon";
             this.Size = new System.Drawing.Size(400, 300);
-            this.Click += new System.EventHandler(this.UCMon_Click);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);

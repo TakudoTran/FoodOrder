@@ -156,3 +156,7 @@ C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\bin\Debug\MyAlgo.dll
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\MyAlgo.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.pdb
