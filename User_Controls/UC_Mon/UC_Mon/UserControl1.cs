@@ -63,8 +63,15 @@ namespace UC_Mon
         public UCMon()
         {
             InitializeComponent();
+            this.btnOrder.Click += new EventHandler(childControls_Click);
+            this.gunaShadowPanel1.Click += new EventHandler(childControls_Click);
+            this.lblTen.Click += new EventHandler(childControls_Click);
+
         }
 
-
+        private void childControls_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
     }
 }

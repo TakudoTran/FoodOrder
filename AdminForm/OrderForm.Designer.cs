@@ -56,7 +56,7 @@ namespace AdminForm
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1198, 131);
+            this.pnTop.Size = new System.Drawing.Size(1334, 131);
             this.pnTop.TabIndex = 0;
             // 
             // gunaControlBox2
@@ -67,7 +67,7 @@ namespace AdminForm
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1111, 0);
+            this.gunaControlBox2.Location = new System.Drawing.Point(1247, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -82,7 +82,7 @@ namespace AdminForm
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1153, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1289, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -100,7 +100,7 @@ namespace AdminForm
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 131);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(193, 630);
+            this.pnLeft.Size = new System.Drawing.Size(193, 643);
             this.pnLeft.TabIndex = 1;
             // 
             // btnContact
@@ -280,9 +280,9 @@ namespace AdminForm
             // 
             this.pnBill.BackColor = System.Drawing.Color.Coral;
             this.pnBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnBill.Location = new System.Drawing.Point(871, 131);
+            this.pnBill.Location = new System.Drawing.Point(864, 131);
             this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(327, 630);
+            this.pnBill.Size = new System.Drawing.Size(470, 643);
             this.pnBill.TabIndex = 2;
             // 
             // pnSortType
@@ -290,7 +290,7 @@ namespace AdminForm
             this.pnSortType.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSortType.Location = new System.Drawing.Point(193, 131);
             this.pnSortType.Name = "pnSortType";
-            this.pnSortType.Size = new System.Drawing.Size(678, 100);
+            this.pnSortType.Size = new System.Drawing.Size(671, 100);
             this.pnSortType.TabIndex = 4;
             // 
             // panel2
@@ -301,7 +301,7 @@ namespace AdminForm
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(193, 231);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(678, 530);
+            this.panel2.Size = new System.Drawing.Size(671, 543);
             this.panel2.TabIndex = 5;
             // 
             // pnMons
@@ -311,7 +311,7 @@ namespace AdminForm
             this.pnMons.ForeColor = System.Drawing.Color.White;
             this.pnMons.Location = new System.Drawing.Point(121, 0);
             this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(557, 530);
+            this.pnMons.Size = new System.Drawing.Size(550, 543);
             this.pnMons.TabIndex = 3;
             // 
             // pnDanhMuc
@@ -322,7 +322,7 @@ namespace AdminForm
             this.pnDanhMuc.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(112)))));
             this.pnDanhMuc.Location = new System.Drawing.Point(0, 0);
             this.pnDanhMuc.Name = "pnDanhMuc";
-            this.pnDanhMuc.Size = new System.Drawing.Size(121, 530);
+            this.pnDanhMuc.Size = new System.Drawing.Size(121, 543);
             this.pnDanhMuc.TabIndex = 2;
             // 
             // OrderForm
@@ -330,7 +330,7 @@ namespace AdminForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1198, 761);
+            this.ClientSize = new System.Drawing.Size(1334, 774);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnSortType);
             this.Controls.Add(this.pnBill);
