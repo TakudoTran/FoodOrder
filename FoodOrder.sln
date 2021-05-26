@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminForm", "AdminForm\Admi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAlgo", "MyAlgo\MyAlgo.csproj", "{2E02F674-DA8B-4DA5-8739-9F34C9987272}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_OrderForm", "CL_OrderForm\CL_OrderForm.csproj", "{8BED9F4F-D4DC-405E-AC35-BA0996B2C176}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{2E02F674-DA8B-4DA5-8739-9F34C9987272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E02F674-DA8B-4DA5-8739-9F34C9987272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E02F674-DA8B-4DA5-8739-9F34C9987272}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BED9F4F-D4DC-405E-AC35-BA0996B2C176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BED9F4F-D4DC-405E-AC35-BA0996B2C176}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BED9F4F-D4DC-405E-AC35-BA0996B2C176}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BED9F4F-D4DC-405E-AC35-BA0996B2C176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

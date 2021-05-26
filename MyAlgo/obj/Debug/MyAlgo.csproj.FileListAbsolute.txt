@@ -7,12 +7,3 @@ C:\Users\USER\OneDrive\Máy tính\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CoreC
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CopyComplete
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\MyAlgo\obj\Debug\MyAlgo.dll
 C:\Users\USER\OneDrive\Máy tính\FoodOrder\MyAlgo\obj\Debug\MyAlgo.pdb
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\bin\Debug\MyAlgo.dll
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\bin\Debug\MyAlgo.pdb
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\bin\Debug\DTO.dll
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\bin\Debug\DTO.pdb
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csprojAssemblyReference.cache
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CoreCompileInputs.cache
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CopyComplete
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\obj\Debug\MyAlgo.dll
-C:\Users\XUAN TRONG\Desktop\FoodOrder\MyAlgo\obj\Debug\MyAlgo.pdb
