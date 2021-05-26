@@ -138,10 +138,6 @@
       <Project>{78395b4a-903b-4e32-93fb-e45c77d96070}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CL_OrderForm\CL_OrderForm.csproj">
-      <Project>{8bed9f4f-d4dc-405e-ac35-ba0996b2c176}</Project>
-      <Name>CL_OrderForm</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{4294c7e7-86ba-469d-80b7-dd958d52b6a1}</Project>
       <Name>DTO</Name>
