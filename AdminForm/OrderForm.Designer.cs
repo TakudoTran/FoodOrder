@@ -39,12 +39,14 @@ namespace AdminForm
             this.btnDoUong = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnDoAn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnHome = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.pnBill = new Guna.UI.WinForms.GunaPanel();
             this.pnSortType = new Guna.UI.WinForms.GunaPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnMons = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnDanhMuc = new Guna.UI.WinForms.GunaGradient2Panel();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -54,7 +56,7 @@ namespace AdminForm
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1559, 131);
+            this.pnTop.Size = new System.Drawing.Size(1198, 131);
             this.pnTop.TabIndex = 0;
             // 
             // gunaControlBox2
@@ -65,7 +67,7 @@ namespace AdminForm
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1472, 0);
+            this.gunaControlBox2.Location = new System.Drawing.Point(1111, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -80,7 +82,7 @@ namespace AdminForm
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1514, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1153, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -98,7 +100,7 @@ namespace AdminForm
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 131);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(193, 567);
+            this.pnLeft.Size = new System.Drawing.Size(193, 630);
             this.pnLeft.TabIndex = 1;
             // 
             // btnContact
@@ -122,7 +124,7 @@ namespace AdminForm
             this.btnContact.ImageSize = new System.Drawing.Size(30, 30);
             this.btnContact.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnContact.LineLeft = 10;
-            this.btnContact.Location = new System.Drawing.Point(0, 372);
+            this.btnContact.Location = new System.Drawing.Point(0, 400);
             this.btnContact.Name = "btnContact";
             this.btnContact.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnContact.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
@@ -131,7 +133,7 @@ namespace AdminForm
             this.btnContact.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnContact.OnPressedColor = System.Drawing.Color.Black;
             this.btnContact.OnPressedDepth = 0;
-            this.btnContact.Size = new System.Drawing.Size(193, 93);
+            this.btnContact.Size = new System.Drawing.Size(193, 100);
             this.btnContact.TabIndex = 7;
             this.btnContact.Text = "Contact us";
             // 
@@ -156,7 +158,7 @@ namespace AdminForm
             this.btnFlash.ImageSize = new System.Drawing.Size(30, 30);
             this.btnFlash.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnFlash.LineLeft = 10;
-            this.btnFlash.Location = new System.Drawing.Point(0, 279);
+            this.btnFlash.Location = new System.Drawing.Point(0, 300);
             this.btnFlash.Name = "btnFlash";
             this.btnFlash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnFlash.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
@@ -165,7 +167,7 @@ namespace AdminForm
             this.btnFlash.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnFlash.OnPressedColor = System.Drawing.Color.Black;
             this.btnFlash.OnPressedDepth = 0;
-            this.btnFlash.Size = new System.Drawing.Size(193, 93);
+            this.btnFlash.Size = new System.Drawing.Size(193, 100);
             this.btnFlash.TabIndex = 7;
             this.btnFlash.Text = "Flash Order";
             // 
@@ -190,7 +192,7 @@ namespace AdminForm
             this.btnDoUong.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDoUong.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnDoUong.LineLeft = 10;
-            this.btnDoUong.Location = new System.Drawing.Point(0, 186);
+            this.btnDoUong.Location = new System.Drawing.Point(0, 200);
             this.btnDoUong.Name = "btnDoUong";
             this.btnDoUong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnDoUong.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
@@ -199,9 +201,10 @@ namespace AdminForm
             this.btnDoUong.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoUong.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoUong.OnPressedDepth = 0;
-            this.btnDoUong.Size = new System.Drawing.Size(193, 93);
+            this.btnDoUong.Size = new System.Drawing.Size(193, 100);
             this.btnDoUong.TabIndex = 4;
             this.btnDoUong.Text = "Đồ uống";
+            this.btnDoUong.Click += new System.EventHandler(this.btnDoUong_Click_1);
             // 
             // btnDoAn
             // 
@@ -224,7 +227,7 @@ namespace AdminForm
             this.btnDoAn.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDoAn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnDoAn.LineLeft = 10;
-            this.btnDoAn.Location = new System.Drawing.Point(0, 93);
+            this.btnDoAn.Location = new System.Drawing.Point(0, 100);
             this.btnDoAn.Name = "btnDoAn";
             this.btnDoAn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnDoAn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
@@ -233,7 +236,7 @@ namespace AdminForm
             this.btnDoAn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoAn.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoAn.OnPressedDepth = 0;
-            this.btnDoAn.Size = new System.Drawing.Size(193, 93);
+            this.btnDoAn.Size = new System.Drawing.Size(193, 100);
             this.btnDoAn.TabIndex = 3;
             this.btnDoAn.Text = "Đồ ăn";
             this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
@@ -269,70 +272,77 @@ namespace AdminForm
             this.btnHome.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnHome.OnPressedColor = System.Drawing.Color.Black;
             this.btnHome.OnPressedDepth = 0;
-            this.btnHome.Size = new System.Drawing.Size(193, 93);
+            this.btnHome.Size = new System.Drawing.Size(193, 100);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             // 
-            // gunaPanel1
+            // pnBill
             // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.Coral;
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaPanel1.Location = new System.Drawing.Point(1268, 131);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(291, 567);
-            this.gunaPanel1.TabIndex = 2;
-            // 
-            // gunaGradientPanel1
-            // 
-            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
-            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(193, 131);
-            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(109, 567);
-            this.gunaGradientPanel1.TabIndex = 3;
-            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            this.pnBill.BackColor = System.Drawing.Color.Coral;
+            this.pnBill.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnBill.Location = new System.Drawing.Point(871, 131);
+            this.pnBill.Name = "pnBill";
+            this.pnBill.Size = new System.Drawing.Size(327, 630);
+            this.pnBill.TabIndex = 2;
             // 
             // pnSortType
             // 
             this.pnSortType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnSortType.Location = new System.Drawing.Point(302, 131);
+            this.pnSortType.Location = new System.Drawing.Point(193, 131);
             this.pnSortType.Name = "pnSortType";
-            this.pnSortType.Size = new System.Drawing.Size(966, 77);
+            this.pnSortType.Size = new System.Drawing.Size(678, 100);
             this.pnSortType.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnMons);
+            this.panel2.Controls.Add(this.pnDanhMuc);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(193, 231);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(678, 530);
+            this.panel2.TabIndex = 5;
             // 
             // pnMons
             // 
-            this.pnMons.AutoScroll = true;
+            this.pnMons.BackColor = System.Drawing.Color.White;
             this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMons.Location = new System.Drawing.Point(302, 208);
+            this.pnMons.ForeColor = System.Drawing.Color.White;
+            this.pnMons.Location = new System.Drawing.Point(121, 0);
             this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(966, 490);
-            this.pnMons.TabIndex = 5;
+            this.pnMons.Size = new System.Drawing.Size(557, 530);
+            this.pnMons.TabIndex = 3;
+            // 
+            // pnDanhMuc
+            // 
+            this.pnDanhMuc.BackColor = System.Drawing.Color.Transparent;
+            this.pnDanhMuc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnDanhMuc.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(111)))), ((int)(((byte)(58)))));
+            this.pnDanhMuc.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(112)))));
+            this.pnDanhMuc.Location = new System.Drawing.Point(0, 0);
+            this.pnDanhMuc.Name = "pnDanhMuc";
+            this.pnDanhMuc.Size = new System.Drawing.Size(121, 530);
+            this.pnDanhMuc.TabIndex = 2;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1559, 698);
-            this.Controls.Add(this.pnMons);
+            this.ClientSize = new System.Drawing.Size(1198, 761);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnSortType);
-            this.Controls.Add(this.gunaGradientPanel1);
-            this.Controls.Add(this.gunaPanel1);
+            this.Controls.Add(this.pnBill);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,10 +356,11 @@ namespace AdminForm
         private Guna.UI.WinForms.GunaAdvenceButton btnDoUong;
         private Guna.UI.WinForms.GunaAdvenceButton btnFlash;
         private Guna.UI.WinForms.GunaAdvenceButton btnContact;
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        private Guna.UI.WinForms.GunaPanel pnBill;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaPanel pnSortType;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel pnMons;
+        private Guna.UI.WinForms.GunaGradient2Panel pnDanhMuc;
     }
 }
