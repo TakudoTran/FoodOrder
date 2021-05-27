@@ -110,3 +110,5 @@ C:\Users\XUAN TRONG\Desktop\new\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompileIn
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\BLL\obj\Debug\BLL.dll
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\MyAlgo.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\BLL\bin\Debug\MyAlgo.pdb

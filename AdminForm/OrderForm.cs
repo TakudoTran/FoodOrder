@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DSLMon;
 using UC_Mon;
 using DTO;
 using BLL;
@@ -20,6 +21,7 @@ namespace AdminForm
         public OrderForm()
         {
             InitializeComponent();
+            tongtien.Text = "0";
         }
 
         #region Do An / Do Uong
@@ -90,7 +92,58 @@ namespace AdminForm
         {
             UCMon obj = (UCMon)sender;
             Mon m = obj.Tag as Mon;
-            MessageBox.Show(m.TenMon + "  " + m.GiaTien);
+            SLMon objMon = new SLMon();
+            objMon.Name = m.TenMon;
+            objMon.TenMon = m.TenMon;
+            objMon.SoLuong = 1;
+            objMon.GiaTien = m.GiaTien;
+            objMon.TongTien = m.GiaTien.ToString();
+            if(pnDSL.Controls.Count == 0 )
+            {
+                objMon.TextChanged += SLMon_Changed;
+                pnDSL.Controls.Add(objMon);
+                tongtien.Text = objMon.TongTien;
+            }  
+            else if(pnDSL.Controls.Count != 0)
+            {
+                int Tien = 0;
+                bool CheckNameMon = false;
+                foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+                {
+                    if (objMon.TenMon == SLMon.TenMon)
+                    {
+                        CheckNameMon = true;
+                        break;
+                    }
+                    Tien += SLMon.GiaTien;
+                }
+                if(!CheckNameMon)
+                {
+                    objMon.TextChanged += SLMon_Changed;
+                    pnDSL.Controls.Add(objMon);
+                    Tien += objMon.GiaTien;
+                    tongtien.Text = Tien.ToString();
+                }    
+            }    
+              
+        }
+        private void SLMon_Changed(object sender, EventArgs e)
+        {
+            int Tien = 0;
+            foreach(var SLMon in pnDSL.Controls.OfType<SLMon>())
+            {
+                Tien += Convert.ToInt32(SLMon.TongTien);
+            }    
+            tongtien.Text = Tien.ToString();
+        }
+        private void tinhtien_Click(object sender, EventArgs e)
+        {
+            int Tien = 0;
+            foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+            {
+                Tien += Convert.ToInt32(SLMon.TongTien);
+            }
+            tongtien.Text = Tien.ToString();
         }
 
 

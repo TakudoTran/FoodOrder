@@ -16,3 +16,12 @@ C:\Users\XUAN TRONG\Desktop\new\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CoreCom
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CopyComplete
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\MyAlgo\obj\Debug\MyAlgo.dll
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\MyAlgo\obj\Debug\MyAlgo.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\bin\Debug\MyAlgo.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\bin\Debug\MyAlgo.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\obj\Debug\MyAlgo.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\obj\Debug\MyAlgo.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\MyAlgo\obj\Debug\MyAlgo.pdb
