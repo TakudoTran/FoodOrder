@@ -46,6 +46,6 @@ namespace AdminForm
             if (index == imgPaths.Count) index = 0;
         }
 
-       
+       //tét
     }
 }
