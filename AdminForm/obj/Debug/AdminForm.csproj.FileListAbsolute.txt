@@ -186,3 +186,11 @@ C:\Users\XUAN TRONG\Desktop\new\FoodOrder\AdminForm\obj\Debug\AdminForm.exe
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\AdminForm\obj\Debug\AdminForm.pdb
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.dll
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\MyAlgo.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UC_Mon.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UC_Mon.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\DSLMon.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\DSLMon.pdb

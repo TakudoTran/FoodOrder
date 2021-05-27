@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\DSLMon\DSLMon\bin\Debug\DSLMon.dll
+C:\Users\Admin\source\repos\DSLMon\DSLMon\bin\Debug\DSLMon.pdb
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.SLMon.resources
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.dll
+C:\Users\Admin\source\repos\DSLMon\DSLMon\obj\Debug\DSLMon.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\DSLMon.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\DSLMon.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.SLMon.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.pdb
