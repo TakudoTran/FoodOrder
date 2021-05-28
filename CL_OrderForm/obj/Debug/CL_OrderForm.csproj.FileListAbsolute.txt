@@ -55,3 +55,6 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\CL_OrderForm\obj\Debug\CL_OrderFor
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\CL_OrderForm\obj\Debug\CL_OrderForm.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\CL_OrderForm\obj\Debug\CL_OrderForm.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\CL_OrderForm\obj\Debug\CL_OrderForm.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\CL_OrderForm\bin\Debug\Guna.UI.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\CL_OrderForm\bin\Debug\UC_Mon.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\CL_OrderForm\bin\Debug\UC_Mon.pdb

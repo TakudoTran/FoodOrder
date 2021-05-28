@@ -23,7 +23,6 @@ namespace AdminForm
         {
             Close();
         }
-
         private void txtuser_Click(object sender, EventArgs e)
         {
             txtuser.Clear();

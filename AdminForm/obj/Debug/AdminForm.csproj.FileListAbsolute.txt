@@ -231,3 +231,4 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\bin\Debug\UC_Home.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\bin\Debug\9_4_2021.pdb
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\bin\Debug\UC_Home.pdb
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\obj\Debug\AdminForm.UserControlHome.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.UserControlHome.resources

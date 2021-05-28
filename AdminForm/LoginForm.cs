@@ -16,10 +16,6 @@ namespace AdminForm
         {
             InitializeComponent();
         }
-        private void form_close(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
         private void form_unhide(object sender, FormClosedEventArgs e)
         {
             this.Show();
@@ -35,7 +31,7 @@ namespace AdminForm
         private void ptcustomer_Click(object sender, EventArgs e)
         {
             OrderForm odf = new OrderForm();
-            odf.FormClosed += new FormClosedEventHandler(form_close);
+            odf.FormClosed += new FormClosedEventHandler(form_unhide);
             odf.Show();
             this.Hide();
         }
