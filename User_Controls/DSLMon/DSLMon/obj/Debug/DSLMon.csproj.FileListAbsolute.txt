@@ -13,3 +13,4 @@ C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\
 C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.dll
 C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csprojAssemblyReference.cache
