@@ -84,9 +84,10 @@ namespace DAL
         }
         public int GetMaxIdAnh()
         {
+            string query = "select max(IdAnh) from AnhMinhHoa";
             try
             {
-                return DBHelper.Instance.GetMaxValueOf("IdAnh", "AnhMinhHoa");
+                return DBHelper.Instance.GetMaxValue(query);
             }
             catch(Exception e)
             {
@@ -123,9 +124,10 @@ namespace DAL
         }
         public int GetMaxIdDanhMuc()
         {
+            string query = "select max(IdDanhMuc) from DanhMuc";
             try
             {
-                return DBHelper.Instance.GetMaxValueOf("IdDanhMuc", "DanhMuc");
+                return DBHelper.Instance.GetMaxValue(query);
             }
             catch (Exception e)
             {
@@ -275,9 +277,10 @@ namespace DAL
 
         public int GetMaxIdMon()
         {
+            string query = "select max(IdMon) from Mon";
             try
             {
-                return DBHelper.Instance.GetMaxValueOf("IdMon", "Mon");
+                return DBHelper.Instance.GetMaxValue(query);
             }
             catch (Exception e)
             {

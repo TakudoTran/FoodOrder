@@ -11,8 +11,8 @@ namespace DBProvider
     {
         private SqlConnection conn { get; set; }
         private static DBHelper _Instance;
-        //private string conStr = "Server = XUANTRONG\\SQLEXPRESS2019; database = PBL3; user id = sa; pwd = 06112000";
-        private string conStr = @"Data Source = ADMIN;Initial Catalog = PBL3; Integrated Security = True";
+        private string conStr = "Server = XUANTRONG\\SQLEXPRESS2019; database = PBL3; user id = sa; pwd = 06112000";
+        //private string conStr = @"Data Source = ADMIN;Initial Catalog = PBL3; Integrated Security = True";
         //private string conStr = "Server = DESKTOP-P1RUVPS\\SQLEXPRESS; database = PBL3; user id = sa; pwd = 290901";
         //private string conStr = "Data Source=LAPTOP-3A87UQ1T;Initial Catalog=PBL3;Integrated Security=True";
 
@@ -85,9 +85,8 @@ namespace DBProvider
             return data;
         }
 
-        public int GetMaxValueOf(string columnHeaderName, string tableName)
+        public int GetMaxValue(string query)
         {
-            string query = "select max(" + columnHeaderName + ") from " + tableName;
             int max = 0;
             using(SqlConnection con = new SqlConnection(conStr))
             {
@@ -100,6 +99,7 @@ namespace DBProvider
                 {
                     max = int.Parse(reader[0].ToString());
                 }
+                con.Close();
             }
             return max;
         }
