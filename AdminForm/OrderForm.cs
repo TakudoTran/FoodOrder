@@ -18,20 +18,62 @@ namespace AdminForm
 {
     public partial class OrderForm : Form
     {
+        private UserControlHome ucHome { get; set; }
         public OrderForm()
         {
             InitializeComponent();
             tongtien.Text = "0";
+            ucHome = new UserControlHome();
+            LoadUcHome();
         }
+        #region Home
+
+        private void ClearUCHome(Panel pn, UserControl uc)
+        {
+            pn.Controls.Remove(uc);
+        }
+        private void HideControlsInPnMid()
+        {
+            pnDanhMuc.Dock = DockStyle.None;
+            pnMons.Dock = DockStyle.None;
+            pnDanhMuc.Hide();
+            pnMons.Hide();
+        }
+        private void ShowControlsInPnMid()
+        {
+            pnDanhMuc.Dock = DockStyle.Left;
+            pnMons.Dock = DockStyle.Fill;
+            pnDanhMuc.Show();
+            pnMons.Show();
+        }
+        private void LoadUcHome()
+        {
+            pnMons.Controls.Clear();
+            pnDanhMuc.Controls.Clear();
+            pnMid.Controls.Add(ucHome);
+            HideControlsInPnMid();
+            ucHome.Dock = DockStyle.Fill;
+            ucHome.BringToFront();
+        }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            LoadUcHome();
+        }
+
+        #endregion
 
         #region Do An / Do Uong
 
         private void btnDoAn_Click(object sender, EventArgs e)
         {
+            ClearUCHome(pnMid, ucHome);
+            ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DA");
         }
         private void btnDoUong_Click_1(object sender, EventArgs e)
         {
+            ClearUCHome(pnMid, ucHome);
+            ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DU");
         }
 
@@ -148,6 +190,6 @@ namespace AdminForm
 
 
         #endregion
-
+        
     }
 }
