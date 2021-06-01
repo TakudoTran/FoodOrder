@@ -168,6 +168,10 @@
       <Project>{2e02f674-da8b-4da5-8739-9f34c9987272}</Project>
       <Name>MyAlgo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UC_FlashOrder\UC_FlashOrder.csproj">
+      <Project>{1f471605-ddbd-47ef-aeb5-798fce4b95d6}</Project>
+      <Name>UC_FlashOrder</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user2.png" />
