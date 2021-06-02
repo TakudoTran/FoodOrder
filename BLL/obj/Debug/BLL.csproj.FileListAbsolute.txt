@@ -127,3 +127,5 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\BLL\obj\Debug\BLL.csproj.CoreCompi
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\BLL\obj\Debug\BLL.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\BLL\obj\Debug\BLL.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\BLL\bin\Debug\MyAlgo.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\BLL\bin\Debug\MyAlgo.pdb

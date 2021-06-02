@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAlgo", "MyAlgo\MyAlgo.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_OrderForm", "CL_OrderForm\CL_OrderForm.csproj", "{2093F2CA-91B0-44AA-B58E-6B01192305B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UC_FlashOrder", "UC_FlashOrder\UC_FlashOrder.csproj", "{1F471605-DDBD-47EF-AEB5-798FCE4B95D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{2093F2CA-91B0-44AA-B58E-6B01192305B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2093F2CA-91B0-44AA-B58E-6B01192305B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2093F2CA-91B0-44AA-B58E-6B01192305B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F471605-DDBD-47EF-AEB5-798FCE4B95D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F471605-DDBD-47EF-AEB5-798FCE4B95D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F471605-DDBD-47EF-AEB5-798FCE4B95D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F471605-DDBD-47EF-AEB5-798FCE4B95D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

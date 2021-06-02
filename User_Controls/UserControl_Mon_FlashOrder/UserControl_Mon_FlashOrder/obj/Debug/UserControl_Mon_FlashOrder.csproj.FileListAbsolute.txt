@@ -1,0 +1,11 @@
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\bin\Debug\UserControl_Mon_FlashOrder.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\bin\Debug\UserControl_Mon_FlashOrder.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\bin\Debug\Guna.UI.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.csprojAssemblyReference.cache
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.Properties.Resources.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.UC_MonFO.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.csproj.GenerateResource.cache
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.csproj.CoreCompileInputs.cache
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.csproj.CopyComplete
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UserControl_Mon_FlashOrder\UserControl_Mon_FlashOrder\obj\Debug\UserControl_Mon_FlashOrder.pdb

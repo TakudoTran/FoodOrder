@@ -13,24 +13,26 @@ using DTO;
 using BLL;
 using Guna.UI.WinForms;
 using CL_OrderForm;
+using UC_FlashOrder;
 
 namespace AdminForm
 {
     public partial class OrderForm : Form
     {
         private UserControlHome ucHome { get; set; }
+        private UCFlashOrder ucFlashOrder { get; set; }
         public OrderForm()
         {
             InitializeComponent();
             tongtien.Text = "0";
             ucHome = new UserControlHome();
+            ucFlashOrder = new UCFlashOrder();
             LoadUcHome();
         }
-        #region Home
-
-        private void ClearUCHome(Panel pn, UserControl uc)
+        #region support menthod
+        private void ClearUCinPanel(Panel pn, UserControl uc)
         {
-            pn.Controls.Remove(uc);
+            if (pn.Contains(uc)) pn.Controls.Remove(uc);
         }
         private void HideControlsInPnMid()
         {
@@ -46,10 +48,16 @@ namespace AdminForm
             pnDanhMuc.Show();
             pnMons.Show();
         }
+        #endregion
+
+        #region Home
+
         private void LoadUcHome()
         {
             pnMons.Controls.Clear();
             pnDanhMuc.Controls.Clear();
+            //
+            ClearUCinPanel(pnMid, ucFlashOrder);
             pnMid.Controls.Add(ucHome);
             HideControlsInPnMid();
             ucHome.Dock = DockStyle.Fill;
@@ -66,13 +74,15 @@ namespace AdminForm
 
         private void btnDoAn_Click(object sender, EventArgs e)
         {
-            ClearUCHome(pnMid, ucHome);
+            ClearUCinPanel(pnMid, ucHome);
+            ClearUCinPanel(pnMid, ucFlashOrder);
             ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DA");
         }
         private void btnDoUong_Click_1(object sender, EventArgs e)
         {
-            ClearUCHome(pnMid, ucHome);
+            ClearUCinPanel(pnMid, ucHome);
+            ClearUCinPanel(pnMid, ucFlashOrder);
             ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DU");
         }
@@ -190,6 +200,67 @@ namespace AdminForm
 
 
         #endregion
-        
+
+
+        #region Flash Order
+        private void LoadUcFlashOrder()
+        {
+            pnMons.Controls.Clear();
+            pnDanhMuc.Controls.Clear();
+            //
+            pnMid.Controls.Add(ucFlashOrder);
+            ClearUCinPanel(pnMid, ucHome);
+            HideControlsInPnMid();
+            ucFlashOrder.Dock = DockStyle.Fill;
+            ucFlashOrder.BringToFront();
+        }
+        private void btnFlash_Click(object sender, EventArgs e)
+        {
+            LoadUcFlashOrder();
+            ucFlashOrder.OrderNow += ThemVaoBill;
+        }
+
+        private void ThemVaoBill(object sender, EventArgs e)
+        {
+            List<Mon> mons = ucFlashOrder.listMonFO;
+            for(int i = 0; i < mons.Count; i++)
+            {
+                SLMon objMon = new SLMon();
+                objMon.Name = mons[i].TenMon;
+                objMon.TenMon = mons[i].TenMon;
+                objMon.SoLuong = 1;
+                objMon.GiaTien = mons[i].GiaTien;
+                objMon.TongTien = mons[i].GiaTien.ToString();
+                if (pnDSL.Controls.Count == 0)
+                {
+                    objMon.TextChanged += SLMon_Changed;
+                    pnDSL.Controls.Add(objMon);
+                    tongtien.Text = objMon.TongTien;
+                }
+                else if (pnDSL.Controls.Count != 0)
+                {
+                    int Tien = 0;
+                    bool CheckNameMon = false;
+                    foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+                    {
+                        if (objMon.TenMon == SLMon.TenMon)
+                        {
+                            CheckNameMon = true;
+                            break;
+                        }
+                        Tien += SLMon.GiaTien;
+                    }
+                    if (!CheckNameMon)
+                    {
+                        objMon.TextChanged += SLMon_Changed;
+                        pnDSL.Controls.Add(objMon);
+                        Tien += objMon.GiaTien;
+                        tongtien.Text = Tien.ToString();
+                    }
+                }
+            }
+        }
+        #endregion
+
     }
 }

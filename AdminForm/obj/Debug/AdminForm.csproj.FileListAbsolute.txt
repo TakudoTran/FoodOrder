@@ -232,3 +232,14 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\bin\Debug\9_4_2021.pdb
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\bin\Debug\UC_Home.pdb
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\AdminForm\obj\Debug\AdminForm.UserControlHome.resources
 C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.UserControlHome.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\DSLMon.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\MyAlgo.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CL_OrderForm.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\DSLMon.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.UserControlHome.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.pdb
