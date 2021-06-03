@@ -24,6 +24,7 @@ namespace AdminForm
         public OrderForm()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
             BLL_OrderForm.Instance.setCbbDanhMucBan(cbbBanAn);
             tongtien.Text = "0";
             ucHome = new UserControlHome();
@@ -228,6 +229,7 @@ namespace AdminForm
             for(int i = 0; i < mons.Count; i++)
             {
                 SLMon objMon = new SLMon();
+                objMon.IdMon = mons[i].IdMon;
                 objMon.Name = mons[i].TenMon;
                 objMon.TenMon = mons[i].TenMon;
                 objMon.SoLuong = 1;

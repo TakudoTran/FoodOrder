@@ -17,7 +17,6 @@ namespace UC_FlashOrder
 {
     public partial class UCFlashOrder : UserControl
     {
-        private List<string> imgPaths;
         private List<Mon> AllMon;
         private List<Mon> _listMonFO = null;
         public List<Mon> listMonFO
@@ -36,12 +35,6 @@ namespace UC_FlashOrder
         {
             InitializeComponent();
             AllMon = BusinessLogicLayer.Instance.GetAllMon();
-        }
-        public string GetImgPath()
-        {
-            string currentPath = Directory.GetCurrentDirectory();
-            string Imgpath = currentPath + @"\ImageSlider";
-            return Imgpath;
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -82,12 +75,28 @@ namespace UC_FlashOrder
             OnOrderNow(EventArgs.Empty);
         }
 
-        private void txtTien_Click(object sender, EventArgs e)
+        private int imgNum = 1;
+        private void LoadNextImg()
         {
-            txtTien.Text = "";
+            if(imgNum == 4)
+            {
+                imgNum = 1;
+            }
+            picSlide.ImageLocation = string.Format(@"FOImgs\Img{0}.jpg", imgNum);
+            imgNum++;
         }
         private void timerFO_Tick(object sender, EventArgs e)
         {
+            LoadNextImg();
+        }
+        private void txtTien_Click_1(object sender, EventArgs e)
+        {
+            txtTien.Clear();
+        }
+
+        private void txtTien_TextChanged(object sender, EventArgs e)
+        {
+            txtTien.ForeColor = Color.Black;
         }
     }
 }

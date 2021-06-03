@@ -43,7 +43,7 @@ namespace CL_OrderForm
             btn.Font = new System.Drawing.Font("Segoe UI", 12F);
             btn.ForeColor = System.Drawing.Color.DimGray;
             btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            btn.LineRight = 3;
+            btn.LineRight = 5;
             btn.Location = new System.Drawing.Point(0, 93);
             btn.Image = null;
             btn.CheckedImage = null;
