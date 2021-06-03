@@ -55,4 +55,3 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DTO\obj\Debug\DTO.csprojAssemblyRe
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DTO\obj\Debug\DTO.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DTO\obj\Debug\DTO.pdb
-C:\Users\Admin\Documents\GitHub\FoodOrder\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
