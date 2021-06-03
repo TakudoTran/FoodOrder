@@ -280,6 +280,49 @@ namespace BLL
         }
 
         #endregion
+
+        #region default bill
+        public bool Load_Default_Bill_BLL()
+        {
+            return DataAccessLayer.Instance.Load_Default_Bill_DAL();
+        }
+        #endregion
+
+        #region danh muc ban
+        private List<CBBItem> GetCBBItemsBan()
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (BanAn i in GetAllDanhMucBan())
+            {
+                data.Add(new CBBItem
+                {
+                    Value = i.IdBan,
+                    Text = i.TenBan
+                });
+            }
+            return data;
+        }
+        public List<BanAn> GetAllDanhMucBan()
+        {
+            return DataAccessLayer.Instance.GetAllDanhMucBan_DAL();
+        }
+        public void setCbbDanhMucBan(ComboBox cb)
+        {
+            cb.Items.AddRange(GetCBBItemsBan().ToArray());
+            cb.SelectedIndex = 0;
+        }
+        #endregion
+
+        #region hoa don
+        public List<BillToAcess> GetBillByTable_BLL(int idBan)
+        {
+            return DataAccessLayer.Instance.GetBillByTable_DAL(idBan);
+        }
+         public bool SetHoaDon_BLL(int tt, int currbill)
+        {
+            return DataAccessLayer.Instance.SetHoaDon_DAL(tt,currbill);
+        }
+        #endregion
         #region Loai
         public List<string> GetDataLoai()
         {

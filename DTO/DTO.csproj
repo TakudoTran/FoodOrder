@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnhMinhHoa.cs" />
+    <Compile Include="BanAn.cs" />
+    <Compile Include="BillToAcess.cs" />
     <Compile Include="CBBItem.cs" />
     <Compile Include="DanhMuc.cs" />
     <Compile Include="Login.cs" />

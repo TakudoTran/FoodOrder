@@ -24,6 +24,7 @@ namespace AdminForm
         public OrderForm()
         {
             InitializeComponent();
+            BLL_OrderForm.Instance.setCbbDanhMucBan(cbbBanAn);
             tongtien.Text = "0";
             ucHome = new UserControlHome();
             ucFlashOrder = new UCFlashOrder();
@@ -145,6 +146,7 @@ namespace AdminForm
             UCMon obj = (UCMon)sender;
             Mon m = obj.Tag as Mon;
             SLMon objMon = new SLMon();
+            objMon.IdMon = m.IdMon;
             objMon.Name = m.TenMon;
             objMon.TenMon = m.TenMon;
             objMon.SoLuong = 1;
@@ -262,5 +264,26 @@ namespace AdminForm
         }
         #endregion
 
+        #region dat don
+        private void datdon_Click(object sender, EventArgs e)
+        {
+            int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
+            List<int> idMon = new List<int>();
+            List<int> slMon  = new List<int>();
+            foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+            {
+                idMon.Add(SLMon.IdMon);
+                slMon.Add(SLMon.SoLuong);
+            }
+            if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon)==true)
+            {
+                MessageBox.Show("Da dat mon thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("Dat that bai");
+            }  
+        }
+        #endregion
     }
 }
