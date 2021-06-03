@@ -20,7 +20,6 @@ namespace AdminForm
             InitializeComponent();
             dgvDanhSachMon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
-            BusinessLogicLayer.Instance.setCbbDanhMucBan(cbbBanAn);
             Show(0, null);
             BusinessLogicLayer.Instance.SetColumnHeaderMon(dgvDanhSachMon);
 
@@ -31,7 +30,7 @@ namespace AdminForm
 
             BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
         }
-        private int CurrentBill = 0;
+
         private void Show(int idDanhmuc, string tenMon)
         {
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetMonByIdDanhMucAndTenMon(idDanhmuc, tenMon);
@@ -265,40 +264,6 @@ namespace AdminForm
             CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
             int idSort = cbSort.Value;
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
-        }
-
-        private void Default_Bill(object sender, EventArgs e)
-        {
-            if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
-            else MessageBox.Show("Add Fail");
-        }
-
-        private void bbtFind_Click(object sender, EventArgs e)
-        {
-            int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
-            List<BillToAcess> data = new List<BillToAcess>();
-            data = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
-            int TongTien = 0;
-            foreach(BillToAcess i in data)
-            {
-                CurrentBill = i.BillNo;
-                string[] row = { i.TenMon, i.SoLuong.ToString(), i.GiaTien.ToString() };
-                var listViewItem = new ListViewItem(row);
-                listView1.Items.Add(listViewItem);
-                TongTien += i.GiaTien * i.SoLuong;
-            }
-            tongtien.Text = TongTien.ToString();
-            tongtien.ReadOnly = true;
-        }
-
-        private void InHoaDon_Click(object sender, EventArgs e)
-        {
-            int TongTien = Convert.ToInt32(tongtien.Text);
-            if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien,CurrentBill))
-            {
-                MessageBox.Show("Susscess");
-            }
-            else MessageBox.Show("Fail");
         }
     }
 }

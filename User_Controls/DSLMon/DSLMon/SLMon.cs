@@ -18,7 +18,6 @@ namespace DSLMon
             this.tongtien.TextChanged += new EventHandler(Text_Changed);
         }
         private int SLConLai = 100;
-        public int IdMon { get; set; }
         public string TenMon
         {
             get
