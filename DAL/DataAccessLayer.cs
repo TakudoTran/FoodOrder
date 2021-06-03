@@ -8,6 +8,7 @@ using DBProvider;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace DAL
 {
@@ -185,6 +186,50 @@ namespace DAL
         }
         #endregion
 
+        #region danh muc ban
+        public List<BanAn> GetAllDanhMucBan_DAL()
+        {
+            string query = "select * from BanAn";
+            List<BanAn> lisDanhMucBan = new List<BanAn>();
+            foreach (DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
+            {
+                lisDanhMucBan.Add(GetDanhMucBan(i));
+            }
+            return lisDanhMucBan;
+        }
+        private BanAn GetDanhMucBan(DataRow i)
+        {
+            string tenBan = "No Name";
+            if (!DBNull.Value.Equals(i["TenBan"])) tenBan = i["TenBan"].ToString();
+            return new BanAn
+            {
+                TenBan = tenBan,
+                IdBan = int.Parse(i["IdBan"].ToString())
+            };
+        }
+        #endregion
+
+        #region default bill
+        public bool Load_Default_Bill_DAL()
+        {
+            try
+            {
+                string query = "insert into Bill(IdBan,TongTien, NgayLapHoaDon)" +
+                                   "values ( @id , @tien , @ngay )";
+                string date = "2021/01/01 00/00/00";
+                DateTime dt = DateTime.ParseExact(date, "yyyy/MM/dd hh/mm/ss", CultureInfo.InvariantCulture);
+                object[] prams = { 1, 0,  dt};
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi" + e.Message);
+                return false;
+            }
+        }
+        #endregion
+
         #region Loai Danh Muc
         public List<string> DataLoai()
         {
@@ -335,7 +380,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                MessageBox.Show("Lỗi" + e.Message);
+                MessageBox.Show("Lỗi " + e.Message);
                 return false;
             }
         }
@@ -347,6 +392,129 @@ namespace DAL
                         " SoLanGoiMon = @solangoi , IdDanhMuc = @idDm , IdAnh = @idAnh where IdMon = @idmon ";
 
                 object[] prams = { Mon.TenMon, Mon.GiaTien, Mon.SoLanGoiMon, Mon.IdDanhMuc, Mon.IdAnh, Mon.IdMon };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region Dat bill
+        public int GetMaxBill()
+        {
+            try
+            {
+                string query = @"select max(BillNo) from Bill";
+                return DBHelper.Instance.GetMaxValue(query);
+            }catch(Exception e)
+            {
+                return -1;
+            }
+        }
+        public bool AddBill(int idBan)
+        {
+            try
+            {
+                string query = "insert into Bill(IdBan,TongTien, NgayLapHoaDon)" +
+                                   "values ( @id , @tien , @ngay )";
+                string date = DateTime.Now.ToString("yyyy/MM/dd hh/mm/ss");
+                DateTime dt = DateTime.ParseExact(date, "yyyy/MM/dd hh/mm/ss", CultureInfo.InvariantCulture);
+                object[] prams = { idBan, 0, dt };
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Lỗi" + e.Message);
+                return false;
+            }
+        }
+        public bool AddBillToData_DAL(int idBan, List<int> idMon, List<int> slMon)
+        {
+            try
+            {
+                if(AddBill(idBan))
+                {
+                    int[] id = idMon.ToArray();
+                    int[] sl = slMon.ToArray();
+                    int BillMax = GetMaxBill();
+                    bool addBillDetail = true;
+                    for (int i = 0; i < id.Length; i++)
+                    {
+                        string query = "insert into BillDetail(BillNo, IdMon, SoLuong)" +
+                                        "values ( @billno , @id , @sl )";
+                        object[] prams = { BillMax, id[i], sl[i] };
+                        addBillDetail = (DBHelper.Instance.ExecuteNonQuery(query, prams) > 0);
+                    }
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi: " + e.Message);
+                return false;
+            }
+        }
+        public bool UpdateSLG_DAL(int idMon)
+        {
+            try
+            {
+                string query = "update Mon set SoLanGoiMon = SoLanGoiMon + 1 where IdMon = @id ";
+
+                object[] prams = { idMon };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region xu li bill
+        public List<BillToAcess> GetBillByTable_DAL(int idBan)
+        {
+            try
+            {
+                List<BillToAcess> data = new List<BillToAcess>();
+                string query = "select Bill.BillNo, TenMon, SoLuong, GiaTien " +
+                    "from Bill inner join BillDetail on Bill.BillNo = BillDetail.BillNo inner" +
+                    " join Mon on BillDetail.IdMon = Mon.IdMon" +
+                    " where NgayLapHoaDon = (select max(NgayLapHoaDon) from Bill where IdBan = "+idBan+")";
+                foreach (DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
+                {
+                    data.Add(GetBillNo(i));
+                }
+                return data;
+
+            }catch(Exception)
+            {
+                return null;
+            }
+        }
+        private BillToAcess GetBillNo(DataRow i)
+        {
+            return new BillToAcess
+            {
+                BillNo = Convert.ToInt32(i["BillNo"].ToString()),
+                TenMon = i["TenMon"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"]),
+                GiaTien = Convert.ToInt32(i["GiaTien"])
+            };
+        }
+        public bool SetHoaDon_DAL(int TongTien, int CurrentBill)
+        {
+            try
+            {
+                string query = "update Bill set TongTien = @tien where BillNo = @bill ";
+
+                object[] prams = { TongTien, CurrentBill };
 
                 return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
 
