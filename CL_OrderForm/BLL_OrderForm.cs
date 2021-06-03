@@ -9,6 +9,7 @@ using Guna.UI.WinForms;
 using System.Drawing;
 using BLL;
 using UC_Mon;
+using DAL;
 
 namespace CL_OrderForm
 {
@@ -49,6 +50,51 @@ namespace CL_OrderForm
         }
 
 
+        #endregion
+
+        #region danh muc ban
+        private List<CBBItem> GetCBBItems()
+        {
+            List<CBBItem> data = new List<CBBItem>();
+            foreach (BanAn i in GetAllDanhMucBan())
+            {
+                data.Add(new CBBItem
+                {
+                    Value = i.IdBan,
+                    Text = i.TenBan
+                });
+            }
+            return data;
+        }
+        public List<BanAn> GetAllDanhMucBan()
+        {
+            return DataAccessLayer.Instance.GetAllDanhMucBan_DAL();
+        }
+        public void setCbbDanhMucBan(ComboBox cb)
+        {
+            cb.Items.AddRange(GetCBBItems().ToArray());
+            cb.SelectedIndex = 0;
+        }
+        #endregion
+
+        #region ghi bill
+        public bool AddBillToData_BLL(int idBan, List<int> idMon, List<int> sl)
+        {
+            return DataAccessLayer.Instance.AddBillToData_DAL(idBan, idMon, sl);
+        }
+        public bool UpdateSLG_BLL(List<int> idMon)
+        {
+            bool check = true;
+            foreach(int i in idMon)
+            {
+                if (DataAccessLayer.Instance.UpdateSLG_DAL(i))
+                {
+                    check = true;
+                }
+                else check = false;
+            }
+            return check;
+        }
         #endregion
 
     }

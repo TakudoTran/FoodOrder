@@ -243,3 +243,7 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.pdb
+C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\UserControl_Mon_FlashOrder.pdb
