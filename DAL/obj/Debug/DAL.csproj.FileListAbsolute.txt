@@ -108,3 +108,14 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DAL\obj\Debug\DAL.csproj.CoreCompi
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DAL\obj\Debug\DAL.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DAL\obj\Debug\DAL.pdb
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DAL.dll
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DAL.pdb
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DBProvider.dll
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DTO.dll
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DBProvider.pdb
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\bin\Debug\DTO.pdb
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\obj\Debug\DAL.dll
+C:\Users\XUAN TRONG\Desktop\OLD\FoodOrder\DAL\obj\Debug\DAL.pdb
