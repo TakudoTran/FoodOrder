@@ -459,6 +459,22 @@ namespace DAL
                 return false;
             }
         }
+        public bool UpdateSLG_DAL(int idMon)
+        {
+            try
+            {
+                string query = "update Mon set SoLanGoiMon = SoLanGoiMon + 1 where IdMon = @id ";
+
+                object[] prams = { idMon };
+
+                return DBHelper.Instance.ExecuteNonQuery(query, prams) > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         #endregion
 
         #region xu li bill

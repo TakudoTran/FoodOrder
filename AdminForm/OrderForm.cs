@@ -275,7 +275,7 @@ namespace AdminForm
                 idMon.Add(SLMon.IdMon);
                 slMon.Add(SLMon.SoLuong);
             }
-            if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon))
+            if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon)==true)
             {
                 MessageBox.Show("Da dat mon thanh cong");
             }

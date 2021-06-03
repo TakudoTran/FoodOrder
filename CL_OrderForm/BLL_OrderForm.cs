@@ -82,6 +82,19 @@ namespace CL_OrderForm
         {
             return DataAccessLayer.Instance.AddBillToData_DAL(idBan, idMon, sl);
         }
+        public bool UpdateSLG_BLL(List<int> idMon)
+        {
+            bool check = true;
+            foreach(int i in idMon)
+            {
+                if (DataAccessLayer.Instance.UpdateSLG_DAL(i))
+                {
+                    check = true;
+                }
+                else check = false;
+            }
+            return check;
+        }
         #endregion
 
     }
