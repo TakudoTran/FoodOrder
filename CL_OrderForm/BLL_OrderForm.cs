@@ -41,6 +41,7 @@ namespace CL_OrderForm
             btn.Dock = System.Windows.Forms.DockStyle.Top;
             btn.FocusedColor = System.Drawing.Color.Empty;
             btn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            btn.TextAlign = HorizontalAlignment.Left;
             btn.ForeColor = System.Drawing.Color.DimGray;
             btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             btn.LineRight = 5;

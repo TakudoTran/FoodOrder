@@ -72,27 +72,6 @@ namespace DSLMon
             }
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.FlatAppearance.BorderSize = 1;
-            button1.FlatAppearance.BorderColor = Color.DeepSkyBlue;
-        }
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
-        }
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-            button2.FlatAppearance.BorderSize = 1;
-            button2.FlatAppearance.BorderColor = Color.DeepSkyBlue;
-        }
-        private void button2_MouseLeave(object sender, EventArgs e)
-        {
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
