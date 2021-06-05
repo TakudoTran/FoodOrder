@@ -36,6 +36,24 @@ namespace MyAlgo
                 }
             }
         }
+        public delegate bool SortType(Mon s1, Mon s2);
+        public List<Mon> MonsSapXep_FO(Mon[] arr, SortType cmp)
+        {
+            for (int i = 0; i < arr.Length - 1; ++i)
+            {
+                for (int j = i + 1; j < arr.Length; ++j)
+                {
+                    if (cmp(arr[i], arr[j]))
+                    {
+                        Mon temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr.ToList();
+
+        }
         #region Flash Order
         public List<Mon> FlashOrder(List<Mon> mons, int giaTien)
         {

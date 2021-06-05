@@ -14,11 +14,13 @@ using BLL;
 using Guna.UI.WinForms;
 using CL_OrderForm;
 using UC_FlashOrder;
+using MyAlgo;
 
 namespace AdminForm
 {
     public partial class OrderForm : Form
     {
+
         private UserControlHome ucHome { get; set; }
         private UCFlashOrder ucFlashOrder { get; set; }
         public OrderForm()
@@ -42,6 +44,7 @@ namespace AdminForm
             pnMons.Dock = DockStyle.None;
             pnDanhMuc.Hide();
             pnMons.Hide();
+            danhMuc = null;
         }
         private void ShowControlsInPnMid()
         {
@@ -49,6 +52,16 @@ namespace AdminForm
             pnMons.Dock = DockStyle.Fill;
             pnDanhMuc.Show();
             pnMons.Show();
+        }
+        private void HidePanelSortType()
+        {
+            pnSapXep.Enabled = false;
+            pnSapXep.Hide();
+        }
+        private void UnHidePanelSortType()
+        {
+            pnSapXep.Enabled = true;
+            pnSapXep.Show();
         }
         #endregion
 
@@ -58,6 +71,7 @@ namespace AdminForm
         {
             pnMons.Controls.Clear();
             pnDanhMuc.Controls.Clear();
+            HidePanelSortType();
             //
             ClearUCinPanel(pnMid, ucFlashOrder);
             pnMid.Controls.Add(ucHome);
@@ -80,6 +94,7 @@ namespace AdminForm
             ClearUCinPanel(pnMid, ucFlashOrder);
             ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DA");
+            UnHidePanelSortType();
         }
         private void btnDoUong_Click_1(object sender, EventArgs e)
         {
@@ -87,6 +102,7 @@ namespace AdminForm
             ClearUCinPanel(pnMid, ucFlashOrder);
             ShowControlsInPnMid();
             setPanelDanhMuc(pnDanhMuc, "DU");
+            UnHidePanelSortType();
         }
 
         public void setPanelDanhMuc(GunaGradient2Panel pn, string loai)
@@ -102,7 +118,7 @@ namespace AdminForm
                 foreach (DanhMuc i in danhMucOfDoAn)
                 {
                     GunaAdvenceButton btn = new GunaAdvenceButton();
-                    btn.Text = i.TenDanhMuc;
+                    btn.Text = "    "+i.TenDanhMuc;
                     btn.Tag = i; // button đang chứa 1 đối tượng danh mục
                     pn.Controls.Add(btn);
                     btn.Dock = DockStyle.Top;
@@ -112,12 +128,56 @@ namespace AdminForm
                 }
             }
         }
+        //click Sort types
+
+        private void radTopOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            if(danhMuc != null)
+            {
+                List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
+                ShowMonByDanhMuc(pnMons, mons);
+            }
+        }
+
+        private void radGiaTang_CheckedChanged(object sender, EventArgs e)
+        {
+            if (danhMuc != null)
+            {
+                List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
+                ShowMonByDanhMuc(pnMons, mons);
+            }
+        }
+
+        private void radGiaGiam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (danhMuc != null)
+            {
+                List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
+                ShowMonByDanhMuc(pnMons, mons);
+            }
+        }
         //Click Danh mục
+        private DanhMuc danhMuc = null;
         private void danhMuc_Click(object sender, EventArgs e)
         {
             GunaAdvenceButton btnDm = (GunaAdvenceButton)sender;
-            DanhMuc dm = btnDm.Tag as DanhMuc;
-            List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(dm.IdDanhMuc);
+            danhMuc = btnDm.Tag as DanhMuc;
+            List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
+            if (radGiaGiam.Checked)
+            {
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
+            }
+            if (radGiaTang.Checked)
+            {
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
+            }
+            if (radTopOrder.Checked)
+            {
+                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
+            }
             ShowMonByDanhMuc(pnMons, mons);
         }
         private void ShowMonByDanhMuc(FlowLayoutPanel pn, List<Mon> mons)
@@ -210,6 +270,7 @@ namespace AdminForm
         {
             pnMons.Controls.Clear();
             pnDanhMuc.Controls.Clear();
+            HidePanelSortType();
             //
             pnMid.Controls.Add(ucFlashOrder);
             ClearUCinPanel(pnMid, ucHome);
@@ -280,12 +341,20 @@ namespace AdminForm
             if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon)==true)
             {
                 MessageBox.Show("Da dat mon thanh cong");
+                pnDSL.Controls.Clear();
             }
             else
             {
                 MessageBox.Show("Dat that bai");
-            }  
+            }
+            
         }
+        private void huy_Click(object sender, EventArgs e)
+        {
+            pnDSL.Controls.Clear();
+        }
+
         #endregion
+
     }
 }

@@ -38,6 +38,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnOrder = new Guna.UI.WinForms.GunaGradientButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradient2Panel1.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -53,7 +57,7 @@
             this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
             this.gunaGradient2Panel1.Location = new System.Drawing.Point(3, 3);
             this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(171, 59);
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(132, 48);
             this.gunaGradient2Panel1.TabIndex = 1;
             // 
             // lblGiaTien
@@ -63,7 +67,7 @@
             this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
             this.lblGiaTien.Location = new System.Drawing.Point(22, 0);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(149, 59);
+            this.lblGiaTien.Size = new System.Drawing.Size(110, 48);
             this.lblGiaTien.TabIndex = 0;
             this.lblGiaTien.Text = "50000";
             this.lblGiaTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -75,7 +79,7 @@
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel3.Location = new System.Drawing.Point(0, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(22, 59);
+            this.gunaLabel3.Size = new System.Drawing.Size(22, 48);
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "$";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,11 +90,11 @@
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.Controls.Add(this.lblTen);
             this.gunaShadowPanel1.Controls.Add(this.gunaElipsePanel1);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(3, 125);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(-13, 125);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel1.ShadowDepth = 50;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(528, 87);
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(528, 95);
             this.gunaShadowPanel1.TabIndex = 1;
             // 
             // lblTen
@@ -100,7 +104,7 @@
             this.lblTen.ForeColor = System.Drawing.Color.White;
             this.lblTen.Location = new System.Drawing.Point(0, 0);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(528, 87);
+            this.lblTen.Size = new System.Drawing.Size(528, 95);
             this.lblTen.TabIndex = 0;
             this.lblTen.Text = "Cánh Gà Chiên Mắm";
             this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,12 +126,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.84211F));
             this.tableLayoutPanel1.Controls.Add(this.btnOrder, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 329);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 304);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(531, 65);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(487, 55);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnOrder
@@ -142,9 +145,10 @@
             this.btnOrder.FocusedColor = System.Drawing.Color.Empty;
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Image = null;
-            this.btnOrder.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnOrder.Location = new System.Drawing.Point(337, 3);
+            this.btnOrder.Image = global::UC_Mon.Properties.Resources.download__1_;
+            this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnOrder.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnOrder.Location = new System.Drawing.Point(309, 3);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
             this.btnOrder.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
@@ -152,7 +156,7 @@
             this.btnOrder.OnHoverForeColor = System.Drawing.Color.White;
             this.btnOrder.OnHoverImage = null;
             this.btnOrder.OnPressedColor = System.Drawing.Color.Black;
-            this.btnOrder.Size = new System.Drawing.Size(191, 59);
+            this.btnOrder.Size = new System.Drawing.Size(175, 49);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order Now";
             // 
@@ -163,14 +167,49 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel2.Controls.Add(this.gunaGradient2Panel1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(531, 65);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(490, 54);
             this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(6, 361);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(499, 6);
+            this.panel1.TabIndex = 5;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 367);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(499, 6);
+            this.flowLayoutPanel2.TabIndex = 6;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(499, 6);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(6, 355);
+            this.flowLayoutPanel3.TabIndex = 7;
             // 
             // UCMon
             // 
@@ -179,12 +218,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.flowLayoutPanel3);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gunaShadowPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "UCMon";
-            this.Size = new System.Drawing.Size(531, 394);
+            this.Size = new System.Drawing.Size(505, 367);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaShadowPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -203,5 +246,9 @@
         private Guna.UI.WinForms.GunaGradientButton btnOrder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }
