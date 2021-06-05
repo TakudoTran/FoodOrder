@@ -275,6 +275,7 @@ namespace AdminForm
 
         private void bbtFind_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
             List<BillToAcess> data = new List<BillToAcess>();
             data = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
