@@ -31,8 +31,9 @@ namespace AdminForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.pnTop = new Guna.UI.WinForms.GunaPanel();
-            this.btnMaxsize = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.btnMaxsize = new Guna.UI.WinForms.GunaControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
             this.btnContact = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnFlash = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -68,6 +69,7 @@ namespace AdminForm
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.pnBill.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
@@ -81,14 +83,31 @@ namespace AdminForm
             // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.btnMaxsize);
             this.pnTop.Controls.Add(this.gunaControlBox1);
+            this.pnTop.Controls.Add(this.btnMaxsize);
+            this.pnTop.Controls.Add(this.pictureBox1);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1472, 132);
+            this.pnTop.Size = new System.Drawing.Size(1472, 235);
             this.pnTop.TabIndex = 0;
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(1427, 0);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 28);
+            this.gunaControlBox1.TabIndex = 0;
             // 
             // btnMaxsize
             // 
@@ -107,21 +126,16 @@ namespace AdminForm
             this.btnMaxsize.Size = new System.Drawing.Size(45, 28);
             this.btnMaxsize.TabIndex = 1;
             // 
-            // gunaControlBox1
+            // pictureBox1
             // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1427, 0);
-            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 28);
-            this.gunaControlBox1.TabIndex = 0;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1472, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // pnLeft
             // 
@@ -131,10 +145,10 @@ namespace AdminForm
             this.pnLeft.Controls.Add(this.btnDoAn);
             this.pnLeft.Controls.Add(this.btnHome);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 132);
+            this.pnLeft.Location = new System.Drawing.Point(0, 235);
             this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(194, 687);
+            this.pnLeft.Size = new System.Drawing.Size(194, 584);
             this.pnLeft.TabIndex = 1;
             // 
             // btnContact
@@ -158,7 +172,7 @@ namespace AdminForm
             this.btnContact.ImageSize = new System.Drawing.Size(30, 30);
             this.btnContact.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnContact.LineLeft = 8;
-            this.btnContact.Location = new System.Drawing.Point(0, 400);
+            this.btnContact.Location = new System.Drawing.Point(0, 368);
             this.btnContact.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnContact.Name = "btnContact";
             this.btnContact.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
@@ -168,7 +182,7 @@ namespace AdminForm
             this.btnContact.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnContact.OnPressedColor = System.Drawing.Color.Black;
             this.btnContact.OnPressedDepth = 0;
-            this.btnContact.Size = new System.Drawing.Size(194, 100);
+            this.btnContact.Size = new System.Drawing.Size(194, 92);
             this.btnContact.TabIndex = 7;
             this.btnContact.Text = "Contact us";
             // 
@@ -193,7 +207,7 @@ namespace AdminForm
             this.btnFlash.ImageSize = new System.Drawing.Size(30, 30);
             this.btnFlash.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnFlash.LineLeft = 8;
-            this.btnFlash.Location = new System.Drawing.Point(0, 300);
+            this.btnFlash.Location = new System.Drawing.Point(0, 276);
             this.btnFlash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFlash.Name = "btnFlash";
             this.btnFlash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
@@ -203,7 +217,7 @@ namespace AdminForm
             this.btnFlash.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnFlash.OnPressedColor = System.Drawing.Color.Black;
             this.btnFlash.OnPressedDepth = 0;
-            this.btnFlash.Size = new System.Drawing.Size(194, 100);
+            this.btnFlash.Size = new System.Drawing.Size(194, 92);
             this.btnFlash.TabIndex = 7;
             this.btnFlash.Text = "Flash Order";
             this.btnFlash.Click += new System.EventHandler(this.btnFlash_Click);
@@ -229,7 +243,7 @@ namespace AdminForm
             this.btnDoUong.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDoUong.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnDoUong.LineLeft = 8;
-            this.btnDoUong.Location = new System.Drawing.Point(0, 200);
+            this.btnDoUong.Location = new System.Drawing.Point(0, 184);
             this.btnDoUong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDoUong.Name = "btnDoUong";
             this.btnDoUong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
@@ -239,7 +253,7 @@ namespace AdminForm
             this.btnDoUong.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoUong.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoUong.OnPressedDepth = 0;
-            this.btnDoUong.Size = new System.Drawing.Size(194, 100);
+            this.btnDoUong.Size = new System.Drawing.Size(194, 92);
             this.btnDoUong.TabIndex = 4;
             this.btnDoUong.Text = "Đồ uống";
             this.btnDoUong.Click += new System.EventHandler(this.btnDoUong_Click_1);
@@ -265,7 +279,7 @@ namespace AdminForm
             this.btnDoAn.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDoAn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnDoAn.LineLeft = 8;
-            this.btnDoAn.Location = new System.Drawing.Point(0, 100);
+            this.btnDoAn.Location = new System.Drawing.Point(0, 92);
             this.btnDoAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDoAn.Name = "btnDoAn";
             this.btnDoAn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
@@ -275,7 +289,7 @@ namespace AdminForm
             this.btnDoAn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoAn.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoAn.OnPressedDepth = 0;
-            this.btnDoAn.Size = new System.Drawing.Size(194, 100);
+            this.btnDoAn.Size = new System.Drawing.Size(194, 92);
             this.btnDoAn.TabIndex = 3;
             this.btnDoAn.Text = "Đồ ăn";
             this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
@@ -312,7 +326,7 @@ namespace AdminForm
             this.btnHome.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnHome.OnPressedColor = System.Drawing.Color.Black;
             this.btnHome.OnPressedDepth = 0;
-            this.btnHome.Size = new System.Drawing.Size(194, 100);
+            this.btnHome.Size = new System.Drawing.Size(194, 92);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -324,19 +338,19 @@ namespace AdminForm
             this.pnBill.Controls.Add(this.gunaGradient2Panel1);
             this.pnBill.Controls.Add(this.pnDM);
             this.pnBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnBill.Location = new System.Drawing.Point(982, 132);
+            this.pnBill.Location = new System.Drawing.Point(982, 235);
             this.pnBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(490, 687);
+            this.pnBill.Size = new System.Drawing.Size(490, 584);
             this.pnBill.TabIndex = 2;
             // 
             // pnDSL
             // 
             this.pnDSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnDSL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDSL.Location = new System.Drawing.Point(0, 100);
+            this.pnDSL.Location = new System.Drawing.Point(0, 92);
             this.pnDSL.Name = "pnDSL";
-            this.pnDSL.Size = new System.Drawing.Size(490, 420);
+            this.pnDSL.Size = new System.Drawing.Size(490, 325);
             this.pnDSL.TabIndex = 3;
             // 
             // gunaGradient2Panel1
@@ -348,7 +362,7 @@ namespace AdminForm
             this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
             this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(490, 100);
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(490, 92);
             this.gunaGradient2Panel1.TabIndex = 2;
             // 
             // label3
@@ -357,7 +371,7 @@ namespace AdminForm
             this.label3.Font = new System.Drawing.Font("Chaparral Pro Light", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(490, 100);
+            this.label3.Size = new System.Drawing.Size(490, 92);
             this.label3.TabIndex = 0;
             this.label3.Text = "New Order";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,7 +386,7 @@ namespace AdminForm
             this.pnDM.Controls.Add(this.label2);
             this.pnDM.Controls.Add(this.tongtien);
             this.pnDM.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnDM.Location = new System.Drawing.Point(0, 520);
+            this.pnDM.Location = new System.Drawing.Point(0, 417);
             this.pnDM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDM.Name = "pnDM";
             this.pnDM.Size = new System.Drawing.Size(490, 167);
@@ -452,10 +466,10 @@ namespace AdminForm
             this.pnMid.Controls.Add(this.pnDanhMuc);
             this.pnMid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMid.ForeColor = System.Drawing.Color.White;
-            this.pnMid.Location = new System.Drawing.Point(194, 232);
+            this.pnMid.Location = new System.Drawing.Point(194, 327);
             this.pnMid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnMid.Name = "pnMid";
-            this.pnMid.Size = new System.Drawing.Size(788, 587);
+            this.pnMid.Size = new System.Drawing.Size(788, 492);
             this.pnMid.TabIndex = 5;
             // 
             // pnMons
@@ -468,7 +482,7 @@ namespace AdminForm
             this.pnMons.Location = new System.Drawing.Point(200, 0);
             this.pnMons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(588, 587);
+            this.pnMons.Size = new System.Drawing.Size(588, 492);
             this.pnMons.TabIndex = 3;
             // 
             // pnDanhMuc
@@ -480,7 +494,7 @@ namespace AdminForm
             this.pnDanhMuc.Location = new System.Drawing.Point(0, 0);
             this.pnDanhMuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnDanhMuc.Name = "pnDanhMuc";
-            this.pnDanhMuc.Size = new System.Drawing.Size(200, 587);
+            this.pnDanhMuc.Size = new System.Drawing.Size(200, 492);
             this.pnDanhMuc.TabIndex = 2;
             // 
             // radTopOrder
@@ -542,7 +556,7 @@ namespace AdminForm
             this.pnSapXep.Controls.Add(this.radGiaTang, 2, 0);
             this.pnSapXep.Controls.Add(this.radTopOrder, 1, 0);
             this.pnSapXep.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSapXep.Location = new System.Drawing.Point(0, 28);
+            this.pnSapXep.Location = new System.Drawing.Point(0, 20);
             this.pnSapXep.Name = "pnSapXep";
             this.pnSapXep.RowCount = 1;
             this.pnSapXep.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -558,17 +572,17 @@ namespace AdminForm
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.Size = new System.Drawing.Size(200, 92);
             this.panel2.TabIndex = 2;
             // 
             // cbbBanAn
             // 
-            this.cbbBanAn.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbBanAn.Font = new System.Drawing.Font("Sitka Heading", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbBanAn.FormattingEnabled = true;
             this.cbbBanAn.Location = new System.Drawing.Point(6, 28);
             this.cbbBanAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbBanAn.Name = "cbbBanAn";
-            this.cbbBanAn.Size = new System.Drawing.Size(191, 40);
+            this.cbbBanAn.Size = new System.Drawing.Size(191, 47);
             this.cbbBanAn.TabIndex = 0;
             // 
             // panel10
@@ -584,7 +598,7 @@ namespace AdminForm
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(5, 95);
+            this.panel9.Location = new System.Drawing.Point(5, 87);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(195, 5);
             this.panel9.TabIndex = 2;
@@ -595,7 +609,7 @@ namespace AdminForm
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 100);
+            this.panel8.Size = new System.Drawing.Size(5, 92);
             this.panel8.TabIndex = 1;
             // 
             // pnUnderTop
@@ -603,10 +617,10 @@ namespace AdminForm
             this.pnUnderTop.Controls.Add(this.panel3);
             this.pnUnderTop.Controls.Add(this.panel2);
             this.pnUnderTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnUnderTop.Location = new System.Drawing.Point(194, 132);
+            this.pnUnderTop.Location = new System.Drawing.Point(194, 235);
             this.pnUnderTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnUnderTop.Name = "pnUnderTop";
-            this.pnUnderTop.Size = new System.Drawing.Size(788, 100);
+            this.pnUnderTop.Size = new System.Drawing.Size(788, 92);
             this.pnUnderTop.TabIndex = 4;
             // 
             // panel3
@@ -618,7 +632,7 @@ namespace AdminForm
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(588, 100);
+            this.panel3.Size = new System.Drawing.Size(588, 92);
             this.panel3.TabIndex = 3;
             // 
             // panel6
@@ -627,14 +641,14 @@ namespace AdminForm
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(583, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 90);
+            this.panel6.Size = new System.Drawing.Size(5, 82);
             this.panel6.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 95);
+            this.panel5.Location = new System.Drawing.Point(0, 87);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(588, 5);
             this.panel5.TabIndex = 0;
@@ -665,6 +679,7 @@ namespace AdminForm
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             this.pnTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnBill.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
@@ -719,5 +734,6 @@ namespace AdminForm
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

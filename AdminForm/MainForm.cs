@@ -311,8 +311,15 @@ namespace AdminForm
         }
         private void Default_Bill(object sender, EventArgs e)
         {
-            if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
-            else MessageBox.Show("Add Fail");
+            try
+            {
+                if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
+                else MessageBox.Show("Add Fail");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

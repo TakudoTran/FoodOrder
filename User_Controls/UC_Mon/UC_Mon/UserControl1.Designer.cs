@@ -90,7 +90,7 @@
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.Controls.Add(this.lblTen);
             this.gunaShadowPanel1.Controls.Add(this.gunaElipsePanel1);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(-13, 125);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(-27, 117);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel1.ShadowDepth = 50;
@@ -126,11 +126,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.84211F));
             this.tableLayoutPanel1.Controls.Add(this.btnOrder, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 304);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 275);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(487, 55);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(483, 55);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnOrder
@@ -147,8 +147,8 @@
             this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.Image = global::UC_Mon.Properties.Resources.download__1_;
             this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnOrder.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnOrder.Location = new System.Drawing.Point(309, 3);
+            this.btnOrder.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnOrder.Location = new System.Drawing.Point(307, 3);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
             this.btnOrder.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
@@ -156,7 +156,7 @@
             this.btnOrder.OnHoverForeColor = System.Drawing.Color.White;
             this.btnOrder.OnHoverImage = null;
             this.btnOrder.OnPressedColor = System.Drawing.Color.Black;
-            this.btnOrder.Size = new System.Drawing.Size(175, 49);
+            this.btnOrder.Size = new System.Drawing.Size(173, 49);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order Now";
             // 
@@ -172,16 +172,16 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(490, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(464, 54);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(6, 361);
+            this.panel1.Location = new System.Drawing.Point(6, 331);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 6);
+            this.panel1.Size = new System.Drawing.Size(489, 6);
             this.panel1.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -190,7 +190,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 367);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(6, 337);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // flowLayoutPanel2
@@ -199,16 +199,16 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(499, 6);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(489, 6);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(499, 6);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(489, 6);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(6, 355);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(6, 325);
             this.flowLayoutPanel3.TabIndex = 7;
             // 
             // UCMon
@@ -227,7 +227,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "UCMon";
-            this.Size = new System.Drawing.Size(505, 367);
+            this.Size = new System.Drawing.Size(495, 337);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaShadowPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
