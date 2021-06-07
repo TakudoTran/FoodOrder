@@ -160,7 +160,23 @@ namespace BLL
 
         #region Mon
 
-
+        public List<Mon> GetMons_DoAn()
+        {
+            List<DanhMuc> danhMucDoAn = new List<DanhMuc>();
+            foreach(DanhMuc i in GetAllDanhMuc())
+            {
+                if (i.Loai.Equals("DA"))
+                {
+                    danhMucDoAn.Add(i);
+                }
+            }
+            List<Mon> mons = new List<Mon>();
+            foreach(DanhMuc i in danhMucDoAn)
+            {
+                mons.AddRange(GetMonByIDDanhMuc(i.IdDanhMuc));
+            }
+            return mons;
+        }
         public List<MonView> GetMonByIdDanhMucAndTenMon(int idMon, string st)
         {
             List<MonView> data = new List<MonView>();

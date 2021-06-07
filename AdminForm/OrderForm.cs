@@ -330,6 +330,11 @@ namespace AdminForm
         #region dat don
         private void datdon_Click(object sender, EventArgs e)
         {
+            if(pnDSL.Controls.Count == 0)
+            {
+                MessageBox.Show("Chưa chọn món!");
+                return;
+            }
             int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
             List<int> idMon = new List<int>();
             List<int> slMon  = new List<int>();

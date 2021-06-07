@@ -32,7 +32,6 @@ namespace AdminForm
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bbtFind = new System.Windows.Forms.Button();
-            this.defaultbill = new System.Windows.Forms.Button();
             this.InHoaDon = new System.Windows.Forms.Button();
             this.tongtien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@ namespace AdminForm
             this.cbbBanAn = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader0 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,6 +76,7 @@ namespace AdminForm
             this.picAnh = new System.Windows.Forms.PictureBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.defaultbill = new System.Windows.Forms.Button();
             this.btnLoadDefaultImg = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.TabControl.SuspendLayout();
@@ -110,18 +111,17 @@ namespace AdminForm
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.bbtFind);
-            this.tabPage1.Controls.Add(this.defaultbill);
             this.tabPage1.Controls.Add(this.InHoaDon);
             this.tabPage1.Controls.Add(this.tongtien);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.cbbBanAn);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(983, 584);
+            this.tabPage1.Size = new System.Drawing.Size(983, 589);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản Lý Bàn Ăn";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -135,16 +135,6 @@ namespace AdminForm
             this.bbtFind.Text = "Tìm";
             this.bbtFind.UseVisualStyleBackColor = true;
             this.bbtFind.Click += new System.EventHandler(this.bbtFind_Click);
-            // 
-            // defaultbill
-            // 
-            this.defaultbill.Location = new System.Drawing.Point(615, 188);
-            this.defaultbill.Name = "defaultbill";
-            this.defaultbill.Size = new System.Drawing.Size(329, 50);
-            this.defaultbill.TabIndex = 5;
-            this.defaultbill.Text = "Default bill";
-            this.defaultbill.UseVisualStyleBackColor = true;
-            this.defaultbill.Click += new System.EventHandler(this.Default_Bill);
             // 
             // InHoaDon
             // 
@@ -160,7 +150,7 @@ namespace AdminForm
             // 
             this.tongtien.Location = new System.Drawing.Point(141, 500);
             this.tongtien.Name = "tongtien";
-            this.tongtien.Size = new System.Drawing.Size(371, 30);
+            this.tongtien.Size = new System.Drawing.Size(371, 26);
             this.tongtien.TabIndex = 4;
             // 
             // label2
@@ -168,7 +158,7 @@ namespace AdminForm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 500);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tổng tiền:";
             // 
@@ -177,7 +167,7 @@ namespace AdminForm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bàn Ăn:";
             // 
@@ -187,7 +177,7 @@ namespace AdminForm
             this.cbbBanAn.Location = new System.Drawing.Point(121, 27);
             this.cbbBanAn.Margin = new System.Windows.Forms.Padding(4);
             this.cbbBanAn.Name = "cbbBanAn";
-            this.cbbBanAn.Size = new System.Drawing.Size(333, 33);
+            this.cbbBanAn.Size = new System.Drawing.Size(333, 28);
             this.cbbBanAn.TabIndex = 1;
             // 
             // groupBox1
@@ -205,34 +195,39 @@ namespace AdminForm
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader0,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(4, 27);
+            this.listView1.Location = new System.Drawing.Point(4, 23);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(573, 354);
+            this.listView1.Size = new System.Drawing.Size(573, 358);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader0
+            // 
+            this.columnHeader0.Text = "STT";
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên món";
-            this.columnHeader1.Width = 208;
+            this.columnHeader1.Width = 238;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 142;
+            this.columnHeader2.Width = 95;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Thành tiền";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader3.Width = 181;
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 179;
             // 
             // tabPage2
             // 
@@ -247,11 +242,11 @@ namespace AdminForm
             this.tabPage2.Controls.Add(this.cboSortType);
             this.tabPage2.Controls.Add(this.cboDanhMuc);
             this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(983, 584);
+            this.tabPage2.Size = new System.Drawing.Size(983, 589);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản Lý Món Ăn";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -260,7 +255,7 @@ namespace AdminForm
             // 
             this.txtSearch.Location = new System.Drawing.Point(652, 36);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(266, 30);
+            this.txtSearch.Size = new System.Drawing.Size(266, 26);
             this.txtSearch.TabIndex = 4;
             // 
             // btnSort
@@ -328,7 +323,7 @@ namespace AdminForm
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 25);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Danh mục:";
             // 
@@ -337,7 +332,7 @@ namespace AdminForm
             this.cboSortType.FormattingEnabled = true;
             this.cboSortType.Location = new System.Drawing.Point(740, 480);
             this.cboSortType.Name = "cboSortType";
-            this.cboSortType.Size = new System.Drawing.Size(193, 33);
+            this.cboSortType.Size = new System.Drawing.Size(193, 28);
             this.cboSortType.TabIndex = 1;
             // 
             // cboDanhMuc
@@ -345,7 +340,7 @@ namespace AdminForm
             this.cboDanhMuc.FormattingEnabled = true;
             this.cboDanhMuc.Location = new System.Drawing.Point(139, 33);
             this.cboDanhMuc.Name = "cboDanhMuc";
-            this.cboDanhMuc.Size = new System.Drawing.Size(251, 33);
+            this.cboDanhMuc.Size = new System.Drawing.Size(251, 28);
             this.cboDanhMuc.TabIndex = 1;
             // 
             // groupBox2
@@ -362,13 +357,13 @@ namespace AdminForm
             // 
             this.dgvDanhSachMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachMon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDanhSachMon.Location = new System.Drawing.Point(3, 26);
+            this.dgvDanhSachMon.Location = new System.Drawing.Point(3, 22);
             this.dgvDanhSachMon.Name = "dgvDanhSachMon";
             this.dgvDanhSachMon.ReadOnly = true;
             this.dgvDanhSachMon.RowHeadersWidth = 51;
             this.dgvDanhSachMon.RowTemplate.Height = 24;
             this.dgvDanhSachMon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachMon.Size = new System.Drawing.Size(885, 313);
+            this.dgvDanhSachMon.Size = new System.Drawing.Size(885, 317);
             this.dgvDanhSachMon.TabIndex = 0;
             // 
             // tabPage3
@@ -383,11 +378,11 @@ namespace AdminForm
             this.tabPage3.Controls.Add(this.txtTenDanhMuc);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(983, 584);
+            this.tabPage3.Size = new System.Drawing.Size(983, 589);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản Lý Danh Mục";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -397,7 +392,7 @@ namespace AdminForm
             this.cbLoaiDM.FormattingEnabled = true;
             this.cbLoaiDM.Location = new System.Drawing.Point(656, 258);
             this.cbLoaiDM.Name = "cbLoaiDM";
-            this.cbLoaiDM.Size = new System.Drawing.Size(292, 33);
+            this.cbLoaiDM.Size = new System.Drawing.Size(292, 28);
             this.cbLoaiDM.TabIndex = 5;
             // 
             // lable
@@ -405,7 +400,7 @@ namespace AdminForm
             this.lable.AutoSize = true;
             this.lable.Location = new System.Drawing.Point(528, 258);
             this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(55, 25);
+            this.lable.Size = new System.Drawing.Size(46, 20);
             this.lable.TabIndex = 4;
             this.lable.Text = "Loại:";
             // 
@@ -444,7 +439,7 @@ namespace AdminForm
             this.txtMaDanhMuc.Location = new System.Drawing.Point(656, 62);
             this.txtMaDanhMuc.Name = "txtMaDanhMuc";
             this.txtMaDanhMuc.ReadOnly = true;
-            this.txtMaDanhMuc.Size = new System.Drawing.Size(292, 30);
+            this.txtMaDanhMuc.Size = new System.Drawing.Size(292, 26);
             this.txtMaDanhMuc.TabIndex = 2;
             // 
             // label5
@@ -452,7 +447,7 @@ namespace AdminForm
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(519, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 25);
+            this.label5.Size = new System.Drawing.Size(115, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Mã danh mục:";
             // 
@@ -460,7 +455,7 @@ namespace AdminForm
             // 
             this.txtTenDanhMuc.Location = new System.Drawing.Point(656, 160);
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
-            this.txtTenDanhMuc.Size = new System.Drawing.Size(292, 30);
+            this.txtTenDanhMuc.Size = new System.Drawing.Size(292, 26);
             this.txtTenDanhMuc.TabIndex = 2;
             // 
             // label4
@@ -468,7 +463,7 @@ namespace AdminForm
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(514, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 25);
+            this.label4.Size = new System.Drawing.Size(120, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên danh mục:";
             // 
@@ -486,22 +481,22 @@ namespace AdminForm
             // 
             this.dgvDSDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSDanhMuc.Location = new System.Drawing.Point(3, 26);
+            this.dgvDSDanhMuc.Location = new System.Drawing.Point(3, 22);
             this.dgvDSDanhMuc.Name = "dgvDSDanhMuc";
             this.dgvDSDanhMuc.ReadOnly = true;
             this.dgvDSDanhMuc.RowHeadersWidth = 51;
             this.dgvDSDanhMuc.RowTemplate.Height = 24;
             this.dgvDSDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDanhMuc.Size = new System.Drawing.Size(455, 452);
+            this.dgvDSDanhMuc.Size = new System.Drawing.Size(455, 456);
             this.dgvDSDanhMuc.TabIndex = 0;
             this.dgvDSDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSDanhMuc_CellClick);
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(983, 584);
+            this.tabPage4.Size = new System.Drawing.Size(983, 589);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Lịch sử";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -513,13 +508,14 @@ namespace AdminForm
             this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Controls.Add(this.btnOK);
             this.tabPage5.Controls.Add(this.btnBrowse);
+            this.tabPage5.Controls.Add(this.defaultbill);
             this.tabPage5.Controls.Add(this.btnLoadDefaultImg);
-            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(983, 584);
+            this.tabPage5.Size = new System.Drawing.Size(983, 589);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Ảnh minh họa";
+            this.tabPage5.Text = "Set up";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // txtFolder
@@ -527,7 +523,7 @@ namespace AdminForm
             this.txtFolder.Location = new System.Drawing.Point(577, 331);
             this.txtFolder.Name = "txtFolder";
             this.txtFolder.ReadOnly = true;
-            this.txtFolder.Size = new System.Drawing.Size(364, 30);
+            this.txtFolder.Size = new System.Drawing.Size(364, 26);
             this.txtFolder.TabIndex = 4;
             // 
             // label6
@@ -535,7 +531,7 @@ namespace AdminForm
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(573, 291);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 25);
+            this.label6.Size = new System.Drawing.Size(61, 20);
             this.label6.TabIndex = 3;
             this.label6.Text = "Folder:";
             // 
@@ -552,9 +548,9 @@ namespace AdminForm
             // picAnh
             // 
             this.picAnh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picAnh.Location = new System.Drawing.Point(3, 26);
+            this.picAnh.Location = new System.Drawing.Point(3, 22);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(501, 451);
+            this.picAnh.Size = new System.Drawing.Size(501, 455);
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAnh.TabIndex = 1;
             this.picAnh.TabStop = false;
@@ -579,6 +575,16 @@ namespace AdminForm
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // defaultbill
+            // 
+            this.defaultbill.Location = new System.Drawing.Point(577, 153);
+            this.defaultbill.Name = "defaultbill";
+            this.defaultbill.Size = new System.Drawing.Size(248, 110);
+            this.defaultbill.TabIndex = 0;
+            this.defaultbill.Text = "Load Default Img";
+            this.defaultbill.UseVisualStyleBackColor = true;
+            this.defaultbill.Click += new System.EventHandler(this.Default_Bill);
+            // 
             // btnLoadDefaultImg
             // 
             this.btnLoadDefaultImg.Location = new System.Drawing.Point(577, 37);
@@ -591,7 +597,7 @@ namespace AdminForm
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 622);
             this.Controls.Add(this.TabControl);
@@ -626,7 +632,6 @@ namespace AdminForm
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button defaultbill;
         private System.Windows.Forms.Button InHoaDon;
         private System.Windows.Forms.TextBox tongtien;
         private System.Windows.Forms.Label label2;
@@ -671,6 +676,8 @@ namespace AdminForm
         private System.Windows.Forms.Label lable;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button bbtFind;
+        private System.Windows.Forms.Button defaultbill;
+        private System.Windows.Forms.ColumnHeader columnHeader0;
     }
 }
 

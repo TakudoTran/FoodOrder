@@ -34,6 +34,11 @@ namespace AdminForm
             this.btnMaxsize = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
+            this.btnContact = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnFlash = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnDoUong = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnDoAn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnHome = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnBill = new Guna.UI.WinForms.GunaPanel();
             this.pnDSL = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
@@ -48,25 +53,20 @@ namespace AdminForm
             this.pnMid = new System.Windows.Forms.Panel();
             this.pnMons = new System.Windows.Forms.FlowLayoutPanel();
             this.pnDanhMuc = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.btnContact = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnFlash = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnDoUong = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnDoAn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnHome = new Guna.UI.WinForms.GunaAdvenceButton();
             this.radTopOrder = new Guna.UI.WinForms.GunaRadioButton();
             this.radGiaTang = new Guna.UI.WinForms.GunaRadioButton();
             this.radGiaGiam = new Guna.UI.WinForms.GunaRadioButton();
             this.pnSapXep = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbbBanAn = new System.Windows.Forms.ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.pnUnderTop = new Guna.UI.WinForms.GunaPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.pnBill.SuspendLayout();
@@ -134,174 +134,8 @@ namespace AdminForm
             this.pnLeft.Location = new System.Drawing.Point(0, 132);
             this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(194, 451);
+            this.pnLeft.Size = new System.Drawing.Size(194, 687);
             this.pnLeft.TabIndex = 1;
-            // 
-            // pnBill
-            // 
-            this.pnBill.BackColor = System.Drawing.Color.Coral;
-            this.pnBill.Controls.Add(this.pnDSL);
-            this.pnBill.Controls.Add(this.gunaGradient2Panel1);
-            this.pnBill.Controls.Add(this.pnDM);
-            this.pnBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnBill.Location = new System.Drawing.Point(982, 132);
-            this.pnBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(490, 451);
-            this.pnBill.TabIndex = 2;
-            // 
-            // pnDSL
-            // 
-            this.pnDSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnDSL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDSL.Location = new System.Drawing.Point(0, 100);
-            this.pnDSL.Name = "pnDSL";
-            this.pnDSL.Size = new System.Drawing.Size(490, 184);
-            this.pnDSL.TabIndex = 3;
-            // 
-            // gunaGradient2Panel1
-            // 
-            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel1.Controls.Add(this.label3);
-            this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(490, 100);
-            this.gunaGradient2Panel1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Chaparral Pro Light", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(490, 100);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "New Order";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnDM
-            // 
-            this.pnDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(252)))), ((int)(((byte)(118)))));
-            this.pnDM.Controls.Add(this.huy);
-            this.pnDM.Controls.Add(this.datdon);
-            this.pnDM.Controls.Add(this.panel1);
-            this.pnDM.Controls.Add(this.label1);
-            this.pnDM.Controls.Add(this.label2);
-            this.pnDM.Controls.Add(this.tongtien);
-            this.pnDM.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnDM.Location = new System.Drawing.Point(0, 284);
-            this.pnDM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnDM.Name = "pnDM";
-            this.pnDM.Size = new System.Drawing.Size(490, 167);
-            this.pnDM.TabIndex = 1;
-            // 
-            // huy
-            // 
-            this.huy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
-            this.huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.huy.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.huy.Location = new System.Drawing.Point(285, 113);
-            this.huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.huy.Name = "huy";
-            this.huy.Size = new System.Drawing.Size(144, 43);
-            this.huy.TabIndex = 5;
-            this.huy.Text = "Xoá hết";
-            this.huy.UseVisualStyleBackColor = false;
-            this.huy.Click += new System.EventHandler(this.huy_Click);
-            // 
-            // datdon
-            // 
-            this.datdon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
-            this.datdon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.datdon.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datdon.Location = new System.Drawing.Point(59, 113);
-            this.datdon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datdon.Name = "datdon";
-            this.datdon.Size = new System.Drawing.Size(144, 43);
-            this.datdon.TabIndex = 4;
-            this.datdon.Text = "Đặt ngay";
-            this.datdon.UseVisualStyleBackColor = false;
-            this.datdon.Click += new System.EventHandler(this.datdon_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(180, 61);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(176, 2);
-            this.panel1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 35);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tổng tiền:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(360, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 35);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "$";
-            // 
-            // tongtien
-            // 
-            this.tongtien.AutoSize = true;
-            this.tongtien.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tongtien.Location = new System.Drawing.Point(237, 27);
-            this.tongtien.Name = "tongtien";
-            this.tongtien.Size = new System.Drawing.Size(70, 35);
-            this.tongtien.TabIndex = 0;
-            this.tongtien.Text = "1000";
-            this.tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnMid
-            // 
-            this.pnMid.Controls.Add(this.pnMons);
-            this.pnMid.Controls.Add(this.pnDanhMuc);
-            this.pnMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMid.ForeColor = System.Drawing.Color.White;
-            this.pnMid.Location = new System.Drawing.Point(194, 232);
-            this.pnMid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnMid.Name = "pnMid";
-            this.pnMid.Size = new System.Drawing.Size(788, 351);
-            this.pnMid.TabIndex = 5;
-            // 
-            // pnMons
-            // 
-            this.pnMons.AutoScroll = true;
-            this.pnMons.AutoSize = true;
-            this.pnMons.BackColor = System.Drawing.Color.White;
-            this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMons.ForeColor = System.Drawing.Color.White;
-            this.pnMons.Location = new System.Drawing.Point(200, 0);
-            this.pnMons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(588, 351);
-            this.pnMons.TabIndex = 3;
-            // 
-            // pnDanhMuc
-            // 
-            this.pnDanhMuc.BackColor = System.Drawing.Color.Transparent;
-            this.pnDanhMuc.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnDanhMuc.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.pnDanhMuc.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.pnDanhMuc.Location = new System.Drawing.Point(0, 0);
-            this.pnDanhMuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnDanhMuc.Name = "pnDanhMuc";
-            this.pnDanhMuc.Size = new System.Drawing.Size(200, 351);
-            this.pnDanhMuc.TabIndex = 2;
             // 
             // btnContact
             // 
@@ -483,6 +317,172 @@ namespace AdminForm
             this.btnHome.Text = "Home";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // pnBill
+            // 
+            this.pnBill.BackColor = System.Drawing.Color.Coral;
+            this.pnBill.Controls.Add(this.pnDSL);
+            this.pnBill.Controls.Add(this.gunaGradient2Panel1);
+            this.pnBill.Controls.Add(this.pnDM);
+            this.pnBill.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnBill.Location = new System.Drawing.Point(982, 132);
+            this.pnBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnBill.Name = "pnBill";
+            this.pnBill.Size = new System.Drawing.Size(490, 687);
+            this.pnBill.TabIndex = 2;
+            // 
+            // pnDSL
+            // 
+            this.pnDSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnDSL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDSL.Location = new System.Drawing.Point(0, 100);
+            this.pnDSL.Name = "pnDSL";
+            this.pnDSL.Size = new System.Drawing.Size(490, 420);
+            this.pnDSL.TabIndex = 3;
+            // 
+            // gunaGradient2Panel1
+            // 
+            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.label3);
+            this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(490, 100);
+            this.gunaGradient2Panel1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Chaparral Pro Light", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(490, 100);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "New Order";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnDM
+            // 
+            this.pnDM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(252)))), ((int)(((byte)(118)))));
+            this.pnDM.Controls.Add(this.huy);
+            this.pnDM.Controls.Add(this.datdon);
+            this.pnDM.Controls.Add(this.panel1);
+            this.pnDM.Controls.Add(this.label1);
+            this.pnDM.Controls.Add(this.label2);
+            this.pnDM.Controls.Add(this.tongtien);
+            this.pnDM.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnDM.Location = new System.Drawing.Point(0, 520);
+            this.pnDM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnDM.Name = "pnDM";
+            this.pnDM.Size = new System.Drawing.Size(490, 167);
+            this.pnDM.TabIndex = 1;
+            // 
+            // huy
+            // 
+            this.huy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
+            this.huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.huy.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.huy.Location = new System.Drawing.Point(285, 113);
+            this.huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.huy.Name = "huy";
+            this.huy.Size = new System.Drawing.Size(144, 43);
+            this.huy.TabIndex = 5;
+            this.huy.Text = "Xoá hết";
+            this.huy.UseVisualStyleBackColor = false;
+            this.huy.Click += new System.EventHandler(this.huy_Click);
+            // 
+            // datdon
+            // 
+            this.datdon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
+            this.datdon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.datdon.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datdon.Location = new System.Drawing.Point(59, 113);
+            this.datdon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datdon.Name = "datdon";
+            this.datdon.Size = new System.Drawing.Size(144, 43);
+            this.datdon.TabIndex = 4;
+            this.datdon.Text = "Đặt ngay";
+            this.datdon.UseVisualStyleBackColor = false;
+            this.datdon.Click += new System.EventHandler(this.datdon_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(180, 61);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(176, 2);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 35);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tổng tiền:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(360, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 35);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "$";
+            // 
+            // tongtien
+            // 
+            this.tongtien.AutoSize = true;
+            this.tongtien.Font = new System.Drawing.Font("SVN-Avo", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tongtien.Location = new System.Drawing.Point(237, 27);
+            this.tongtien.Name = "tongtien";
+            this.tongtien.Size = new System.Drawing.Size(70, 35);
+            this.tongtien.TabIndex = 0;
+            this.tongtien.Text = "1000";
+            this.tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnMid
+            // 
+            this.pnMid.Controls.Add(this.pnMons);
+            this.pnMid.Controls.Add(this.pnDanhMuc);
+            this.pnMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMid.ForeColor = System.Drawing.Color.White;
+            this.pnMid.Location = new System.Drawing.Point(194, 232);
+            this.pnMid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnMid.Name = "pnMid";
+            this.pnMid.Size = new System.Drawing.Size(788, 587);
+            this.pnMid.TabIndex = 5;
+            // 
+            // pnMons
+            // 
+            this.pnMons.AutoScroll = true;
+            this.pnMons.AutoSize = true;
+            this.pnMons.BackColor = System.Drawing.Color.White;
+            this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMons.ForeColor = System.Drawing.Color.White;
+            this.pnMons.Location = new System.Drawing.Point(200, 0);
+            this.pnMons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnMons.Name = "pnMons";
+            this.pnMons.Size = new System.Drawing.Size(588, 587);
+            this.pnMons.TabIndex = 3;
+            // 
+            // pnDanhMuc
+            // 
+            this.pnDanhMuc.BackColor = System.Drawing.Color.Transparent;
+            this.pnDanhMuc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnDanhMuc.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.pnDanhMuc.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.pnDanhMuc.Location = new System.Drawing.Point(0, 0);
+            this.pnDanhMuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnDanhMuc.Name = "pnDanhMuc";
+            this.pnDanhMuc.Size = new System.Drawing.Size(200, 587);
+            this.pnDanhMuc.TabIndex = 2;
+            // 
             // radTopOrder
             // 
             this.radTopOrder.BaseColor = System.Drawing.SystemColors.Control;
@@ -571,6 +571,33 @@ namespace AdminForm
             this.cbbBanAn.Size = new System.Drawing.Size(191, 40);
             this.cbbBanAn.TabIndex = 0;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(5, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(195, 5);
+            this.panel10.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(5, 95);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(195, 5);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 100);
+            this.panel8.TabIndex = 1;
+            // 
             // pnUnderTop
             // 
             this.pnUnderTop.Controls.Add(this.panel3);
@@ -594,14 +621,14 @@ namespace AdminForm
             this.panel3.Size = new System.Drawing.Size(588, 100);
             this.panel3.TabIndex = 3;
             // 
-            // panel4
+            // panel6
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(588, 5);
-            this.panel4.TabIndex = 0;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(583, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 90);
+            this.panel6.TabIndex = 0;
             // 
             // panel5
             // 
@@ -612,48 +639,21 @@ namespace AdminForm
             this.panel5.Size = new System.Drawing.Size(588, 5);
             this.panel5.TabIndex = 0;
             // 
-            // panel6
+            // panel4
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(583, 5);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 90);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 100);
-            this.panel8.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(5, 95);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(195, 5);
-            this.panel9.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(5, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(195, 5);
-            this.panel10.TabIndex = 3;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(588, 5);
+            this.panel4.TabIndex = 0;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1472, 583);
+            this.ClientSize = new System.Drawing.Size(1472, 819);
             this.Controls.Add(this.pnMid);
             this.Controls.Add(this.pnUnderTop);
             this.Controls.Add(this.pnBill);
