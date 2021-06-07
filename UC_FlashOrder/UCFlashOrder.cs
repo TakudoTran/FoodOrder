@@ -25,16 +25,12 @@ namespace UC_FlashOrder
             {
                 return _listMonFO;
             }
-            set
-            {
-                _listMonFO = value;
-            }
         }
 
         public UCFlashOrder()
         {
             InitializeComponent();
-            AllMon = BusinessLogicLayer.Instance.GetAllMon();
+            AllMon = BusinessLogicLayer.Instance.GetMons_DoAn();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -73,21 +69,6 @@ namespace UC_FlashOrder
         private void btnOrder_Click(object sender, EventArgs e)
         {
             OnOrderNow(EventArgs.Empty);
-        }
-
-        private int imgNum = 1;
-        private void LoadNextImg()
-        {
-            if(imgNum == 4)
-            {
-                imgNum = 1;
-            }
-            picSlide.ImageLocation = string.Format(@"FOImgs\Img{0}.jpg", imgNum);
-            imgNum++;
-        }
-        private void timerFO_Tick(object sender, EventArgs e)
-        {
-            LoadNextImg();
         }
         private void txtTien_Click_1(object sender, EventArgs e)
         {

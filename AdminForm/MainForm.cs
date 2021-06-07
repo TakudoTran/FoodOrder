@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL;
 using DTO;
 using MyAlgo;
+
 namespace AdminForm
 {
     public partial class MainForm : Form
@@ -30,6 +31,7 @@ namespace AdminForm
             SetComboboxLoai();
 
             BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
+            cbbBanAn.SelectedIndex = 0;
         }
         private int CurrentBill = 0;
         private void Show(int idDanhmuc, string tenMon)
@@ -267,39 +269,50 @@ namespace AdminForm
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
         }
 
-        private void Default_Bill(object sender, EventArgs e)
-        {
-            if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
-            else MessageBox.Show("Add Fail");
-        }
-
         private void bbtFind_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
+            idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
             List<BillToAcess> data = new List<BillToAcess>();
             data = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
+           
             int TongTien = 0;
+            int index = 1;
             foreach(BillToAcess i in data)
             {
                 CurrentBill = i.BillNo;
-                string[] row = { i.TenMon, i.SoLuong.ToString(), i.GiaTien.ToString() };
+                string[] row = {index +"", i.TenMon, i.SoLuong.ToString(), i.GiaTien.ToString() };
                 var listViewItem = new ListViewItem(row);
                 listView1.Items.Add(listViewItem);
                 TongTien += i.GiaTien * i.SoLuong;
+                index++;
             }
             tongtien.Text = TongTien.ToString();
             tongtien.ReadOnly = true;
         }
-
+        int idBan = 1;
         private void InHoaDon_Click(object sender, EventArgs e)
         {
-            int TongTien = Convert.ToInt32(tongtien.Text);
-            if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien,CurrentBill))
+            try
             {
-                MessageBox.Show("Susscess");
+                int TongTien = Convert.ToInt32(tongtien.Text);
+                if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, CurrentBill))
+                {
+
+                    Printer_Form f = new Printer_Form(idBan);
+                    f.Show();
+                }
+                else MessageBox.Show("Fail");
             }
-            else MessageBox.Show("Fail");
+            catch(Exception ex)
+            {
+                MessageBox.Show("Bill: values not found!");
+            }
+        }
+        private void Default_Bill(object sender, EventArgs e)
+        {
+            if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
+            else MessageBox.Show("Add Fail");
         }
     }
 }
