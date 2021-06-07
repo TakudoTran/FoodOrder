@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCFlashOrder));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
+            this.txtTien = new System.Windows.Forms.TextBox();
+            this.picSlide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnShow = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnChonAll = new Guna.UI.WinForms.GunaGradientButton();
             this.pnMons = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnChonAll = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
-            this.txtTien = new System.Windows.Forms.TextBox();
-            this.btnShow = new Guna.UI.WinForms.GunaGradientButton();
-            this.picSlide = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSlide)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1405, 334);
+            this.panel1.Size = new System.Drawing.Size(1405, 271);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -65,73 +65,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1166, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(239, 334);
+            this.panel3.Size = new System.Drawing.Size(239, 271);
             this.panel3.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnShow);
-            this.panel2.Controls.Add(this.btnChonAll);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1212, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 356);
-            this.panel2.TabIndex = 10;
-            // 
-            // pnMons
-            // 
-            this.pnMons.AutoScroll = true;
-            this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMons.Location = new System.Drawing.Point(0, 0);
-            this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(1212, 356);
-            this.pnMons.TabIndex = 11;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 334);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1405, 14);
-            this.panel4.TabIndex = 12;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pnMons);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 348);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1405, 356);
-            this.panel5.TabIndex = 13;
-            // 
-            // btnChonAll
-            // 
-            this.btnChonAll.AnimationHoverSpeed = 0.07F;
-            this.btnChonAll.AnimationSpeed = 0.03F;
-            this.btnChonAll.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
-            this.btnChonAll.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
-            this.btnChonAll.BorderColor = System.Drawing.Color.Black;
-            this.btnChonAll.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnChonAll.FocusedColor = System.Drawing.Color.Empty;
-            this.btnChonAll.Font = new System.Drawing.Font("SVN-Blenda Script", 15F);
-            this.btnChonAll.ForeColor = System.Drawing.Color.White;
-            this.btnChonAll.Image = null;
-            this.btnChonAll.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnChonAll.Location = new System.Drawing.Point(17, 204);
-            this.btnChonAll.Name = "btnChonAll";
-            this.btnChonAll.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnChonAll.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnChonAll.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnChonAll.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnChonAll.OnHoverImage = null;
-            this.btnChonAll.OnPressedColor = System.Drawing.Color.Black;
-            this.btnChonAll.Size = new System.Drawing.Size(166, 64);
-            this.btnChonAll.TabIndex = 4;
-            this.btnChonAll.Text = "Thêm tất cả";
-            this.btnChonAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnChonAll.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // gunaLinePanel1
             // 
@@ -142,7 +77,7 @@
             this.gunaLinePanel1.LineRight = 2;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.LineTop = 2;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(63, 261);
+            this.gunaLinePanel1.Location = new System.Drawing.Point(63, 229);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
             this.gunaLinePanel1.Size = new System.Drawing.Size(166, 55);
             this.gunaLinePanel1.TabIndex = 7;
@@ -153,7 +88,7 @@
             this.txtTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTien.Font = new System.Drawing.Font("SVN-Blenda Script", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTien.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTien.Location = new System.Drawing.Point(4, 11);
+            this.txtTien.Location = new System.Drawing.Point(4, 4);
             this.txtTien.Multiline = true;
             this.txtTien.Name = "txtTien";
             this.txtTien.Size = new System.Drawing.Size(154, 34);
@@ -162,6 +97,28 @@
             this.txtTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTien.Click += new System.EventHandler(this.txtTien_Click_1);
             this.txtTien.TextChanged += new System.EventHandler(this.txtTien_TextChanged);
+            // 
+            // picSlide
+            // 
+            this.picSlide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picSlide.ErrorImage = null;
+            this.picSlide.Image = ((System.Drawing.Image)(resources.GetObject("picSlide.Image")));
+            this.picSlide.Location = new System.Drawing.Point(0, 0);
+            this.picSlide.Name = "picSlide";
+            this.picSlide.Size = new System.Drawing.Size(1405, 271);
+            this.picSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSlide.TabIndex = 6;
+            this.picSlide.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnShow);
+            this.panel2.Controls.Add(this.btnChonAll);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1212, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(193, 423);
+            this.panel2.TabIndex = 10;
             // 
             // btnShow
             // 
@@ -176,7 +133,7 @@
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
             this.btnShow.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnShow.Location = new System.Drawing.Point(17, 62);
+            this.btnShow.Location = new System.Drawing.Point(17, 40);
             this.btnShow.Name = "btnShow";
             this.btnShow.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnShow.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -189,17 +146,60 @@
             this.btnShow.Text = "Xem";
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
-            // picSlide
+            // btnChonAll
             // 
-            this.picSlide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picSlide.ErrorImage = null;
-            this.picSlide.Image = ((System.Drawing.Image)(resources.GetObject("picSlide.Image")));
-            this.picSlide.Location = new System.Drawing.Point(0, 0);
-            this.picSlide.Name = "picSlide";
-            this.picSlide.Size = new System.Drawing.Size(1405, 334);
-            this.picSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSlide.TabIndex = 6;
-            this.picSlide.TabStop = false;
+            this.btnChonAll.AnimationHoverSpeed = 0.07F;
+            this.btnChonAll.AnimationSpeed = 0.03F;
+            this.btnChonAll.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.btnChonAll.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
+            this.btnChonAll.BorderColor = System.Drawing.Color.Black;
+            this.btnChonAll.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnChonAll.FocusedColor = System.Drawing.Color.Empty;
+            this.btnChonAll.Font = new System.Drawing.Font("SVN-Blenda Script", 15F);
+            this.btnChonAll.ForeColor = System.Drawing.Color.White;
+            this.btnChonAll.Image = null;
+            this.btnChonAll.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnChonAll.Location = new System.Drawing.Point(17, 135);
+            this.btnChonAll.Name = "btnChonAll";
+            this.btnChonAll.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnChonAll.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnChonAll.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnChonAll.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnChonAll.OnHoverImage = null;
+            this.btnChonAll.OnPressedColor = System.Drawing.Color.Black;
+            this.btnChonAll.Size = new System.Drawing.Size(166, 64);
+            this.btnChonAll.TabIndex = 4;
+            this.btnChonAll.Text = "Thêm tất cả";
+            this.btnChonAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnChonAll.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // pnMons
+            // 
+            this.pnMons.AutoScroll = true;
+            this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMons.Location = new System.Drawing.Point(0, 0);
+            this.pnMons.Name = "pnMons";
+            this.pnMons.Size = new System.Drawing.Size(1212, 423);
+            this.pnMons.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gold;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 271);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1405, 10);
+            this.panel4.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnMons);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 281);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1405, 423);
+            this.panel5.TabIndex = 13;
             // 
             // UCFlashOrder
             // 
@@ -212,11 +212,11 @@
             this.Size = new System.Drawing.Size(1405, 704);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSlide)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
