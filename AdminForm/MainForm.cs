@@ -268,7 +268,7 @@ namespace AdminForm
             int idSort = cbSort.Value;
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
         }
-
+        int idBan = 1;
         private void bbtFind_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
@@ -290,11 +290,11 @@ namespace AdminForm
             tongtien.Text = TongTien.ToString();
             tongtien.ReadOnly = true;
         }
-        int idBan = 1;
         private void InHoaDon_Click(object sender, EventArgs e)
         {
             try
             {
+                int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
                 int TongTien = Convert.ToInt32(tongtien.Text);
                 if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, CurrentBill))
                 {
@@ -303,6 +303,8 @@ namespace AdminForm
                     f.Show();
                 }
                 else MessageBox.Show("Fail");
+                listView1.Items.Clear();
+                BusinessLogicLayer.Instance.DeleteBillDetail_BLL(CurrentBill);
             }
             catch(Exception ex)
             {

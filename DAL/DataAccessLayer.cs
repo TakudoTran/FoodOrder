@@ -524,6 +524,18 @@ namespace DAL
                 return false;
             }
         }
+
+        public void DeleteBillDetail_DAL(int CurrentBill)
+        {
+            try
+            {
+                string query = "delete from BillDetail where BillNo = @bill ";
+                object[] prams = { CurrentBill };
+                int check;
+                check = DBHelper.Instance.ExecuteNonQuery(query, prams);
+            }
+            catch (Exception) { }
+        }
         #endregion
 
 
