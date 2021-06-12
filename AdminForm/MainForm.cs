@@ -16,50 +16,50 @@ namespace AdminForm
 {
     public partial class MainForm : Form
     {
+        List<BillToAcess> finalBill { get; set; }
+        List<BillChuaTinhTien> BillsThanhToan { get; set; }
         public MainForm()
         {
             InitializeComponent();
+            #region QL mon
             dgvDanhSachMon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
             BusinessLogicLayer.Instance.setCbbDanhMucBan(cbbBanAn);
             Show(0, null);
             BusinessLogicLayer.Instance.SetColumnHeaderMon(dgvDanhSachMon);
-
+            BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
+            #endregion
+            #region QL danhMuc
             dgvDSDanhMuc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ShowDanhMuc();
             BusinessLogicLayer.Instance.SetColumnHeaderDM(dgvDSDanhMuc);
             SetComboboxLoai();
-
-            BusinessLogicLayer.Instance.setCbbSortType(cboSortType);
+            #endregion
+            #region QL Ban
             cbbBanAn.SelectedIndex = 0;
+            finalBill = new List<BillToAcess>();
+          
+            #endregion
         }
         private int CurrentBill = 0;
+        #region QL Mon
         private void Show(int idDanhmuc, string tenMon)
         {
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetMonByIdDanhMucAndTenMon(idDanhmuc, tenMon);
-        }
-      
-        private void ShowDanhMuc()
-        {
-            dgvDSDanhMuc.DataSource = BusinessLogicLayer.Instance.GetAllDanhMuc();
-        }
-        private void SetComboboxLoai()
-        {
-            cbLoaiDM.Items.AddRange(BusinessLogicLayer.Instance.GetDataLoai().ToArray());
         }
         private void btnXem_Click(object sender, EventArgs e)
         {
             CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
             int idDanhMuc = cbi.Value;
-            Show(idDanhMuc, ""); 
-            
+            Show(idDanhMuc, "");
+
         }
         private void btnTim_Click(object sender, EventArgs e)
         {
             CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
             int idDanhMuc = cbi.Value;
             string st = txtSearch.Text;
-            Show(idDanhMuc,st);
+            Show(idDanhMuc, st);
 
         }
 
@@ -93,10 +93,100 @@ namespace AdminForm
                 MessageBox.Show("Sửa thất bại");
             }
         }
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFolder.Text))
+            {
+                MessageBox.Show("Chưa chọn folder hình ảnh!");
+                return;
+            }
+            string folderPath = txtFolder.Text;
+            foreach (string imgPath in Directory.GetFiles(folderPath))
+            {
+                byte[] Anh = null;
+                FileStream fileStream = new FileStream(imgPath, FileMode.Open, FileAccess.Read);
+                BinaryReader binaryReader = new BinaryReader(fileStream);
+                Anh = binaryReader.ReadBytes((int)fileStream.Length);
+                string imgName = imgPath.Substring(imgPath.LastIndexOf(@"\"));
+                BusinessLogicLayer.Instance.ThemAnhVaoDb(imgName, Anh);
 
+                Image img = Image.FromFile(imgPath);
+                picAnh.Image = img;
+
+            }
+        }
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog())
+            {
+                if (fbd.ShowDialog() == DialogResult.OK)
+                {
+                    string folderPath = fbd.SelectedPath;
+                    txtFolder.Text = folderPath;
+                    //MessageBox.Show(folderPath);
+                }
+
+            }
+        }
+
+        private void btnLoadDefaultImg_Click(object sender, EventArgs e)
+        {
+            BusinessLogicLayer.Instance.DefaultImages();
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSachMon.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Chọn ít nhất 1 món để xóa!");
+                return;
+            }
+            foreach (DataGridViewRow i in dgvDanhSachMon.SelectedRows)
+            {
+                MonView mon = i.DataBoundItem as MonView;
+                int IdMon = mon.IdMon;
+                DialogResult result = MessageBox.Show("Muốn xóa Món: " + mon.TenMon + "?",
+                    "Hỏi xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (BusinessLogicLayer.Instance.XoaMon(IdMon))
+                    {
+                        MessageBox.Show("Đã xóa Món: " + mon.TenMon);
+                    }
+                    else MessageBox.Show("Lỗi xóa! ");
+                }
+            }
+            int id = ((CBBItem)cboDanhMuc.SelectedItem).Value;
+            Show(id, "");
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cboSortType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Chọn kiểu sắp xếp!");
+                return;
+            }
+            string name = txtSearch.Text;
+            CBBItem cbLop = cboDanhMuc.SelectedItem as CBBItem;
+            int IDLop = cbLop.Value;
+            CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
+            int idSort = cbSort.Value;
+            dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
+        }
+        #endregion
+
+        #region QL Danh muc
+        private void ShowDanhMuc()
+        {
+            dgvDSDanhMuc.DataSource = BusinessLogicLayer.Instance.GetAllDanhMuc();
+        }
+        private void SetComboboxLoai()
+        {
+            cbLoaiDM.Items.AddRange(BusinessLogicLayer.Instance.GetDataLoai().ToArray());
+        }
         private void btnThemDM_Click(object sender, EventArgs e)
         {
-            if(cbLoaiDM.SelectedIndex == -1)
+            if (cbLoaiDM.SelectedIndex == -1)
             {
                 MessageBox.Show("Chưa chọn Loại !!!");
                 return;
@@ -183,105 +273,24 @@ namespace AdminForm
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
+        #endregion
 
-        private void btnOK_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtFolder.Text))
-            {
-                MessageBox.Show("Chưa chọn folder hình ảnh!");
-                return;
-            }
-            string folderPath = txtFolder.Text;
-            foreach (string imgPath in Directory.GetFiles(folderPath))
-            {
-                byte[] Anh = null;
-                FileStream fileStream = new FileStream(imgPath, FileMode.Open, FileAccess.Read);
-                BinaryReader binaryReader = new BinaryReader(fileStream);
-                Anh = binaryReader.ReadBytes((int)fileStream.Length);
-                string imgName = imgPath.Substring(imgPath.LastIndexOf(@"\"));
-                BusinessLogicLayer.Instance.ThemAnhVaoDb(imgName, Anh);
-
-                Image img = Image.FromFile(imgPath);
-                picAnh.Image = img;
-
-            }
-        }
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
-            using (FolderBrowserDialog fbd = new FolderBrowserDialog())
-            {
-                if (fbd.ShowDialog() == DialogResult.OK)
-                {
-                    string folderPath = fbd.SelectedPath;
-                    txtFolder.Text = folderPath;
-                    //MessageBox.Show(folderPath);
-                }
-
-            }
-        }
-
-        private void btnLoadDefaultImg_Click(object sender, EventArgs e)
-        {
-            BusinessLogicLayer.Instance.DefaultImages();
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (dgvDanhSachMon.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Chọn ít nhất 1 món để xóa!");
-                return;
-            }
-            foreach (DataGridViewRow i in dgvDanhSachMon.SelectedRows)
-            {
-                MonView mon = i.DataBoundItem as MonView;
-                int IdMon = mon.IdMon;
-                DialogResult result = MessageBox.Show("Muốn xóa Món: " + mon.TenMon + "?",
-                    "Hỏi xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    if (BusinessLogicLayer.Instance.XoaMon(IdMon))
-                    {
-                        MessageBox.Show("Đã xóa Món: " + mon.TenMon);
-                    }
-                    else MessageBox.Show("Lỗi xóa! ");
-                }
-            }
-            int id = ((CBBItem)cboDanhMuc.SelectedItem).Value;
-            Show(id, "");
-        }
-
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-            if (cboSortType.SelectedIndex == -1)
-            {
-                MessageBox.Show("Chọn kiểu sắp xếp!");
-                return;
-            }
-            string name = txtSearch.Text;
-            CBBItem cbLop = cboDanhMuc.SelectedItem as CBBItem;
-            int IDLop = cbLop.Value;
-            CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
-            int idSort = cbSort.Value;
-            dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
-        }
+        #region QL Ban
         int idBan = 1;
-        private void bbtFind_Click(object sender, EventArgs e)
+        /*private void bbtFind_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
             idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
             List<BillToAcess> data = new List<BillToAcess>();
             data = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
-           
+
             int TongTien = 0;
             int index = 1;
-            foreach(BillToAcess i in data)
+            foreach (BillToAcess i in data)
             {
                 CurrentBill = i.BillNo;
-                string[] row = {index +"", i.TenMon, i.SoLuong.ToString(), i.GiaTien.ToString() };
+                string[] row = { index + "", i.TenMon, i.SoLuong.ToString(),i.GiaTien.ToString() ,(i.GiaTien * i.SoLuong).ToString() };
                 var listViewItem = new ListViewItem(row);
                 listView1.Items.Add(listViewItem);
                 TongTien += i.GiaTien * i.SoLuong;
@@ -289,24 +298,38 @@ namespace AdminForm
             }
             tongtien.Text = TongTien.ToString();
             tongtien.ReadOnly = true;
-        }
+        }*/
         private void InHoaDon_Click(object sender, EventArgs e)
         {
+            if (finalBill == null || listView1.Items.Count == 0) return;
+            bool OK = false;
             try
             {
                 int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
                 int TongTien = Convert.ToInt32(tongtien.Text);
-                if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, CurrentBill))
+                foreach(BillChuaTinhTien i in BillsThanhToan)
                 {
-
-                    Printer_Form f = new Printer_Form(idBan);
+                    if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, i.BillNo))
+                    {
+                        OK = true;
+                    }
+                }
+                if (OK)
+                {
+                    Printer_Form f = new Printer_Form(finalBill);
                     f.Show();
+                    foreach (BillToAcess i in finalBill)
+                    {
+                        BusinessLogicLayer.Instance.DeleteBillDetail_BLL(i.BillNo);
+                    }
                 }
                 else MessageBox.Show("Fail");
                 listView1.Items.Clear();
-                BusinessLogicLayer.Instance.DeleteBillDetail_BLL(CurrentBill);
+                //Xoa bill da thanh toan
+                lvBill.Items.Clear();
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Bill: values not found!");
             }
@@ -318,10 +341,85 @@ namespace AdminForm
                 if (BusinessLogicLayer.Instance.Load_Default_Bill_BLL()) MessageBox.Show("Add susscess");
                 else MessageBox.Show("Add Fail");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+
+
+        private void LayBillChuaThanhToan()
+        {
+            lvBill.Items.Clear();
+            idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
+            List<BillChuaTinhTien> list = BusinessLogicLayer.Instance.GetTop3BillChuaTinhTien(idBan);
+            foreach (BillChuaTinhTien i in list)
+            {
+                ListViewItem lvi = new ListViewItem(i.BillNo + "");
+                lvi.SubItems.Add(i.NgayLapBill + "");
+                lvi.Tag = i;
+                lvBill.Items.Add(lvi);
+            }
+        }
+        private void ClearBilldetail()
+        {
+            listView1.Items.Clear();
+            tongtien.Text = "";
+        }
+        private void cbbBanAn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClearBilldetail();
+            finalBill = null;
+            LayBillChuaThanhToan();
+        }
+        private List<BillToAcess> ChiTietHoaDon(List<BillChuaTinhTien> list)
+        {
+            List<BillToAcess> res = new List<BillToAcess>();
+            foreach(BillChuaTinhTien i in list)
+            {
+                res.AddRange(BusinessLogicLayer.Instance.GetDetail_BillChuaTinTien(i.BillNo));
+            }
+            return res;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClearBilldetail();
+            BillsThanhToan = new List<BillChuaTinhTien>();
+            if (lvBill.SelectedItems.Count == 0) return;
+
+            foreach(ListViewItem j in lvBill.SelectedItems)
+            {
+                BillChuaTinhTien bill = j.Tag as BillChuaTinhTien;
+                BillsThanhToan.Add(bill);
+            }
+            finalBill = ChiTietHoaDon(BillsThanhToan);
+            int TongTien = 0;
+            int index = 1;
+            foreach (BillToAcess i in finalBill)
+            {
+                CurrentBill = i.BillNo;
+                string[] row = { index + "", i.TenMon, i.SoLuong.ToString(), i.GiaTien.ToString(), (i.GiaTien * i.SoLuong).ToString() };
+                var listViewItem = new ListViewItem(row);
+                listView1.Items.Add(listViewItem);
+                TongTien += i.GiaTien * i.SoLuong;
+                index++;
+            }
+            tongtien.Text = TongTien.ToString();
+            tongtien.ReadOnly = true;
+        }
+
+        private void lvBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvBill.SelectedItems.Count > 1)
+            {
+                btnXem_tab1.Text = "Gộp hóa đơn";
+            }
+            else
+            {
+                btnXem_tab1.Text = "Xem";
+            }
+
     }
+}
 }

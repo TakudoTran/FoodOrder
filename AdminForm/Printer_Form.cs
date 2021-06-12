@@ -16,11 +16,11 @@ namespace AdminForm
 {
     public partial class Printer_Form : Form
     {
-        public int idBan { get; set; }
-        public Printer_Form(int idFromMainForm)
+        public List<BillToAcess> BillThanhToan { get; set; }
+        public Printer_Form(List<BillToAcess> Bill)
         {
             InitializeComponent();
-            this.idBan = idFromMainForm;
+            this.BillThanhToan = Bill;
         }
 
         private void Bill_Printer_Form_Load(object sender, EventArgs e)
@@ -31,9 +31,7 @@ namespace AdminForm
                 tb.Columns.Add("TenMon", typeof(string));
                 tb.Columns.Add("SoLuong", typeof(int));
                 tb.Columns.Add("DonGia", typeof(int));
-                List<BillToAcess> bill = new List<BillToAcess>();
-                bill = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
-                foreach (BillToAcess i in bill)
+                foreach (BillToAcess i in BillThanhToan)
                 {
                     tb.Rows.Add(i.TenMon, i.SoLuong, i.GiaTien);
                 }

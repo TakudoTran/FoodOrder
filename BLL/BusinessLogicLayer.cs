@@ -351,5 +351,13 @@ namespace BLL
             return DataAccessLayer.Instance.DataLoai();
         }
         #endregion
+        public List<BillChuaTinhTien> GetTop3BillChuaTinhTien(int idBan)
+        {
+            return DataAccessLayer.Instance.GetTopBill_BanAn(3, idBan);
+        }
+        public List<BillToAcess> GetDetail_BillChuaTinTien(int billNo)
+        {
+            return DataAccessLayer.Instance.GetBillDetailOfBill(billNo);
+        }
     }
 }
