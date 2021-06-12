@@ -538,7 +538,51 @@ namespace DAL
         }
         #endregion
 
+        public List<BillChuaTinhTien> GetTopBill_BanAn(int topNum, int idBan )
+        {
+            try
+            {
+                List<BillChuaTinhTien> listBill = new List<BillChuaTinhTien>();
+                string query = "select top " + topNum + " BillNo, NgayLapHoaDon from Bill " +
+                    "where IdBan = "+ idBan +  " and TongTien = 0 " +
+                    "order by BillNo Desc";
+                foreach(DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
+                {
+                    listBill.Add(new BillChuaTinhTien
+                    {
+                        BillNo = int.Parse(i["BillNo"].ToString()),
+                        NgayLapBill = DateTime.Parse(i["NgayLapHoaDon"].ToString())
+                    });
+                }
+                return listBill;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public List<BillToAcess> GetBillDetailOfBill(int billNo)
+        {
+            try
+            {
+                List<BillToAcess> data = new List<BillToAcess>();
+                string q = "select   Bill.BillNo, Mon.TenMon, BillDetail.SoLuong, Mon.GiaTien" +
+                    " From" +
+                    " (((BillDetail inner join Bill On BillDetail.BillNo = Bill.BillNo) inner join Mon on BillDetail.IdMon = Mon.IdMon)" +
+                    " inner join BanAn on Bill.IdBan = BanAn.IdBan)" +
+                    " where Bill.BillNo = " + billNo;
+                foreach (DataRow i in DBHelper.Instance.GetDataTable(q).Rows)
+                {
+                    data.Add(GetBillNo(i));
+                }
+                return data;
+            }
+            catch(Exception)
+            {
+                return null;
+            }
 
+        }
 
     }
 }

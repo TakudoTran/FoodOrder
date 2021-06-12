@@ -45,6 +45,8 @@ namespace AdminForm
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnDM = new System.Windows.Forms.Panel();
+            this.huy = new Guna.UI.WinForms.GunaGradientButton();
+            this.datdon = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@ namespace AdminForm
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.datdon = new Guna.UI.WinForms.GunaGradientButton();
-            this.huy = new Guna.UI.WinForms.GunaGradientButton();
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
@@ -394,6 +394,60 @@ namespace AdminForm
             this.pnDM.Size = new System.Drawing.Size(490, 167);
             this.pnDM.TabIndex = 1;
             // 
+            // huy
+            // 
+            this.huy.AnimationHoverSpeed = 0.07F;
+            this.huy.AnimationSpeed = 0.03F;
+            this.huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(13)))), ((int)(((byte)(94)))));
+            this.huy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(165)))), ((int)(((byte)(47)))));
+            this.huy.BorderColor = System.Drawing.Color.Black;
+            this.huy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.huy.FocusedColor = System.Drawing.Color.Empty;
+            this.huy.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.huy.ForeColor = System.Drawing.Color.Black;
+            this.huy.Image = ((System.Drawing.Image)(resources.GetObject("huy.Image")));
+            this.huy.ImageSize = new System.Drawing.Size(30, 30);
+            this.huy.Location = new System.Drawing.Point(274, 113);
+            this.huy.Name = "huy";
+            this.huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.huy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.huy.OnHoverForeColor = System.Drawing.Color.White;
+            this.huy.OnHoverImage = null;
+            this.huy.OnPressedColor = System.Drawing.Color.Black;
+            this.huy.Size = new System.Drawing.Size(166, 42);
+            this.huy.TabIndex = 6;
+            this.huy.Text = "Xóa hết";
+            this.huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.huy.Click += new System.EventHandler(this.huy_Click);
+            // 
+            // datdon
+            // 
+            this.datdon.AnimationHoverSpeed = 0.07F;
+            this.datdon.AnimationSpeed = 0.03F;
+            this.datdon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(223)))), ((int)(((byte)(56)))));
+            this.datdon.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(255)))), ((int)(((byte)(196)))));
+            this.datdon.BorderColor = System.Drawing.Color.Black;
+            this.datdon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.datdon.FocusedColor = System.Drawing.Color.Empty;
+            this.datdon.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.datdon.ForeColor = System.Drawing.Color.Black;
+            this.datdon.Image = ((System.Drawing.Image)(resources.GetObject("datdon.Image")));
+            this.datdon.ImageSize = new System.Drawing.Size(30, 30);
+            this.datdon.Location = new System.Drawing.Point(59, 113);
+            this.datdon.Name = "datdon";
+            this.datdon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.datdon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.datdon.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.datdon.OnHoverForeColor = System.Drawing.Color.White;
+            this.datdon.OnHoverImage = null;
+            this.datdon.OnPressedColor = System.Drawing.Color.Black;
+            this.datdon.Size = new System.Drawing.Size(166, 42);
+            this.datdon.TabIndex = 6;
+            this.datdon.Text = "Đặt ngay";
+            this.datdon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.datdon.Click += new System.EventHandler(this.datdon_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -635,60 +689,6 @@ namespace AdminForm
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(588, 5);
             this.panel4.TabIndex = 0;
-            // 
-            // datdon
-            // 
-            this.datdon.AnimationHoverSpeed = 0.07F;
-            this.datdon.AnimationSpeed = 0.03F;
-            this.datdon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(223)))), ((int)(((byte)(56)))));
-            this.datdon.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(255)))), ((int)(((byte)(196)))));
-            this.datdon.BorderColor = System.Drawing.Color.Black;
-            this.datdon.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.datdon.FocusedColor = System.Drawing.Color.Empty;
-            this.datdon.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.datdon.ForeColor = System.Drawing.Color.Black;
-            this.datdon.Image = ((System.Drawing.Image)(resources.GetObject("datdon.Image")));
-            this.datdon.ImageSize = new System.Drawing.Size(30, 30);
-            this.datdon.Location = new System.Drawing.Point(59, 113);
-            this.datdon.Name = "datdon";
-            this.datdon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.datdon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.datdon.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.datdon.OnHoverForeColor = System.Drawing.Color.White;
-            this.datdon.OnHoverImage = null;
-            this.datdon.OnPressedColor = System.Drawing.Color.Black;
-            this.datdon.Size = new System.Drawing.Size(166, 42);
-            this.datdon.TabIndex = 6;
-            this.datdon.Text = "Đặt ngay";
-            this.datdon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.datdon.Click += new System.EventHandler(this.datdon_Click);
-            // 
-            // huy
-            // 
-            this.huy.AnimationHoverSpeed = 0.07F;
-            this.huy.AnimationSpeed = 0.03F;
-            this.huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(13)))), ((int)(((byte)(94)))));
-            this.huy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(165)))), ((int)(((byte)(47)))));
-            this.huy.BorderColor = System.Drawing.Color.Black;
-            this.huy.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.huy.FocusedColor = System.Drawing.Color.Empty;
-            this.huy.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.huy.ForeColor = System.Drawing.Color.Black;
-            this.huy.Image = ((System.Drawing.Image)(resources.GetObject("huy.Image")));
-            this.huy.ImageSize = new System.Drawing.Size(30, 30);
-            this.huy.Location = new System.Drawing.Point(274, 113);
-            this.huy.Name = "huy";
-            this.huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.huy.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.huy.OnHoverForeColor = System.Drawing.Color.White;
-            this.huy.OnHoverImage = null;
-            this.huy.OnPressedColor = System.Drawing.Color.Black;
-            this.huy.Size = new System.Drawing.Size(166, 42);
-            this.huy.TabIndex = 6;
-            this.huy.Text = "Xóa hết";
-            this.huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.huy.Click += new System.EventHandler(this.huy_Click);
             // 
             // OrderForm
             // 

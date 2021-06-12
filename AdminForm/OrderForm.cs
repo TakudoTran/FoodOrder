@@ -204,42 +204,49 @@ namespace AdminForm
         // Xử lý click chọn món ở đây
         private void btnMon_Click(object sender, EventArgs e)
         {
-            UCMon obj = (UCMon)sender;
-            Mon m = obj.Tag as Mon;
-            SLMon objMon = new SLMon();
-            objMon.IdMon = m.IdMon;
-            objMon.Name = m.TenMon;
-            objMon.TenMon = m.TenMon;
-            objMon.SoLuong = 1;
-            objMon.GiaTien = m.GiaTien;
-            objMon.TongTien = m.GiaTien.ToString();
-            if(pnDSL.Controls.Count == 0 )
+            try
             {
-                objMon.TextChanged += SLMon_Changed;
-                pnDSL.Controls.Add(objMon);
-                tongtien.Text = objMon.TongTien;
-            }  
-            else if(pnDSL.Controls.Count != 0)
-            {
-                int Tien = 0;
-                bool CheckNameMon = false;
-                foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
-                {
-                    if (objMon.TenMon == SLMon.TenMon)
-                    {
-                        CheckNameMon = true;
-                        break;
-                    }
-                    Tien += SLMon.GiaTien;
-                }
-                if(!CheckNameMon)
+                UCMon obj = (UCMon)sender;
+                Mon m = obj.Tag as Mon;
+                SLMon objMon = new SLMon();
+                objMon.IdMon = m.IdMon;
+                objMon.Name = m.TenMon;
+                objMon.TenMon = m.TenMon;
+                objMon.SoLuong = 1;
+                objMon.GiaTien = m.GiaTien;
+                objMon.TongTien = m.GiaTien.ToString();
+                if (pnDSL.Controls.Count == 0)
                 {
                     objMon.TextChanged += SLMon_Changed;
                     pnDSL.Controls.Add(objMon);
-                    Tien += objMon.GiaTien;
-                    tongtien.Text = Tien.ToString();
-                }    
-            }    
+                    tongtien.Text = objMon.TongTien;
+                }
+                else if (pnDSL.Controls.Count != 0)
+                {
+                    int Tien = 0;
+                    bool CheckNameMon = false;
+                    foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+                    {
+                        if (objMon.TenMon == SLMon.TenMon)
+                        {
+                            CheckNameMon = true;
+                            break;
+                        }
+                        Tien += SLMon.GiaTien;
+                    }
+                    if (!CheckNameMon)
+                    {
+                        objMon.TextChanged += SLMon_Changed;
+                        pnDSL.Controls.Add(objMon);
+                        Tien += objMon.GiaTien;
+                        tongtien.Text = Tien.ToString();
+                    }
+                }
+            }
+            catch(Exception)
+            {
+
+            }
               
         }
         private void SLMon_Changed(object sender, EventArgs e)

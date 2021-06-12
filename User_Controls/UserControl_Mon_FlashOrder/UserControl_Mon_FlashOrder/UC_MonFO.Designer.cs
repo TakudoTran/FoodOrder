@@ -171,13 +171,13 @@
             this.lblTenMon.BackColor = System.Drawing.Color.Transparent;
             this.lblTenMon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTenMon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTenMon.Font = new System.Drawing.Font("SVN-Nexa Bold", 18F, System.Drawing.FontStyle.Italic);
+            this.lblTenMon.Font = new System.Drawing.Font("SVN-Newton", 15F, System.Drawing.FontStyle.Italic);
             this.lblTenMon.ForeColor = System.Drawing.Color.Black;
             this.lblTenMon.Location = new System.Drawing.Point(0, 0);
             this.lblTenMon.Name = "lblTenMon";
             this.lblTenMon.Size = new System.Drawing.Size(311, 57);
             this.lblTenMon.TabIndex = 1;
-            this.lblTenMon.Text = "Gà hấp lá chanh";
+            this.lblTenMon.Text = "Bún đậu mắm tôm (mẹt lớn)";
             this.lblTenMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picHinhAnh

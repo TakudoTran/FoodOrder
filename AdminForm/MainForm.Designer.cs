@@ -31,7 +31,11 @@ namespace AdminForm
         {
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.bbtFind = new System.Windows.Forms.Button();
+            this.btnXem_tab1 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lvBill = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.InHoaDon = new System.Windows.Forms.Button();
             this.tongtien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +47,7 @@ namespace AdminForm
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSort = new System.Windows.Forms.Button();
@@ -68,7 +73,6 @@ namespace AdminForm
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvDSDanhMuc = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.txtFolder = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,6 +85,7 @@ namespace AdminForm
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,19 +103,19 @@ namespace AdminForm
             this.TabControl.Controls.Add(this.tabPage1);
             this.TabControl.Controls.Add(this.tabPage2);
             this.TabControl.Controls.Add(this.tabPage3);
-            this.TabControl.Controls.Add(this.tabPage4);
             this.TabControl.Controls.Add(this.tabPage5);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Margin = new System.Windows.Forms.Padding(4);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(991, 622);
+            this.TabControl.Size = new System.Drawing.Size(992, 622);
             this.TabControl.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.bbtFind);
+            this.tabPage1.Controls.Add(this.btnXem_tab1);
+            this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.InHoaDon);
             this.tabPage1.Controls.Add(this.tongtien);
             this.tabPage1.Controls.Add(this.label2);
@@ -121,37 +126,73 @@ namespace AdminForm
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(983, 589);
+            this.tabPage1.Size = new System.Drawing.Size(984, 589);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản Lý Bàn Ăn";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // bbtFind
+            // btnXem_tab1
             // 
-            this.bbtFind.Location = new System.Drawing.Point(496, 26);
-            this.bbtFind.Name = "bbtFind";
-            this.bbtFind.Size = new System.Drawing.Size(75, 33);
-            this.bbtFind.TabIndex = 6;
-            this.bbtFind.Text = "Tìm";
-            this.bbtFind.UseVisualStyleBackColor = true;
-            this.bbtFind.Click += new System.EventHandler(this.bbtFind_Click);
+            this.btnXem_tab1.Location = new System.Drawing.Point(668, 342);
+            this.btnXem_tab1.Name = "btnXem_tab1";
+            this.btnXem_tab1.Size = new System.Drawing.Size(276, 50);
+            this.btnXem_tab1.TabIndex = 3;
+            this.btnXem_tab1.Text = "Xem";
+            this.btnXem_tab1.UseVisualStyleBackColor = true;
+            this.btnXem_tab1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.lvBill);
+            this.groupBox5.Location = new System.Drawing.Point(665, 96);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(282, 221);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Lịch sử order";
+            // 
+            // lvBill
+            // 
+            this.lvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvBill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvBill.FullRowSelect = true;
+            this.lvBill.HideSelection = false;
+            this.lvBill.Location = new System.Drawing.Point(3, 22);
+            this.lvBill.Name = "lvBill";
+            this.lvBill.Size = new System.Drawing.Size(276, 196);
+            this.lvBill.TabIndex = 0;
+            this.lvBill.UseCompatibleStateImageBehavior = false;
+            this.lvBill.View = System.Windows.Forms.View.Details;
+            this.lvBill.SelectedIndexChanged += new System.EventHandler(this.lvBill_SelectedIndexChanged);
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ID Bill";
+            this.columnHeader4.Width = 73;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Thời điểm đặt";
+            this.columnHeader5.Width = 201;
             // 
             // InHoaDon
             // 
-            this.InHoaDon.Location = new System.Drawing.Point(615, 111);
+            this.InHoaDon.Location = new System.Drawing.Point(665, 415);
             this.InHoaDon.Name = "InHoaDon";
-            this.InHoaDon.Size = new System.Drawing.Size(329, 50);
-            this.InHoaDon.TabIndex = 5;
+            this.InHoaDon.Size = new System.Drawing.Size(279, 50);
+            this.InHoaDon.TabIndex = 4;
             this.InHoaDon.Text = "In hóa đơn";
             this.InHoaDon.UseVisualStyleBackColor = true;
             this.InHoaDon.Click += new System.EventHandler(this.InHoaDon_Click);
             // 
             // tongtien
             // 
-            this.tongtien.Location = new System.Drawing.Point(141, 500);
+            this.tongtien.Location = new System.Drawing.Point(280, 500);
             this.tongtien.Name = "tongtien";
             this.tongtien.Size = new System.Drawing.Size(371, 26);
-            this.tongtien.TabIndex = 4;
+            this.tongtien.TabIndex = 7;
             // 
             // label2
             // 
@@ -159,7 +200,7 @@ namespace AdminForm
             this.label2.Location = new System.Drawing.Point(27, 500);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 6;
             this.label2.Text = "Tổng tiền:";
             // 
             // label1
@@ -167,18 +208,19 @@ namespace AdminForm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bàn Ăn:";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chọn bàn Ăn:";
             // 
             // cbbBanAn
             // 
             this.cbbBanAn.FormattingEnabled = true;
-            this.cbbBanAn.Location = new System.Drawing.Point(121, 27);
+            this.cbbBanAn.Location = new System.Drawing.Point(160, 27);
             this.cbbBanAn.Margin = new System.Windows.Forms.Padding(4);
             this.cbbBanAn.Name = "cbbBanAn";
-            this.cbbBanAn.Size = new System.Drawing.Size(333, 28);
+            this.cbbBanAn.Size = new System.Drawing.Size(157, 28);
             this.cbbBanAn.TabIndex = 1;
+            this.cbbBanAn.SelectedIndexChanged += new System.EventHandler(this.cbbBanAn_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -187,8 +229,8 @@ namespace AdminForm
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(581, 385);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(628, 385);
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết ";
             // 
@@ -198,13 +240,14 @@ namespace AdminForm
             this.columnHeader0,
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader6});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(4, 23);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(573, 358);
+            this.listView1.Size = new System.Drawing.Size(620, 358);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -225,9 +268,14 @@ namespace AdminForm
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Thành tiền";
+            this.columnHeader3.Text = "Đơn giá";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 179;
+            this.columnHeader3.Width = 124;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Thành tiền";
+            this.columnHeader6.Width = 106;
             // 
             // tabPage2
             // 
@@ -246,7 +294,7 @@ namespace AdminForm
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(983, 589);
+            this.tabPage2.Size = new System.Drawing.Size(984, 589);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản Lý Món Ăn";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -256,14 +304,14 @@ namespace AdminForm
             this.txtSearch.Location = new System.Drawing.Point(652, 36);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(266, 26);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TabIndex = 3;
             // 
             // btnSort
             // 
             this.btnSort.Location = new System.Drawing.Point(549, 476);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(159, 35);
-            this.btnSort.TabIndex = 3;
+            this.btnSort.TabIndex = 9;
             this.btnSort.Text = "Sắp xếp theo:";
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
@@ -273,7 +321,7 @@ namespace AdminForm
             this.btnXoa.Location = new System.Drawing.Point(420, 476);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(97, 35);
-            this.btnXoa.TabIndex = 3;
+            this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -283,7 +331,7 @@ namespace AdminForm
             this.btnSua.Location = new System.Drawing.Point(291, 476);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(97, 35);
-            this.btnSua.TabIndex = 3;
+            this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -293,7 +341,7 @@ namespace AdminForm
             this.btnThem.Location = new System.Drawing.Point(162, 476);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(97, 35);
-            this.btnThem.TabIndex = 3;
+            this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -303,7 +351,7 @@ namespace AdminForm
             this.btnXem.Location = new System.Drawing.Point(33, 476);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(97, 35);
-            this.btnXem.TabIndex = 3;
+            this.btnXem.TabIndex = 5;
             this.btnXem.Text = "Xem";
             this.btnXem.UseVisualStyleBackColor = true;
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
@@ -313,7 +361,7 @@ namespace AdminForm
             this.btnSearch.Location = new System.Drawing.Point(537, 32);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(97, 35);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnTim_Click);
@@ -324,7 +372,7 @@ namespace AdminForm
             this.label3.Location = new System.Drawing.Point(26, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Danh mục:";
             // 
             // cboSortType
@@ -333,7 +381,7 @@ namespace AdminForm
             this.cboSortType.Location = new System.Drawing.Point(740, 480);
             this.cboSortType.Name = "cboSortType";
             this.cboSortType.Size = new System.Drawing.Size(193, 28);
-            this.cboSortType.TabIndex = 1;
+            this.cboSortType.TabIndex = 10;
             // 
             // cboDanhMuc
             // 
@@ -349,7 +397,7 @@ namespace AdminForm
             this.groupBox2.Location = new System.Drawing.Point(30, 99);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(891, 342);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách món:";
             // 
@@ -382,7 +430,7 @@ namespace AdminForm
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(983, 589);
+            this.tabPage3.Size = new System.Drawing.Size(984, 589);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản Lý Danh Mục";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -393,7 +441,7 @@ namespace AdminForm
             this.cbLoaiDM.Location = new System.Drawing.Point(656, 258);
             this.cbLoaiDM.Name = "cbLoaiDM";
             this.cbLoaiDM.Size = new System.Drawing.Size(292, 28);
-            this.cbLoaiDM.TabIndex = 5;
+            this.cbLoaiDM.TabIndex = 6;
             // 
             // lable
             // 
@@ -401,7 +449,7 @@ namespace AdminForm
             this.lable.Location = new System.Drawing.Point(528, 258);
             this.lable.Name = "lable";
             this.lable.Size = new System.Drawing.Size(46, 20);
-            this.lable.TabIndex = 4;
+            this.lable.TabIndex = 5;
             this.lable.Text = "Loại:";
             // 
             // btnXoaDM
@@ -409,7 +457,7 @@ namespace AdminForm
             this.btnXoaDM.Location = new System.Drawing.Point(841, 358);
             this.btnXoaDM.Name = "btnXoaDM";
             this.btnXoaDM.Size = new System.Drawing.Size(107, 37);
-            this.btnXoaDM.TabIndex = 3;
+            this.btnXoaDM.TabIndex = 9;
             this.btnXoaDM.Text = "Xóa";
             this.btnXoaDM.UseVisualStyleBackColor = true;
             this.btnXoaDM.Click += new System.EventHandler(this.btnXoaDM_Click);
@@ -419,7 +467,7 @@ namespace AdminForm
             this.btnSuaDM.Location = new System.Drawing.Point(679, 358);
             this.btnSuaDM.Name = "btnSuaDM";
             this.btnSuaDM.Size = new System.Drawing.Size(107, 37);
-            this.btnSuaDM.TabIndex = 3;
+            this.btnSuaDM.TabIndex = 8;
             this.btnSuaDM.Text = "Sửa";
             this.btnSuaDM.UseVisualStyleBackColor = true;
             this.btnSuaDM.Click += new System.EventHandler(this.btnSuaDM_Click);
@@ -429,7 +477,7 @@ namespace AdminForm
             this.btnThemDM.Location = new System.Drawing.Point(523, 356);
             this.btnThemDM.Name = "btnThemDM";
             this.btnThemDM.Size = new System.Drawing.Size(107, 37);
-            this.btnThemDM.TabIndex = 3;
+            this.btnThemDM.TabIndex = 7;
             this.btnThemDM.Text = "Thêm";
             this.btnThemDM.UseVisualStyleBackColor = true;
             this.btnThemDM.Click += new System.EventHandler(this.btnThemDM_Click);
@@ -456,7 +504,7 @@ namespace AdminForm
             this.txtTenDanhMuc.Location = new System.Drawing.Point(656, 160);
             this.txtTenDanhMuc.Name = "txtTenDanhMuc";
             this.txtTenDanhMuc.Size = new System.Drawing.Size(292, 26);
-            this.txtTenDanhMuc.TabIndex = 2;
+            this.txtTenDanhMuc.TabIndex = 4;
             // 
             // label4
             // 
@@ -464,7 +512,7 @@ namespace AdminForm
             this.label4.Location = new System.Drawing.Point(514, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 20);
-            this.label4.TabIndex = 1;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Tên danh mục:";
             // 
             // groupBox3
@@ -491,16 +539,6 @@ namespace AdminForm
             this.dgvDSDanhMuc.TabIndex = 0;
             this.dgvDSDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSDanhMuc_CellClick);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(983, 589);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Lịch sử";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.txtFolder);
@@ -513,7 +551,7 @@ namespace AdminForm
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(983, 589);
+            this.tabPage5.Size = new System.Drawing.Size(984, 589);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Set up";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -581,7 +619,7 @@ namespace AdminForm
             this.defaultbill.Name = "defaultbill";
             this.defaultbill.Size = new System.Drawing.Size(248, 110);
             this.defaultbill.TabIndex = 0;
-            this.defaultbill.Text = "Load Default Img";
+            this.defaultbill.Text = "Load Default Bill";
             this.defaultbill.UseVisualStyleBackColor = true;
             this.defaultbill.Click += new System.EventHandler(this.Default_Bill);
             // 
@@ -599,7 +637,7 @@ namespace AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 622);
+            this.ClientSize = new System.Drawing.Size(992, 622);
             this.Controls.Add(this.TabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -609,6 +647,7 @@ namespace AdminForm
             this.TabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -648,7 +687,6 @@ namespace AdminForm
         private System.Windows.Forms.ComboBox cboDanhMuc;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvDanhSachMon;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -675,9 +713,14 @@ namespace AdminForm
         private System.Windows.Forms.ComboBox cbLoaiDM;
         private System.Windows.Forms.Label lable;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button bbtFind;
         private System.Windows.Forms.Button defaultbill;
         private System.Windows.Forms.ColumnHeader columnHeader0;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ListView lvBill;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnXem_tab1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 

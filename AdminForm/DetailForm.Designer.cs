@@ -53,7 +53,7 @@ namespace AdminForm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(60, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 25);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã món ăn:";
             // 
@@ -61,7 +61,7 @@ namespace AdminForm
             // 
             this.txtIdMon.Location = new System.Drawing.Point(192, 55);
             this.txtIdMon.Name = "txtIdMon";
-            this.txtIdMon.Size = new System.Drawing.Size(264, 30);
+            this.txtIdMon.Size = new System.Drawing.Size(264, 26);
             this.txtIdMon.TabIndex = 1;
             // 
             // btnOk
@@ -69,7 +69,7 @@ namespace AdminForm
             this.btnOk.Location = new System.Drawing.Point(191, 357);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(93, 48);
-            this.btnOk.TabIndex = 3;
+            this.btnOk.TabIndex = 10;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -79,55 +79,55 @@ namespace AdminForm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(60, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 25);
-            this.label2.TabIndex = 0;
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 2;
             this.label2.Text = "Tên món ăn:";
             // 
             // txtTenMon
             // 
             this.txtTenMon.Location = new System.Drawing.Point(191, 114);
             this.txtTenMon.Name = "txtTenMon";
-            this.txtTenMon.Size = new System.Drawing.Size(264, 30);
-            this.txtTenMon.TabIndex = 1;
+            this.txtTenMon.Size = new System.Drawing.Size(264, 26);
+            this.txtTenMon.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(60, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 25);
-            this.label3.TabIndex = 0;
+            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.TabIndex = 4;
             this.label3.Text = "Giá tiền:";
             // 
             // txtGiaTien
             // 
             this.txtGiaTien.Location = new System.Drawing.Point(191, 173);
             this.txtGiaTien.Name = "txtGiaTien";
-            this.txtGiaTien.Size = new System.Drawing.Size(264, 30);
-            this.txtGiaTien.TabIndex = 1;
+            this.txtGiaTien.Size = new System.Drawing.Size(264, 26);
+            this.txtGiaTien.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(60, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
-            this.label4.TabIndex = 0;
+            this.label4.Size = new System.Drawing.Size(125, 20);
+            this.label4.TabIndex = 6;
             this.label4.Text = "Số lần gọi món:";
             // 
             // txtSoLanGoiMon
             // 
             this.txtSoLanGoiMon.Location = new System.Drawing.Point(191, 232);
             this.txtSoLanGoiMon.Name = "txtSoLanGoiMon";
-            this.txtSoLanGoiMon.Size = new System.Drawing.Size(264, 30);
-            this.txtSoLanGoiMon.TabIndex = 1;
+            this.txtSoLanGoiMon.Size = new System.Drawing.Size(264, 26);
+            this.txtSoLanGoiMon.TabIndex = 7;
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(362, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 48);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -137,8 +137,8 @@ namespace AdminForm
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(60, 291);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 25);
-            this.label5.TabIndex = 0;
+            this.label5.Size = new System.Drawing.Size(91, 20);
+            this.label5.TabIndex = 8;
             this.label5.Text = "Danh mục:";
             // 
             // cboDanhMuc
@@ -146,8 +146,8 @@ namespace AdminForm
             this.cboDanhMuc.FormattingEnabled = true;
             this.cboDanhMuc.Location = new System.Drawing.Point(192, 291);
             this.cboDanhMuc.Name = "cboDanhMuc";
-            this.cboDanhMuc.Size = new System.Drawing.Size(263, 33);
-            this.cboDanhMuc.TabIndex = 4;
+            this.cboDanhMuc.Size = new System.Drawing.Size(263, 28);
+            this.cboDanhMuc.TabIndex = 9;
             // 
             // picHinhAnh
             // 
@@ -164,8 +164,8 @@ namespace AdminForm
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(529, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 25);
-            this.label6.TabIndex = 0;
+            this.label6.Size = new System.Drawing.Size(154, 20);
+            this.label6.TabIndex = 13;
             this.label6.Text = "Hình ảnh minh họa:";
             // 
             // btnUpload
@@ -173,7 +173,7 @@ namespace AdminForm
             this.btnUpload.Location = new System.Drawing.Point(533, 357);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(237, 48);
-            this.btnUpload.TabIndex = 3;
+            this.btnUpload.TabIndex = 14;
             this.btnUpload.Text = "Upload ảnh";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
@@ -183,14 +183,14 @@ namespace AdminForm
             this.btnPull.Location = new System.Drawing.Point(533, 55);
             this.btnPull.Name = "btnPull";
             this.btnPull.Size = new System.Drawing.Size(237, 32);
-            this.btnPull.TabIndex = 3;
+            this.btnPull.TabIndex = 12;
             this.btnPull.Text = "Chọn ảnh từ CSDL";
             this.btnPull.UseVisualStyleBackColor = true;
             this.btnPull.Click += new System.EventHandler(this.btnPull_Click);
             // 
             // DetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 448);
             this.Controls.Add(this.picHinhAnh);
