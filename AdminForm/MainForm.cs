@@ -321,10 +321,15 @@ namespace AdminForm
                     foreach (BillToAcess i in finalBill)
                     {
                         BusinessLogicLayer.Instance.DeleteBillDetail_BLL(i.BillNo);
+                        //chỉ còn 1 bill sau khi gộp nhiều bill để thanh toán
+                        for(int j = 0; j < BillsThanhToan.Count -1; j ++)
+                        {
+                            BusinessLogicLayer.Instance.Del_Bill(BillsThanhToan[j].BillNo);
+                        }
                     }
                 }
-                else MessageBox.Show("Fail");
-                listView1.Items.Clear();
+                else MessageBox.Show("Failed!");
+                ClearBilldetail();
                 //Xoa bill da thanh toan
                 lvBill.Items.Clear();
 
@@ -420,6 +425,33 @@ namespace AdminForm
                 btnXem_tab1.Text = "Xem";
             }
 
+        }
+        private void btnXoa_tab1_Click(object sender, EventArgs e)
+        {
+            if(lvBill.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn!");
+                return;
+            }
+            for(int i = 0; i < lvBill.SelectedItems.Count; i++)
+            {
+                BillChuaTinhTien selectedBill = lvBill.SelectedItems[i].Tag as BillChuaTinhTien;
+                DialogResult res =  MessageBox.Show("Bàn " + ((CBBItem)cbbBanAn.SelectedItem).Value + " - Xác nhận xóa ID_Bill: " + selectedBill.BillNo + " Time: " + selectedBill.NgayLapBill,
+                    "Hỏi xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    if (BusinessLogicLayer.Instance.DeleteBillDetail_BLL(selectedBill.BillNo))
+                    {
+                        if (BusinessLogicLayer.Instance.Del_Bill(selectedBill.BillNo))
+                        {
+                            MessageBox.Show("Xóa thành công!");
+                        }
+                        else MessageBox.Show("Xóa thất bại!");
+                    }   
+                }
+            }
+            LayBillChuaThanhToan();
+            ClearBilldetail();
+        }
     }
-}
 }

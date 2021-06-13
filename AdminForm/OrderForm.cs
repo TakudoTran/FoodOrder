@@ -15,6 +15,7 @@ using Guna.UI.WinForms;
 using CL_OrderForm;
 using UC_FlashOrder;
 using MyAlgo;
+using AfterOrderDialog;
 
 namespace AdminForm
 {
@@ -353,6 +354,9 @@ namespace AdminForm
             if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon)==true)
             {
                 MessageBox.Show("Da dat mon thanh cong");
+                AfterOrderForm f = new AfterOrderForm();
+                f.StartPosition = FormStartPosition.CenterScreen;
+                f.Show();
                 pnDSL.Controls.Clear();
             }
             else

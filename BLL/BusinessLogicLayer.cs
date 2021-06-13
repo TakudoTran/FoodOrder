@@ -339,9 +339,13 @@ namespace BLL
             return DataAccessLayer.Instance.SetHoaDon_DAL(tt,currbill);
         }
 
-        public void DeleteBillDetail_BLL(int CurrentBill)
+        public bool DeleteBillDetail_BLL(int CurrentBill)
         {
-            DataAccessLayer.Instance.DeleteBillDetail_DAL(CurrentBill);
+            return  DataAccessLayer.Instance.DeleteBillDetail_DAL(CurrentBill);
+        }
+        public bool Del_Bill(int billNo)
+        {
+            return DataAccessLayer.Instance.DeleteBill(billNo);
         }
         #endregion
 

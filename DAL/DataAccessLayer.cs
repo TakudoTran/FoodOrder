@@ -525,7 +525,7 @@ namespace DAL
             }
         }
 
-        public void DeleteBillDetail_DAL(int CurrentBill)
+        public bool DeleteBillDetail_DAL(int CurrentBill)
         {
             try
             {
@@ -533,8 +533,28 @@ namespace DAL
                 object[] prams = { CurrentBill };
                 int check;
                 check = DBHelper.Instance.ExecuteNonQuery(query, prams);
+                if (check > 0) return true;
+                return false;
             }
-            catch (Exception) { }
+            catch (Exception) {
+                return false;
+            }
+        }
+        public bool DeleteBill(int billNo)
+        {
+            try
+            {
+                string query = "delete from Bill where BillNo = @bill ";
+                object[] prams = { billNo };
+                int check;
+                check = DBHelper.Instance.ExecuteNonQuery(query, prams);
+                if (check > 0) return true;
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
         #endregion
 

@@ -404,3 +404,6 @@ C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\ru\Microsoft.Repor
 C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.Printer_Form.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.exe.config
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.AfterOrderForm.resources
