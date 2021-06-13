@@ -36,6 +36,9 @@
     <Reference Include="9_4_2021">
       <HintPath>..\..\..\..\..\source\repos\9_4_2021\9_4_2021\bin\Debug\9_4_2021.dll</HintPath>
     </Reference>
+    <Reference Include="AfterOrderDialog">
+      <HintPath>..\User_Controls\AfterOrderDialog\AfterOrderDialog\bin\Debug\AfterOrderDialog.exe</HintPath>
+    </Reference>
     <Reference Include="DSLMon">
       <HintPath>..\User_Controls\DSLMon\DSLMon\bin\Debug\DSLMon.dll</HintPath>
     </Reference>
@@ -82,6 +85,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfterOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfterOrderForm.Designer.cs">
+      <DependentUpon>AfterOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +147,9 @@
     <Compile Include="UserControlHome.Designer.cs">
       <DependentUpon>UserControlHome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AfterOrderForm.resx">
+      <DependentUpon>AfterOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>

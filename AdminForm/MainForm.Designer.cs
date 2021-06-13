@@ -83,6 +83,7 @@ namespace AdminForm
             this.defaultbill = new System.Windows.Forms.Button();
             this.btnLoadDefaultImg = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnXoa_tab1 = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -114,6 +115,7 @@ namespace AdminForm
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnXoa_tab1);
             this.tabPage1.Controls.Add(this.btnXem_tab1);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.InHoaDon);
@@ -179,7 +181,7 @@ namespace AdminForm
             // 
             // InHoaDon
             // 
-            this.InHoaDon.Location = new System.Drawing.Point(665, 415);
+            this.InHoaDon.Location = new System.Drawing.Point(668, 476);
             this.InHoaDon.Name = "InHoaDon";
             this.InHoaDon.Size = new System.Drawing.Size(279, 50);
             this.InHoaDon.TabIndex = 4;
@@ -633,6 +635,16 @@ namespace AdminForm
             this.btnLoadDefaultImg.UseVisualStyleBackColor = true;
             this.btnLoadDefaultImg.Click += new System.EventHandler(this.btnLoadDefaultImg_Click);
             // 
+            // btnXoa_tab1
+            // 
+            this.btnXoa_tab1.Location = new System.Drawing.Point(668, 410);
+            this.btnXoa_tab1.Name = "btnXoa_tab1";
+            this.btnXoa_tab1.Size = new System.Drawing.Size(276, 50);
+            this.btnXoa_tab1.TabIndex = 3;
+            this.btnXoa_tab1.Text = "Xóa";
+            this.btnXoa_tab1.UseVisualStyleBackColor = true;
+            this.btnXoa_tab1.Click += new System.EventHandler(this.btnXoa_tab1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -721,6 +733,7 @@ namespace AdminForm
         private System.Windows.Forms.Button btnXem_tab1;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btnXoa_tab1;
     }
 }
 
