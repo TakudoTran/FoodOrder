@@ -236,7 +236,6 @@ namespace DAL
             List<string> list = new List<string>();
             list.Add("DA");
             list.Add("DU");
-            list.Add("Kh");
             return list;
         }
         #endregion
@@ -556,17 +555,15 @@ namespace DAL
                 return false;
             }
         }
-        #endregion
-
-        public List<BillChuaTinhTien> GetTopBill_BanAn(int topNum, int idBan )
+        public List<BillChuaTinhTien> GetTopBill_BanAn(int topNum, int idBan)
         {
             try
             {
                 List<BillChuaTinhTien> listBill = new List<BillChuaTinhTien>();
                 string query = "select top " + topNum + " BillNo, NgayLapHoaDon from Bill " +
-                    "where IdBan = "+ idBan +  " and TongTien = 0 " +
+                    "where IdBan = " + idBan + " and TongTien = 0 " +
                     "order by BillNo Desc";
-                foreach(DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
+                foreach (DataRow i in DBHelper.Instance.GetDataTable(query).Rows)
                 {
                     listBill.Add(new BillChuaTinhTien
                     {
@@ -597,12 +594,12 @@ namespace DAL
                 }
                 return data;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return null;
             }
 
         }
-
+        #endregion
     }
 }

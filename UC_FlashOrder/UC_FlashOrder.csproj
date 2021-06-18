@@ -124,5 +124,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomMessageBox\CustomMessageBox.csproj">
+      <Project>{4657af6c-6193-4d24-80f2-3c00a35d0b61}</Project>
+      <Name>CustomMessageBox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

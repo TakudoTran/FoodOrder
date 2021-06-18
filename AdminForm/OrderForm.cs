@@ -16,6 +16,7 @@ using CL_OrderForm;
 using UC_FlashOrder;
 using MyAlgo;
 using AfterOrderDialog;
+using CustomMessageBox;
 
 namespace AdminForm
 {
@@ -295,6 +296,11 @@ namespace AdminForm
         private void ThemVaoBill(object sender, EventArgs e)
         {
             List<Mon> mons = ucFlashOrder.listMonFO;
+            if(mons == null)
+            {
+                MyMessageBox.ShowMessage("Chưa có món nào!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             for(int i = 0; i < mons.Count; i++)
             {
                 SLMon objMon = new SLMon();
@@ -340,37 +346,52 @@ namespace AdminForm
         {
             if(pnDSL.Controls.Count == 0)
             {
-                MessageBox.Show("Chưa chọn món!");
+                MyMessageBox.ShowMessage("Quý khách chưa chọn món!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
-            List<int> idMon = new List<int>();
-            List<int> slMon  = new List<int>();
-            foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+            DialogResult res = MyMessageBox.ShowMessage("Quý khách chắc chắn đặt món?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
             {
-                idMon.Add(SLMon.IdMon);
-                slMon.Add(SLMon.SoLuong);
-            }
-            if(BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon)==true)
-            {
-                MessageBox.Show("Da dat mon thanh cong");
-                AfterOrderForm f = new AfterOrderForm();
-                f.StartPosition = FormStartPosition.CenterScreen;
-                f.Show();
-                pnDSL.Controls.Clear();
+                int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
+                List<int> idMon = new List<int>();
+                List<int> slMon = new List<int>();
+                foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
+                {
+                    idMon.Add(SLMon.IdMon);
+                    slMon.Add(SLMon.SoLuong);
+                }
+                if (BLL_OrderForm.Instance.AddBillToData_BLL(idBan, idMon, slMon) == true && BLL_OrderForm.Instance.UpdateSLG_BLL(idMon) == true)
+                {
+                    MyMessageBox.ShowMessage("Đặt món thành công!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AfterOrderForm f = new AfterOrderForm();
+                    f.StartPosition = FormStartPosition.CenterScreen;
+                    f.Show();
+                    pnDSL.Controls.Clear();
+                }
+                else
+                {
+                    MyMessageBox.ShowMessage("Đặt món thất bại!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Dat that bai");
+                MyMessageBox.ShowMessage("Đặt món thất bại!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+           
         }
         private void huy_Click(object sender, EventArgs e)
         {
-            pnDSL.Controls.Clear();
+            if(pnDSL.Controls.Count == 0)
+            {
+                return;
+            }
+            DialogResult res = MyMessageBox.ShowMessage("Quý khách chắc chắn xóa hết?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+                pnDSL.Controls.Clear();
+            }
         }
 
         #endregion
-
     }
 }

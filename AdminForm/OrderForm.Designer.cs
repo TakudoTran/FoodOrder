@@ -33,20 +33,12 @@ namespace AdminForm
             this.pnTop = new Guna.UI.WinForms.GunaPanel();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.btnMaxsize = new Guna.UI.WinForms.GunaControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
-            this.btnContact = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnFlash = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnDoUong = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnDoAn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnHome = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnBill = new Guna.UI.WinForms.GunaPanel();
             this.pnDSL = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnDM = new System.Windows.Forms.Panel();
-            this.huy = new Guna.UI.WinForms.GunaGradientButton();
-            this.datdon = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,8 +60,15 @@ namespace AdminForm
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.huy = new Guna.UI.WinForms.GunaGradientButton();
+            this.datdon = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnContact = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnFlash = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnDoUong = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnDoAn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnHome = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.pnBill.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
@@ -79,6 +78,7 @@ namespace AdminForm
             this.panel2.SuspendLayout();
             this.pnUnderTop.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -126,17 +126,6 @@ namespace AdminForm
             this.btnMaxsize.Size = new System.Drawing.Size(45, 28);
             this.btnMaxsize.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1472, 235);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(194)))));
@@ -151,186 +140,6 @@ namespace AdminForm
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(194, 584);
             this.pnLeft.TabIndex = 1;
-            // 
-            // btnContact
-            // 
-            this.btnContact.AnimationHoverSpeed = 0.07F;
-            this.btnContact.AnimationSpeed = 0.03F;
-            this.btnContact.BaseColor = System.Drawing.Color.White;
-            this.btnContact.BorderColor = System.Drawing.Color.Black;
-            this.btnContact.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnContact.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
-            this.btnContact.CheckedBorderColor = System.Drawing.Color.Gray;
-            this.btnContact.CheckedForeColor = System.Drawing.Color.Black;
-            this.btnContact.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnContact.CheckedImage")));
-            this.btnContact.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
-            this.btnContact.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnContact.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContact.FocusedColor = System.Drawing.Color.Empty;
-            this.btnContact.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnContact.ForeColor = System.Drawing.Color.DimGray;
-            this.btnContact.Image = ((System.Drawing.Image)(resources.GetObject("btnContact.Image")));
-            this.btnContact.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnContact.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            this.btnContact.LineLeft = 8;
-            this.btnContact.Location = new System.Drawing.Point(0, 368);
-            this.btnContact.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnContact.Name = "btnContact";
-            this.btnContact.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnContact.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnContact.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnContact.OnHoverImage = null;
-            this.btnContact.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnContact.OnPressedColor = System.Drawing.Color.Black;
-            this.btnContact.OnPressedDepth = 0;
-            this.btnContact.Size = new System.Drawing.Size(194, 92);
-            this.btnContact.TabIndex = 7;
-            this.btnContact.Text = "Contact us";
-            // 
-            // btnFlash
-            // 
-            this.btnFlash.AnimationHoverSpeed = 0.07F;
-            this.btnFlash.AnimationSpeed = 0.03F;
-            this.btnFlash.BaseColor = System.Drawing.Color.White;
-            this.btnFlash.BorderColor = System.Drawing.Color.Black;
-            this.btnFlash.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnFlash.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
-            this.btnFlash.CheckedBorderColor = System.Drawing.Color.Gray;
-            this.btnFlash.CheckedForeColor = System.Drawing.Color.Black;
-            this.btnFlash.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnFlash.CheckedImage")));
-            this.btnFlash.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
-            this.btnFlash.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnFlash.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFlash.FocusedColor = System.Drawing.Color.Empty;
-            this.btnFlash.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnFlash.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFlash.Image = ((System.Drawing.Image)(resources.GetObject("btnFlash.Image")));
-            this.btnFlash.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFlash.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            this.btnFlash.LineLeft = 8;
-            this.btnFlash.Location = new System.Drawing.Point(0, 276);
-            this.btnFlash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnFlash.Name = "btnFlash";
-            this.btnFlash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnFlash.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnFlash.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnFlash.OnHoverImage = null;
-            this.btnFlash.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnFlash.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFlash.OnPressedDepth = 0;
-            this.btnFlash.Size = new System.Drawing.Size(194, 92);
-            this.btnFlash.TabIndex = 7;
-            this.btnFlash.Text = "Flash Order";
-            this.btnFlash.Click += new System.EventHandler(this.btnFlash_Click);
-            // 
-            // btnDoUong
-            // 
-            this.btnDoUong.AnimationHoverSpeed = 0.07F;
-            this.btnDoUong.AnimationSpeed = 0.03F;
-            this.btnDoUong.BaseColor = System.Drawing.Color.White;
-            this.btnDoUong.BorderColor = System.Drawing.Color.Black;
-            this.btnDoUong.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnDoUong.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
-            this.btnDoUong.CheckedBorderColor = System.Drawing.Color.Gray;
-            this.btnDoUong.CheckedForeColor = System.Drawing.Color.Black;
-            this.btnDoUong.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnDoUong.CheckedImage")));
-            this.btnDoUong.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
-            this.btnDoUong.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDoUong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoUong.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDoUong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDoUong.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnDoUong.Image")));
-            this.btnDoUong.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDoUong.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            this.btnDoUong.LineLeft = 8;
-            this.btnDoUong.Location = new System.Drawing.Point(0, 184);
-            this.btnDoUong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDoUong.Name = "btnDoUong";
-            this.btnDoUong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnDoUong.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnDoUong.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnDoUong.OnHoverImage = null;
-            this.btnDoUong.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnDoUong.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDoUong.OnPressedDepth = 0;
-            this.btnDoUong.Size = new System.Drawing.Size(194, 92);
-            this.btnDoUong.TabIndex = 4;
-            this.btnDoUong.Text = "Đồ uống";
-            this.btnDoUong.Click += new System.EventHandler(this.btnDoUong_Click_1);
-            // 
-            // btnDoAn
-            // 
-            this.btnDoAn.AnimationHoverSpeed = 0.07F;
-            this.btnDoAn.AnimationSpeed = 0.03F;
-            this.btnDoAn.BaseColor = System.Drawing.Color.White;
-            this.btnDoAn.BorderColor = System.Drawing.Color.Black;
-            this.btnDoAn.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnDoAn.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
-            this.btnDoAn.CheckedBorderColor = System.Drawing.Color.Gray;
-            this.btnDoAn.CheckedForeColor = System.Drawing.Color.Black;
-            this.btnDoAn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnDoAn.CheckedImage")));
-            this.btnDoAn.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
-            this.btnDoAn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDoAn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoAn.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDoAn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDoAn.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoAn.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAn.Image")));
-            this.btnDoAn.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDoAn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            this.btnDoAn.LineLeft = 8;
-            this.btnDoAn.Location = new System.Drawing.Point(0, 92);
-            this.btnDoAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDoAn.Name = "btnDoAn";
-            this.btnDoAn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnDoAn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnDoAn.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnDoAn.OnHoverImage = null;
-            this.btnDoAn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnDoAn.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDoAn.OnPressedDepth = 0;
-            this.btnDoAn.Size = new System.Drawing.Size(194, 92);
-            this.btnDoAn.TabIndex = 3;
-            this.btnDoAn.Text = "Đồ ăn";
-            this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.AnimationHoverSpeed = 0.07F;
-            this.btnHome.AnimationSpeed = 0.03F;
-            this.btnHome.BaseColor = System.Drawing.Color.White;
-            this.btnHome.BorderColor = System.Drawing.Color.Black;
-            this.btnHome.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btnHome.Checked = true;
-            this.btnHome.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
-            this.btnHome.CheckedBorderColor = System.Drawing.Color.Gray;
-            this.btnHome.CheckedForeColor = System.Drawing.Color.Black;
-            this.btnHome.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnHome.CheckedImage")));
-            this.btnHome.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
-            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FocusedColor = System.Drawing.Color.Empty;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnHome.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHome.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
-            this.btnHome.LineLeft = 8;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnHome.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnHome.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnHome.OnHoverImage = null;
-            this.btnHome.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
-            this.btnHome.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHome.OnPressedDepth = 0;
-            this.btnHome.Size = new System.Drawing.Size(194, 92);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pnBill
             // 
@@ -393,60 +202,6 @@ namespace AdminForm
             this.pnDM.Name = "pnDM";
             this.pnDM.Size = new System.Drawing.Size(490, 167);
             this.pnDM.TabIndex = 1;
-            // 
-            // huy
-            // 
-            this.huy.AnimationHoverSpeed = 0.07F;
-            this.huy.AnimationSpeed = 0.03F;
-            this.huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(13)))), ((int)(((byte)(94)))));
-            this.huy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(165)))), ((int)(((byte)(47)))));
-            this.huy.BorderColor = System.Drawing.Color.Black;
-            this.huy.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.huy.FocusedColor = System.Drawing.Color.Empty;
-            this.huy.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.huy.ForeColor = System.Drawing.Color.Black;
-            this.huy.Image = ((System.Drawing.Image)(resources.GetObject("huy.Image")));
-            this.huy.ImageSize = new System.Drawing.Size(30, 30);
-            this.huy.Location = new System.Drawing.Point(274, 113);
-            this.huy.Name = "huy";
-            this.huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.huy.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.huy.OnHoverForeColor = System.Drawing.Color.White;
-            this.huy.OnHoverImage = null;
-            this.huy.OnPressedColor = System.Drawing.Color.Black;
-            this.huy.Size = new System.Drawing.Size(166, 42);
-            this.huy.TabIndex = 6;
-            this.huy.Text = "Xóa hết";
-            this.huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.huy.Click += new System.EventHandler(this.huy_Click);
-            // 
-            // datdon
-            // 
-            this.datdon.AnimationHoverSpeed = 0.07F;
-            this.datdon.AnimationSpeed = 0.03F;
-            this.datdon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(223)))), ((int)(((byte)(56)))));
-            this.datdon.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(255)))), ((int)(((byte)(196)))));
-            this.datdon.BorderColor = System.Drawing.Color.Black;
-            this.datdon.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.datdon.FocusedColor = System.Drawing.Color.Empty;
-            this.datdon.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.datdon.ForeColor = System.Drawing.Color.Black;
-            this.datdon.Image = ((System.Drawing.Image)(resources.GetObject("datdon.Image")));
-            this.datdon.ImageSize = new System.Drawing.Size(30, 30);
-            this.datdon.Location = new System.Drawing.Point(59, 113);
-            this.datdon.Name = "datdon";
-            this.datdon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.datdon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
-            this.datdon.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.datdon.OnHoverForeColor = System.Drawing.Color.White;
-            this.datdon.OnHoverImage = null;
-            this.datdon.OnPressedColor = System.Drawing.Color.Black;
-            this.datdon.Size = new System.Drawing.Size(166, 42);
-            this.datdon.TabIndex = 6;
-            this.datdon.Text = "Đặt ngay";
-            this.datdon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.datdon.Click += new System.EventHandler(this.datdon_Click);
             // 
             // panel1
             // 
@@ -607,10 +362,10 @@ namespace AdminForm
             // 
             this.cbbBanAn.Font = new System.Drawing.Font("Sitka Heading", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbBanAn.FormattingEnabled = true;
-            this.cbbBanAn.Location = new System.Drawing.Point(6, 28);
+            this.cbbBanAn.Location = new System.Drawing.Point(11, 28);
             this.cbbBanAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbBanAn.Name = "cbbBanAn";
-            this.cbbBanAn.Size = new System.Drawing.Size(191, 47);
+            this.cbbBanAn.Size = new System.Drawing.Size(186, 47);
             this.cbbBanAn.TabIndex = 0;
             // 
             // panel10
@@ -690,6 +445,251 @@ namespace AdminForm
             this.panel4.Size = new System.Drawing.Size(588, 5);
             this.panel4.TabIndex = 0;
             // 
+            // huy
+            // 
+            this.huy.AnimationHoverSpeed = 0.07F;
+            this.huy.AnimationSpeed = 0.03F;
+            this.huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(13)))), ((int)(((byte)(94)))));
+            this.huy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(165)))), ((int)(((byte)(47)))));
+            this.huy.BorderColor = System.Drawing.Color.Black;
+            this.huy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.huy.FocusedColor = System.Drawing.Color.Empty;
+            this.huy.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.huy.ForeColor = System.Drawing.Color.Black;
+            this.huy.Image = ((System.Drawing.Image)(resources.GetObject("huy.Image")));
+            this.huy.ImageSize = new System.Drawing.Size(30, 30);
+            this.huy.Location = new System.Drawing.Point(274, 113);
+            this.huy.Name = "huy";
+            this.huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.huy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.huy.OnHoverForeColor = System.Drawing.Color.White;
+            this.huy.OnHoverImage = null;
+            this.huy.OnPressedColor = System.Drawing.Color.Black;
+            this.huy.Size = new System.Drawing.Size(166, 42);
+            this.huy.TabIndex = 6;
+            this.huy.Text = "Xóa hết";
+            this.huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.huy.Click += new System.EventHandler(this.huy_Click);
+            // 
+            // datdon
+            // 
+            this.datdon.AnimationHoverSpeed = 0.07F;
+            this.datdon.AnimationSpeed = 0.03F;
+            this.datdon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(223)))), ((int)(((byte)(56)))));
+            this.datdon.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(255)))), ((int)(((byte)(196)))));
+            this.datdon.BorderColor = System.Drawing.Color.Black;
+            this.datdon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.datdon.FocusedColor = System.Drawing.Color.Empty;
+            this.datdon.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.datdon.ForeColor = System.Drawing.Color.Black;
+            this.datdon.Image = ((System.Drawing.Image)(resources.GetObject("datdon.Image")));
+            this.datdon.ImageSize = new System.Drawing.Size(30, 30);
+            this.datdon.Location = new System.Drawing.Point(59, 113);
+            this.datdon.Name = "datdon";
+            this.datdon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.datdon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(0)))));
+            this.datdon.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.datdon.OnHoverForeColor = System.Drawing.Color.White;
+            this.datdon.OnHoverImage = null;
+            this.datdon.OnPressedColor = System.Drawing.Color.Black;
+            this.datdon.Size = new System.Drawing.Size(166, 42);
+            this.datdon.TabIndex = 6;
+            this.datdon.Text = "Đặt ngay";
+            this.datdon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.datdon.Click += new System.EventHandler(this.datdon_Click);
+            // 
+            // btnContact
+            // 
+            this.btnContact.AnimationHoverSpeed = 0.07F;
+            this.btnContact.AnimationSpeed = 0.03F;
+            this.btnContact.BaseColor = System.Drawing.Color.White;
+            this.btnContact.BorderColor = System.Drawing.Color.Black;
+            this.btnContact.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnContact.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
+            this.btnContact.CheckedBorderColor = System.Drawing.Color.Gray;
+            this.btnContact.CheckedForeColor = System.Drawing.Color.Black;
+            this.btnContact.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnContact.CheckedImage")));
+            this.btnContact.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
+            this.btnContact.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnContact.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContact.FocusedColor = System.Drawing.Color.Empty;
+            this.btnContact.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnContact.ForeColor = System.Drawing.Color.DimGray;
+            this.btnContact.Image = ((System.Drawing.Image)(resources.GetObject("btnContact.Image")));
+            this.btnContact.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnContact.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
+            this.btnContact.LineLeft = 8;
+            this.btnContact.Location = new System.Drawing.Point(0, 368);
+            this.btnContact.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnContact.Name = "btnContact";
+            this.btnContact.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.btnContact.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnContact.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnContact.OnHoverImage = null;
+            this.btnContact.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnContact.OnPressedColor = System.Drawing.Color.Black;
+            this.btnContact.OnPressedDepth = 0;
+            this.btnContact.Size = new System.Drawing.Size(194, 92);
+            this.btnContact.TabIndex = 7;
+            this.btnContact.Text = "Contact us";
+            // 
+            // btnFlash
+            // 
+            this.btnFlash.AnimationHoverSpeed = 0.07F;
+            this.btnFlash.AnimationSpeed = 0.03F;
+            this.btnFlash.BaseColor = System.Drawing.Color.White;
+            this.btnFlash.BorderColor = System.Drawing.Color.Black;
+            this.btnFlash.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnFlash.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
+            this.btnFlash.CheckedBorderColor = System.Drawing.Color.Gray;
+            this.btnFlash.CheckedForeColor = System.Drawing.Color.Black;
+            this.btnFlash.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnFlash.CheckedImage")));
+            this.btnFlash.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
+            this.btnFlash.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFlash.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFlash.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFlash.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFlash.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFlash.Image = ((System.Drawing.Image)(resources.GetObject("btnFlash.Image")));
+            this.btnFlash.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnFlash.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
+            this.btnFlash.LineLeft = 8;
+            this.btnFlash.Location = new System.Drawing.Point(0, 276);
+            this.btnFlash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFlash.Name = "btnFlash";
+            this.btnFlash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.btnFlash.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnFlash.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnFlash.OnHoverImage = null;
+            this.btnFlash.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnFlash.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFlash.OnPressedDepth = 0;
+            this.btnFlash.Size = new System.Drawing.Size(194, 92);
+            this.btnFlash.TabIndex = 7;
+            this.btnFlash.Text = "Flash Order";
+            this.btnFlash.Click += new System.EventHandler(this.btnFlash_Click);
+            // 
+            // btnDoUong
+            // 
+            this.btnDoUong.AnimationHoverSpeed = 0.07F;
+            this.btnDoUong.AnimationSpeed = 0.03F;
+            this.btnDoUong.BaseColor = System.Drawing.Color.White;
+            this.btnDoUong.BorderColor = System.Drawing.Color.Black;
+            this.btnDoUong.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnDoUong.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
+            this.btnDoUong.CheckedBorderColor = System.Drawing.Color.Gray;
+            this.btnDoUong.CheckedForeColor = System.Drawing.Color.Black;
+            this.btnDoUong.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnDoUong.CheckedImage")));
+            this.btnDoUong.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
+            this.btnDoUong.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDoUong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoUong.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDoUong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDoUong.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnDoUong.Image")));
+            this.btnDoUong.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDoUong.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
+            this.btnDoUong.LineLeft = 8;
+            this.btnDoUong.Location = new System.Drawing.Point(0, 184);
+            this.btnDoUong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDoUong.Name = "btnDoUong";
+            this.btnDoUong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.btnDoUong.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnDoUong.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnDoUong.OnHoverImage = null;
+            this.btnDoUong.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnDoUong.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDoUong.OnPressedDepth = 0;
+            this.btnDoUong.Size = new System.Drawing.Size(194, 92);
+            this.btnDoUong.TabIndex = 4;
+            this.btnDoUong.Text = "Đồ uống";
+            this.btnDoUong.Click += new System.EventHandler(this.btnDoUong_Click_1);
+            // 
+            // btnDoAn
+            // 
+            this.btnDoAn.AnimationHoverSpeed = 0.07F;
+            this.btnDoAn.AnimationSpeed = 0.03F;
+            this.btnDoAn.BaseColor = System.Drawing.Color.White;
+            this.btnDoAn.BorderColor = System.Drawing.Color.Black;
+            this.btnDoAn.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnDoAn.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
+            this.btnDoAn.CheckedBorderColor = System.Drawing.Color.Gray;
+            this.btnDoAn.CheckedForeColor = System.Drawing.Color.Black;
+            this.btnDoAn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnDoAn.CheckedImage")));
+            this.btnDoAn.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
+            this.btnDoAn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDoAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoAn.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDoAn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDoAn.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDoAn.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAn.Image")));
+            this.btnDoAn.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDoAn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
+            this.btnDoAn.LineLeft = 8;
+            this.btnDoAn.Location = new System.Drawing.Point(0, 92);
+            this.btnDoAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDoAn.Name = "btnDoAn";
+            this.btnDoAn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.btnDoAn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnDoAn.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnDoAn.OnHoverImage = null;
+            this.btnDoAn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnDoAn.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDoAn.OnPressedDepth = 0;
+            this.btnDoAn.Size = new System.Drawing.Size(194, 92);
+            this.btnDoAn.TabIndex = 3;
+            this.btnDoAn.Text = "Đồ ăn";
+            this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.AnimationHoverSpeed = 0.07F;
+            this.btnHome.AnimationSpeed = 0.03F;
+            this.btnHome.BaseColor = System.Drawing.Color.White;
+            this.btnHome.BorderColor = System.Drawing.Color.Black;
+            this.btnHome.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btnHome.Checked = true;
+            this.btnHome.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(134)))));
+            this.btnHome.CheckedBorderColor = System.Drawing.Color.Gray;
+            this.btnHome.CheckedForeColor = System.Drawing.Color.Black;
+            this.btnHome.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnHome.CheckedImage")));
+            this.btnHome.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
+            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnHome.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnHome.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
+            this.btnHome.LineLeft = 8;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.btnHome.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnHome.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnHome.OnHoverImage = null;
+            this.btnHome.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
+            this.btnHome.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHome.OnPressedDepth = 0;
+            this.btnHome.Size = new System.Drawing.Size(194, 92);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1472, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -707,7 +707,6 @@ namespace AdminForm
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             this.pnTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnBill.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
@@ -720,6 +719,7 @@ namespace AdminForm
             this.panel2.ResumeLayout(false);
             this.pnUnderTop.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

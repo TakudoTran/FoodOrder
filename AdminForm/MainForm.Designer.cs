@@ -31,6 +31,7 @@ namespace AdminForm
         {
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnXoa_tab1 = new System.Windows.Forms.Button();
             this.btnXem_tab1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lvBill = new System.Windows.Forms.ListView();
@@ -83,7 +84,6 @@ namespace AdminForm
             this.defaultbill = new System.Windows.Forms.Button();
             this.btnLoadDefaultImg = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnXoa_tab1 = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -110,7 +110,7 @@ namespace AdminForm
             this.TabControl.Margin = new System.Windows.Forms.Padding(4);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(992, 622);
+            this.TabControl.Size = new System.Drawing.Size(992, 601);
             this.TabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -128,10 +128,20 @@ namespace AdminForm
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(984, 589);
+            this.tabPage1.Size = new System.Drawing.Size(984, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản Lý Bàn Ăn";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa_tab1
+            // 
+            this.btnXoa_tab1.Location = new System.Drawing.Point(668, 410);
+            this.btnXoa_tab1.Name = "btnXoa_tab1";
+            this.btnXoa_tab1.Size = new System.Drawing.Size(276, 50);
+            this.btnXoa_tab1.TabIndex = 3;
+            this.btnXoa_tab1.Text = "Xóa đơn";
+            this.btnXoa_tab1.UseVisualStyleBackColor = true;
+            this.btnXoa_tab1.Click += new System.EventHandler(this.btnXoa_tab1_Click);
             // 
             // btnXem_tab1
             // 
@@ -139,7 +149,7 @@ namespace AdminForm
             this.btnXem_tab1.Name = "btnXem_tab1";
             this.btnXem_tab1.Size = new System.Drawing.Size(276, 50);
             this.btnXem_tab1.TabIndex = 3;
-            this.btnXem_tab1.Text = "Xem";
+            this.btnXem_tab1.Text = "Xem đơn";
             this.btnXem_tab1.UseVisualStyleBackColor = true;
             this.btnXem_tab1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -208,7 +218,7 @@ namespace AdminForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 30);
+            this.label1.Location = new System.Drawing.Point(664, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 0;
@@ -217,7 +227,7 @@ namespace AdminForm
             // cbbBanAn
             // 
             this.cbbBanAn.FormattingEnabled = true;
-            this.cbbBanAn.Location = new System.Drawing.Point(160, 27);
+            this.cbbBanAn.Location = new System.Drawing.Point(787, 58);
             this.cbbBanAn.Margin = new System.Windows.Forms.Padding(4);
             this.cbbBanAn.Name = "cbbBanAn";
             this.cbbBanAn.Size = new System.Drawing.Size(157, 28);
@@ -227,11 +237,11 @@ namespace AdminForm
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(27, 84);
+            this.groupBox1.Location = new System.Drawing.Point(27, 35);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(628, 385);
+            this.groupBox1.Size = new System.Drawing.Size(628, 434);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết ";
@@ -249,7 +259,7 @@ namespace AdminForm
             this.listView1.Location = new System.Drawing.Point(4, 23);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(620, 358);
+            this.listView1.Size = new System.Drawing.Size(620, 407);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -448,7 +458,7 @@ namespace AdminForm
             // lable
             // 
             this.lable.AutoSize = true;
-            this.lable.Location = new System.Drawing.Point(528, 258);
+            this.lable.Location = new System.Drawing.Point(519, 258);
             this.lable.Name = "lable";
             this.lable.Size = new System.Drawing.Size(46, 20);
             this.lable.TabIndex = 5;
@@ -635,21 +645,11 @@ namespace AdminForm
             this.btnLoadDefaultImg.UseVisualStyleBackColor = true;
             this.btnLoadDefaultImg.Click += new System.EventHandler(this.btnLoadDefaultImg_Click);
             // 
-            // btnXoa_tab1
-            // 
-            this.btnXoa_tab1.Location = new System.Drawing.Point(668, 410);
-            this.btnXoa_tab1.Name = "btnXoa_tab1";
-            this.btnXoa_tab1.Size = new System.Drawing.Size(276, 50);
-            this.btnXoa_tab1.TabIndex = 3;
-            this.btnXoa_tab1.Text = "Xóa";
-            this.btnXoa_tab1.UseVisualStyleBackColor = true;
-            this.btnXoa_tab1.Click += new System.EventHandler(this.btnXoa_tab1_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 622);
+            this.ClientSize = new System.Drawing.Size(992, 601);
             this.Controls.Add(this.TabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);

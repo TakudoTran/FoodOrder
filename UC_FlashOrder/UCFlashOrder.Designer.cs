@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCFlashOrder));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picSlide = new System.Windows.Forms.PictureBox();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.txtTien = new System.Windows.Forms.TextBox();
-            this.picSlide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnShow = new Guna.UI.WinForms.GunaGradientButton();
             this.btnChonAll = new Guna.UI.WinForms.GunaGradientButton();
@@ -40,8 +40,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.gunaLinePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSlide)).BeginInit();
+            this.gunaLinePanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -55,36 +55,6 @@
             this.panel1.Size = new System.Drawing.Size(1405, 271);
             this.panel1.TabIndex = 5;
             // 
-            // gunaLinePanel1
-            // 
-            this.gunaLinePanel1.Controls.Add(this.txtTien);
-            this.gunaLinePanel1.LineBottom = 2;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.DarkOrange;
-            this.gunaLinePanel1.LineLeft = 2;
-            this.gunaLinePanel1.LineRight = 2;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.LineTop = 2;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(19, 3);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(166, 55);
-            this.gunaLinePanel1.TabIndex = 7;
-            // 
-            // txtTien
-            // 
-            this.txtTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(240)))), ((int)(((byte)(190)))));
-            this.txtTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTien.Font = new System.Drawing.Font("SVN-Blenda Script", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTien.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTien.Location = new System.Drawing.Point(6, 10);
-            this.txtTien.Multiline = true;
-            this.txtTien.Name = "txtTien";
-            this.txtTien.Size = new System.Drawing.Size(154, 34);
-            this.txtTien.TabIndex = 0;
-            this.txtTien.Text = "Nhập số tiền";
-            this.txtTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTien.Click += new System.EventHandler(this.txtTien_Click_1);
-            this.txtTien.TextChanged += new System.EventHandler(this.txtTien_TextChanged);
-            // 
             // picSlide
             // 
             this.picSlide.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -97,15 +67,47 @@
             this.picSlide.TabIndex = 6;
             this.picSlide.TabStop = false;
             // 
+            // gunaLinePanel1
+            // 
+            this.gunaLinePanel1.Controls.Add(this.txtTien);
+            this.gunaLinePanel1.LineBottom = 2;
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.DarkOrange;
+            this.gunaLinePanel1.LineLeft = 2;
+            this.gunaLinePanel1.LineRight = 2;
+            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel1.LineTop = 2;
+            this.gunaLinePanel1.Location = new System.Drawing.Point(13, 3);
+            this.gunaLinePanel1.Name = "gunaLinePanel1";
+            this.gunaLinePanel1.Size = new System.Drawing.Size(184, 55);
+            this.gunaLinePanel1.TabIndex = 7;
+            // 
+            // txtTien
+            // 
+            this.txtTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(240)))), ((int)(((byte)(190)))));
+            this.txtTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTien.Font = new System.Drawing.Font("SVN-Blenda Script", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTien.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTien.Location = new System.Drawing.Point(6, 10);
+            this.txtTien.Multiline = true;
+            this.txtTien.Name = "txtTien";
+            this.txtTien.Size = new System.Drawing.Size(172, 34);
+            this.txtTien.TabIndex = 0;
+            this.txtTien.Text = "Nhập số tiền";
+            this.txtTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTien.Click += new System.EventHandler(this.txtTien_Click_1);
+            this.txtTien.TextChanged += new System.EventHandler(this.txtTien_TextChanged);
+            this.txtTien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTien_KeyDown);
+            // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(194)))));
             this.panel2.Controls.Add(this.gunaLinePanel1);
             this.panel2.Controls.Add(this.btnShow);
             this.panel2.Controls.Add(this.btnChonAll);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1212, 0);
+            this.panel2.Location = new System.Drawing.Point(1196, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 428);
+            this.panel2.Size = new System.Drawing.Size(209, 428);
             this.panel2.TabIndex = 10;
             // 
             // btnShow
@@ -117,12 +119,12 @@
             this.btnShow.BorderColor = System.Drawing.Color.Black;
             this.btnShow.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnShow.FocusedColor = System.Drawing.Color.Empty;
-            this.btnShow.Font = new System.Drawing.Font("SVN-Blenda Script", 12F);
+            this.btnShow.Font = new System.Drawing.Font("SVN-Abril Fatface", 11F);
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
             this.btnShow.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnShow.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnShow.Location = new System.Drawing.Point(19, 90);
+            this.btnShow.Location = new System.Drawing.Point(13, 90);
             this.btnShow.Name = "btnShow";
             this.btnShow.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnShow.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -130,9 +132,9 @@
             this.btnShow.OnHoverForeColor = System.Drawing.Color.White;
             this.btnShow.OnHoverImage = null;
             this.btnShow.OnPressedColor = System.Drawing.Color.Black;
-            this.btnShow.Size = new System.Drawing.Size(166, 55);
+            this.btnShow.Size = new System.Drawing.Size(184, 55);
             this.btnShow.TabIndex = 4;
-            this.btnShow.Text = "Xem ";
+            this.btnShow.Text = "Xem món";
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnChonAll
@@ -144,12 +146,12 @@
             this.btnChonAll.BorderColor = System.Drawing.Color.Black;
             this.btnChonAll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnChonAll.FocusedColor = System.Drawing.Color.Empty;
-            this.btnChonAll.Font = new System.Drawing.Font("SVN-Blenda Script", 12F);
+            this.btnChonAll.Font = new System.Drawing.Font("SVN-Abril Fatface", 11F);
             this.btnChonAll.ForeColor = System.Drawing.Color.White;
             this.btnChonAll.Image = ((System.Drawing.Image)(resources.GetObject("btnChonAll.Image")));
             this.btnChonAll.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnChonAll.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnChonAll.Location = new System.Drawing.Point(19, 183);
+            this.btnChonAll.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnChonAll.Location = new System.Drawing.Point(13, 183);
             this.btnChonAll.Name = "btnChonAll";
             this.btnChonAll.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnChonAll.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -157,7 +159,7 @@
             this.btnChonAll.OnHoverForeColor = System.Drawing.Color.White;
             this.btnChonAll.OnHoverImage = null;
             this.btnChonAll.OnPressedColor = System.Drawing.Color.Black;
-            this.btnChonAll.Size = new System.Drawing.Size(166, 64);
+            this.btnChonAll.Size = new System.Drawing.Size(184, 64);
             this.btnChonAll.TabIndex = 4;
             this.btnChonAll.Text = "Thêm tất cả";
             this.btnChonAll.Click += new System.EventHandler(this.btnOrder_Click);
@@ -168,7 +170,7 @@
             this.pnMons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMons.Location = new System.Drawing.Point(0, 0);
             this.pnMons.Name = "pnMons";
-            this.pnMons.Size = new System.Drawing.Size(1212, 428);
+            this.pnMons.Size = new System.Drawing.Size(1196, 428);
             this.pnMons.TabIndex = 11;
             // 
             // panel4
@@ -201,9 +203,9 @@
             this.Name = "UCFlashOrder";
             this.Size = new System.Drawing.Size(1405, 704);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSlide)).EndInit();
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSlide)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
