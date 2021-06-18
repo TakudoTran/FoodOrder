@@ -407,3 +407,6 @@ C:\Users\Admin\Documents\GitHub\FoodOrder\AdminForm\obj\Debug\AdminForm.Printer_
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.exe.config
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\obj\Debug\AdminForm.AfterOrderForm.resources
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CustomMessageBox.exe
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CustomMessageBox.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CustomMessageBox.exe.config

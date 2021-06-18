@@ -347,6 +347,14 @@ namespace BLL
         {
             return DataAccessLayer.Instance.DeleteBill(billNo);
         }
+        public List<BillChuaTinhTien> GetTop5BillChuaTinhTien(int idBan)
+        {
+            return DataAccessLayer.Instance.GetTopBill_BanAn(5, idBan);
+        }
+        public List<BillToAcess> GetDetail_BillChuaTinTien(int billNo)
+        {
+            return DataAccessLayer.Instance.GetBillDetailOfBill(billNo);
+        }
         #endregion
 
         #region Loai
@@ -355,13 +363,6 @@ namespace BLL
             return DataAccessLayer.Instance.DataLoai();
         }
         #endregion
-        public List<BillChuaTinhTien> GetTop3BillChuaTinhTien(int idBan)
-        {
-            return DataAccessLayer.Instance.GetTopBill_BanAn(3, idBan);
-        }
-        public List<BillToAcess> GetDetail_BillChuaTinTien(int billNo)
-        {
-            return DataAccessLayer.Instance.GetBillDetailOfBill(billNo);
-        }
+        
     }
 }

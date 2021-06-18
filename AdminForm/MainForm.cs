@@ -278,66 +278,55 @@ namespace AdminForm
 
         #region QL Ban
         int idBan = 1;
-        /*private void bbtFind_Click(object sender, EventArgs e)
-        {
-            listView1.Items.Clear();
-            idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
-            List<BillToAcess> data = new List<BillToAcess>();
-            data = BusinessLogicLayer.Instance.GetBillByTable_BLL(idBan);
-
-            int TongTien = 0;
-            int index = 1;
-            foreach (BillToAcess i in data)
-            {
-                CurrentBill = i.BillNo;
-                string[] row = { index + "", i.TenMon, i.SoLuong.ToString(),i.GiaTien.ToString() ,(i.GiaTien * i.SoLuong).ToString() };
-                var listViewItem = new ListViewItem(row);
-                listView1.Items.Add(listViewItem);
-                TongTien += i.GiaTien * i.SoLuong;
-                index++;
-            }
-            tongtien.Text = TongTien.ToString();
-            tongtien.ReadOnly = true;
-        }*/
         private void InHoaDon_Click(object sender, EventArgs e)
         {
-            if (finalBill == null || listView1.Items.Count == 0) return;
-            bool OK = false;
-            try
+            if (finalBill == null || listView1.Items.Count == 0)
             {
-                int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
-                int TongTien = Convert.ToInt32(tongtien.Text);
-                foreach(BillChuaTinhTien i in BillsThanhToan)
+                MessageBox.Show("Vui lòng xem hóa đơn trước khi xuất!");
+                return;
+            }
+
+            bool OK = false;
+            DialogResult res = MessageBox.Show("In hóa đơn cho bàn " + ((CBBItem)cbbBanAn.SelectedItem).Value + " ?",
+                "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+                try
                 {
-                    if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, i.BillNo))
+                    int idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
+                    int TongTien = Convert.ToInt32(tongtien.Text);
+                    foreach (BillChuaTinhTien i in BillsThanhToan)
                     {
-                        OK = true;
-                    }
-                }
-                if (OK)
-                {
-                    Printer_Form f = new Printer_Form(finalBill);
-                    f.Show();
-                    foreach (BillToAcess i in finalBill)
-                    {
-                        BusinessLogicLayer.Instance.DeleteBillDetail_BLL(i.BillNo);
-                        //chỉ còn 1 bill sau khi gộp nhiều bill để thanh toán
-                        for(int j = 0; j < BillsThanhToan.Count -1; j ++)
+                        if (BusinessLogicLayer.Instance.SetHoaDon_BLL(TongTien, i.BillNo))
                         {
-                            BusinessLogicLayer.Instance.Del_Bill(BillsThanhToan[j].BillNo);
+                            OK = true;
                         }
                     }
-                }
-                else MessageBox.Show("Failed!");
-                ClearBilldetail();
-                //Xoa bill da thanh toan
-                lvBill.Items.Clear();
+                    if (OK)
+                    {
+                        Printer_Form f = new Printer_Form(finalBill);
+                        f.Show();
+                        foreach (BillToAcess i in finalBill)
+                        {
+                            BusinessLogicLayer.Instance.DeleteBillDetail_BLL(i.BillNo);
+                            //chỉ còn 1 bill sau khi gộp nhiều bill để thanh toán
+                            for (int j = 0; j < BillsThanhToan.Count - 1; j++)
+                            {
+                                BusinessLogicLayer.Instance.Del_Bill(BillsThanhToan[j].BillNo);
+                            }
+                        }
+                    }
+                    else MessageBox.Show("Failed!");
+                    //Xoa bill da thanh toan
+                    LayBillChuaThanhToan();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bill: values not found!");
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bill: values not found!");
-            }
+            
         }
         private void Default_Bill(object sender, EventArgs e)
         {
@@ -351,14 +340,12 @@ namespace AdminForm
                 MessageBox.Show(ex.Message);
             }
         }
-        #endregion
-
-
         private void LayBillChuaThanhToan()
         {
+            ClearBilldetail();
             lvBill.Items.Clear();
             idBan = ((CBBItem)cbbBanAn.SelectedItem).Value;
-            List<BillChuaTinhTien> list = BusinessLogicLayer.Instance.GetTop3BillChuaTinhTien(idBan);
+            List<BillChuaTinhTien> list = BusinessLogicLayer.Instance.GetTop5BillChuaTinhTien(idBan);
             foreach (BillChuaTinhTien i in list)
             {
                 ListViewItem lvi = new ListViewItem(i.BillNo + "");
@@ -374,14 +361,13 @@ namespace AdminForm
         }
         private void cbbBanAn_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClearBilldetail();
             finalBill = null;
             LayBillChuaThanhToan();
         }
         private List<BillToAcess> ChiTietHoaDon(List<BillChuaTinhTien> list)
         {
             List<BillToAcess> res = new List<BillToAcess>();
-            foreach(BillChuaTinhTien i in list)
+            foreach (BillChuaTinhTien i in list)
             {
                 res.AddRange(BusinessLogicLayer.Instance.GetDetail_BillChuaTinTien(i.BillNo));
             }
@@ -393,7 +379,7 @@ namespace AdminForm
             BillsThanhToan = new List<BillChuaTinhTien>();
             if (lvBill.SelectedItems.Count == 0) return;
 
-            foreach(ListViewItem j in lvBill.SelectedItems)
+            foreach (ListViewItem j in lvBill.SelectedItems)
             {
                 BillChuaTinhTien bill = j.Tag as BillChuaTinhTien;
                 BillsThanhToan.Add(bill);
@@ -422,21 +408,21 @@ namespace AdminForm
             }
             else
             {
-                btnXem_tab1.Text = "Xem";
+                btnXem_tab1.Text = "Xem đơn";
             }
 
         }
         private void btnXoa_tab1_Click(object sender, EventArgs e)
         {
-            if(lvBill.SelectedItems.Count == 0)
+            if (lvBill.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn hóa đơn!");
                 return;
             }
-            for(int i = 0; i < lvBill.SelectedItems.Count; i++)
+            for (int i = 0; i < lvBill.SelectedItems.Count; i++)
             {
                 BillChuaTinhTien selectedBill = lvBill.SelectedItems[i].Tag as BillChuaTinhTien;
-                DialogResult res =  MessageBox.Show("Bàn " + ((CBBItem)cbbBanAn.SelectedItem).Value + " - Xác nhận xóa ID_Bill: " + selectedBill.BillNo + " Time: " + selectedBill.NgayLapBill,
+                DialogResult res = MessageBox.Show("Bàn " + ((CBBItem)cbbBanAn.SelectedItem).Value + " - Xác nhận xóa ID_Bill: " + selectedBill.BillNo + " Time: " + selectedBill.NgayLapBill,
                     "Hỏi xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
@@ -447,11 +433,12 @@ namespace AdminForm
                             MessageBox.Show("Xóa thành công!");
                         }
                         else MessageBox.Show("Xóa thất bại!");
-                    }   
+                    }
                 }
             }
             LayBillChuaThanhToan();
             ClearBilldetail();
         }
+        #endregion
     }
 }

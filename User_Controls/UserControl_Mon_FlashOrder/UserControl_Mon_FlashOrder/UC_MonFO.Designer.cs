@@ -63,7 +63,7 @@
             this.gunaLinePanel3.LineTop = 6;
             this.gunaLinePanel3.Location = new System.Drawing.Point(0, 0);
             this.gunaLinePanel3.Name = "gunaLinePanel3";
-            this.gunaLinePanel3.Size = new System.Drawing.Size(565, 170);
+            this.gunaLinePanel3.Size = new System.Drawing.Size(534, 165);
             this.gunaLinePanel3.TabIndex = 6;
             // 
             // panel2
@@ -71,9 +71,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblGiaTien);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(254, 116);
+            this.panel2.Location = new System.Drawing.Point(239, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(304, 42);
+            this.panel2.Size = new System.Drawing.Size(286, 42);
             this.panel2.TabIndex = 4;
             // 
             // label2
@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(176, 11);
+            this.label2.Location = new System.Drawing.Point(170, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 25);
             this.label2.TabIndex = 2;
@@ -95,7 +95,7 @@
             this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
             this.lblGiaTien.Location = new System.Drawing.Point(196, 0);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(108, 42);
+            this.lblGiaTien.Size = new System.Drawing.Size(90, 42);
             this.lblGiaTien.TabIndex = 0;
             this.lblGiaTien.Text = "500";
             this.lblGiaTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,9 +118,9 @@
             this.lblSLGoi.BackColor = System.Drawing.Color.Transparent;
             this.lblSLGoi.Font = new System.Drawing.Font("SVN-Haptic Script", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSLGoi.ForeColor = System.Drawing.Color.Black;
-            this.lblSLGoi.Location = new System.Drawing.Point(453, 67);
+            this.lblSLGoi.Location = new System.Drawing.Point(437, 67);
             this.lblSLGoi.Name = "lblSLGoi";
-            this.lblSLGoi.Size = new System.Drawing.Size(91, 51);
+            this.lblSLGoi.Size = new System.Drawing.Size(88, 51);
             this.lblSLGoi.TabIndex = 0;
             this.lblSLGoi.Text = "500";
             this.lblSLGoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,7 +130,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("SVN-Haptic Script", 18F);
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(253, 70);
+            this.gunaLabel2.Location = new System.Drawing.Point(239, 70);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(214, 51);
             this.gunaLabel2.TabIndex = 1;
@@ -148,9 +148,9 @@
             this.gunaLinePanel1.LineRight = 3;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.LineTop = 3;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(247, 9);
+            this.gunaLinePanel1.Location = new System.Drawing.Point(230, 9);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(311, 57);
+            this.gunaLinePanel1.Size = new System.Drawing.Size(295, 57);
             this.gunaLinePanel1.TabIndex = 2;
             // 
             // gunaGradient2Panel2
@@ -163,7 +163,7 @@
             this.gunaGradient2Panel2.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
             this.gunaGradient2Panel2.Location = new System.Drawing.Point(0, 0);
             this.gunaGradient2Panel2.Name = "gunaGradient2Panel2";
-            this.gunaGradient2Panel2.Size = new System.Drawing.Size(311, 57);
+            this.gunaGradient2Panel2.Size = new System.Drawing.Size(295, 57);
             this.gunaGradient2Panel2.TabIndex = 2;
             // 
             // lblTenMon
@@ -175,7 +175,7 @@
             this.lblTenMon.ForeColor = System.Drawing.Color.Black;
             this.lblTenMon.Location = new System.Drawing.Point(0, 0);
             this.lblTenMon.Name = "lblTenMon";
-            this.lblTenMon.Size = new System.Drawing.Size(311, 57);
+            this.lblTenMon.Size = new System.Drawing.Size(295, 57);
             this.lblTenMon.TabIndex = 1;
             this.lblTenMon.Text = "Bún đậu mắm tôm (mẹt lớn)";
             this.lblTenMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@
             this.picHinhAnh.Image = global::UserControl_Mon_FlashOrder.Properties.Resources.beefSteak;
             this.picHinhAnh.Location = new System.Drawing.Point(9, 9);
             this.picHinhAnh.Name = "picHinhAnh";
-            this.picHinhAnh.Size = new System.Drawing.Size(236, 151);
+            this.picHinhAnh.Size = new System.Drawing.Size(218, 149);
             this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHinhAnh.TabIndex = 0;
             this.picHinhAnh.TabStop = false;
@@ -197,7 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaLinePanel3);
             this.Name = "UC_MonFO";
-            this.Size = new System.Drawing.Size(565, 170);
+            this.Size = new System.Drawing.Size(534, 165);
             this.gunaLinePanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -219,6 +219,10 @@
       <Project>{2093f2ca-91b0-44aa-b58e-6b01192305b3}</Project>
       <Name>CL_OrderForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CustomMessageBox\CustomMessageBox.csproj">
+      <Project>{4657af6c-6193-4d24-80f2-3c00a35d0b61}</Project>
+      <Name>CustomMessageBox</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{4294c7e7-86ba-469d-80b7-dd958d52b6a1}</Project>
       <Name>DTO</Name>

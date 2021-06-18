@@ -189,3 +189,6 @@ C:\Users\Admin\Documents\GitHub\FoodOrder\UC_FlashOrder\bin\Debug\pt\Microsoft.R
 C:\Users\Admin\Documents\GitHub\FoodOrder\UC_FlashOrder\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Documents\GitHub\FoodOrder\UC_FlashOrder\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Documents\GitHub\FoodOrder\UC_FlashOrder\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\XUAN TRONG\Desktop\FoodOrder\UC_FlashOrder\bin\Debug\CustomMessageBox.exe
+C:\Users\XUAN TRONG\Desktop\FoodOrder\UC_FlashOrder\bin\Debug\CustomMessageBox.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\UC_FlashOrder\bin\Debug\CustomMessageBox.exe.config
