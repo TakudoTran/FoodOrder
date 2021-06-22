@@ -50,9 +50,10 @@ namespace AdminForm
             this.ptEixt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ptEixt.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ptEixt.ForeColor = System.Drawing.Color.White;
-            this.ptEixt.Location = new System.Drawing.Point(375, 1);
+            this.ptEixt.Location = new System.Drawing.Point(333, 1);
+            this.ptEixt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptEixt.Name = "ptEixt";
-            this.ptEixt.Size = new System.Drawing.Size(75, 40);
+            this.ptEixt.Size = new System.Drawing.Size(67, 32);
             this.ptEixt.TabIndex = 6;
             this.ptEixt.Text = "X";
             this.ptEixt.UseVisualStyleBackColor = false;
@@ -60,33 +61,38 @@ namespace AdminForm
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(154, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(114, 57);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // ptuser
             // 
+            this.ptuser.BackColor = System.Drawing.Color.Transparent;
             this.ptuser.Image = global::AdminForm.Properties.Resources.user;
-            this.ptuser.Location = new System.Drawing.Point(50, 323);
+            this.ptuser.Location = new System.Drawing.Point(40, 259);
+            this.ptuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptuser.Name = "ptuser";
-            this.ptuser.Size = new System.Drawing.Size(50, 50);
+            this.ptuser.Size = new System.Drawing.Size(44, 45);
             this.ptuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptuser.TabIndex = 8;
             this.ptuser.TabStop = false;
             // 
             // txtuser
             // 
-            this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(220)))), ((int)(((byte)(247)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.ForeColor = System.Drawing.Color.White;
-            this.txtuser.Location = new System.Drawing.Point(106, 346);
+            this.txtuser.ForeColor = System.Drawing.Color.Black;
+            this.txtuser.Location = new System.Drawing.Point(94, 277);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(274, 33);
+            this.txtuser.Size = new System.Drawing.Size(244, 27);
             this.txtuser.TabIndex = 9;
             this.txtuser.Text = "Username";
             this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
@@ -95,28 +101,31 @@ namespace AdminForm
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(50, 379);
+            this.panel1.Location = new System.Drawing.Point(44, 303);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 1);
+            this.panel1.Size = new System.Drawing.Size(293, 1);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(50, 477);
+            this.panel2.Location = new System.Drawing.Point(44, 382);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(330, 1);
+            this.panel2.Size = new System.Drawing.Size(293, 1);
             this.panel2.TabIndex = 13;
             // 
             // txtpw
             // 
-            this.txtpw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtpw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(220)))), ((int)(((byte)(247)))));
             this.txtpw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpw.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpw.ForeColor = System.Drawing.Color.White;
-            this.txtpw.Location = new System.Drawing.Point(106, 444);
+            this.txtpw.ForeColor = System.Drawing.Color.Black;
+            this.txtpw.Location = new System.Drawing.Point(94, 355);
+            this.txtpw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtpw.Name = "txtpw";
-            this.txtpw.Size = new System.Drawing.Size(274, 33);
+            this.txtpw.Size = new System.Drawing.Size(244, 27);
             this.txtpw.TabIndex = 12;
             this.txtpw.Text = "Password";
             this.txtpw.Click += new System.EventHandler(this.txtpw_Click);
@@ -124,10 +133,12 @@ namespace AdminForm
             // 
             // ptpw
             // 
+            this.ptpw.BackColor = System.Drawing.Color.Transparent;
             this.ptpw.Image = global::AdminForm.Properties.Resources.pw;
-            this.ptpw.Location = new System.Drawing.Point(50, 421);
+            this.ptpw.Location = new System.Drawing.Point(40, 338);
+            this.ptpw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptpw.Name = "ptpw";
-            this.ptpw.Size = new System.Drawing.Size(50, 50);
+            this.ptpw.Size = new System.Drawing.Size(44, 45);
             this.ptpw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptpw.TabIndex = 11;
             this.ptpw.TabStop = false;
@@ -138,9 +149,10 @@ namespace AdminForm
             this.btlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlog.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btlog.ForeColor = System.Drawing.Color.White;
-            this.btlog.Location = new System.Drawing.Point(95, 538);
+            this.btlog.Location = new System.Drawing.Point(84, 430);
+            this.btlog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btlog.Name = "btlog";
-            this.btlog.Size = new System.Drawing.Size(245, 62);
+            this.btlog.Size = new System.Drawing.Size(218, 50);
             this.btlog.TabIndex = 14;
             this.btlog.Text = "Sign in";
             this.btlog.UseVisualStyleBackColor = false;
@@ -148,10 +160,12 @@ namespace AdminForm
             // 
             // LogToAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(450, 640);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(400, 512);
             this.Controls.Add(this.btlog);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtpw);
@@ -162,6 +176,7 @@ namespace AdminForm
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ptEixt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LogToAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogToAdmin";

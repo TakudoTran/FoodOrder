@@ -330,7 +330,7 @@ namespace AdminForm
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("SVN-Dessert Menu Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(80, 190);
+            this.label1.Location = new System.Drawing.Point(80, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(352, 45);
             this.label1.TabIndex = 1;
@@ -342,7 +342,7 @@ namespace AdminForm
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("SVN-Dessert Menu Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(80, 92);
+            this.label12.Location = new System.Drawing.Point(80, 131);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(375, 45);
             this.label12.TabIndex = 1;
@@ -354,7 +354,7 @@ namespace AdminForm
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("SVN-Dessert Menu Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(80, -6);
+            this.label11.Location = new System.Drawing.Point(80, 21);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(418, 45);
             this.label11.TabIndex = 1;
@@ -366,7 +366,7 @@ namespace AdminForm
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("SVN-Dessert Menu Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(80, 288);
+            this.label8.Location = new System.Drawing.Point(80, 351);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(400, 45);
             this.label8.TabIndex = 1;
@@ -375,7 +375,7 @@ namespace AdminForm
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(24, 292);
+            this.pictureBox10.Location = new System.Drawing.Point(24, 355);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(35, 35);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +385,7 @@ namespace AdminForm
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(24, 195);
+            this.pictureBox9.Location = new System.Drawing.Point(24, 246);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(35, 35);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,7 +395,7 @@ namespace AdminForm
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(24, 98);
+            this.pictureBox8.Location = new System.Drawing.Point(24, 137);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 35);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -405,7 +405,7 @@ namespace AdminForm
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(24, 1);
+            this.pictureBox7.Location = new System.Drawing.Point(24, 28);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

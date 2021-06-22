@@ -16,7 +16,7 @@ namespace CustomMessageBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MessageOK());
+            Application.Run(new MessageYesNo());
         }
     }
 }

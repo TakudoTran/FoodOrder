@@ -29,12 +29,12 @@ namespace AdminForm
             ptuser.Image = Properties.Resources.user2;
             ptuser.SizeMode = PictureBoxSizeMode.StretchImage;
             panel1.ForeColor = Color.DeepSkyBlue;
-            txtuser.ForeColor = Color.WhiteSmoke;
+            txtuser.ForeColor = Color.Black;
 
             ptpw.Image = Properties.Resources.pw;
             ptpw.SizeMode = PictureBoxSizeMode.StretchImage;
             panel2.ForeColor = Color.WhiteSmoke;
-            txtpw.ForeColor = Color.WhiteSmoke;
+            txtpw.ForeColor = Color.Black;
         }
 
         private void txtpw_Click(object sender, EventArgs e)

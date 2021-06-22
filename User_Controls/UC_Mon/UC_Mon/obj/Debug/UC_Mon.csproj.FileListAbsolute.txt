@@ -30,3 +30,4 @@ C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.CopyComplete
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.dll
 C:\Users\XUAN TRONG\Desktop\new\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.pdb
+C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\UC_Mon\UC_Mon\obj\Debug\UC_Mon.csproj.AssemblyReference.cache
