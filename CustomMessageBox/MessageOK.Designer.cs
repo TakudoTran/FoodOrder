@@ -30,14 +30,15 @@ namespace CustomMessageBox
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageOK));
             this.lblMessage = new System.Windows.Forms.Label();
             this.btnOk = new Guna.UI.WinForms.GunaGradientButton();
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -46,6 +47,7 @@ namespace CustomMessageBox
             // 
             // lblMessage
             // 
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMessage.Font = new System.Drawing.Font("SVN-Book Antiqua", 15F);
             this.lblMessage.Location = new System.Drawing.Point(0, 0);
@@ -58,26 +60,29 @@ namespace CustomMessageBox
             // 
             // btnOk
             // 
+            this.btnOk.Animated = true;
             this.btnOk.AnimationHoverSpeed = 0.07F;
             this.btnOk.AnimationSpeed = 0.03F;
-            this.btnOk.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.btnOk.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnOk.BorderColor = System.Drawing.Color.Black;
+            this.btnOk.BackColor = System.Drawing.Color.Transparent;
+            this.btnOk.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(207)))), ((int)(((byte)(229)))));
+            this.btnOk.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(225)))), ((int)(((byte)(238)))));
+            this.btnOk.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(252)))), ((int)(((byte)(122)))));
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnOk.FocusedColor = System.Drawing.Color.Empty;
-            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnOk.ForeColor = System.Drawing.Color.White;
+            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnOk.ForeColor = System.Drawing.Color.Black;
             this.btnOk.Image = null;
             this.btnOk.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnOk.Location = new System.Drawing.Point(157, 33);
+            this.btnOk.Location = new System.Drawing.Point(148, 31);
             this.btnOk.Name = "btnOk";
-            this.btnOk.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnOk.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnOk.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(253)))), ((int)(((byte)(65)))));
+            this.btnOk.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(253)))), ((int)(((byte)(69)))));
             this.btnOk.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnOk.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnOk.OnHoverForeColor = System.Drawing.Color.Brown;
             this.btnOk.OnHoverImage = null;
             this.btnOk.OnPressedColor = System.Drawing.Color.Black;
-            this.btnOk.Size = new System.Drawing.Size(115, 45);
+            this.btnOk.Radius = 20;
+            this.btnOk.Size = new System.Drawing.Size(130, 45);
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "OK";
             this.btnOk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -96,6 +101,7 @@ namespace CustomMessageBox
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.gunaControlBox1);
             this.panel1.Controls.Add(this.picIcon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -104,8 +110,25 @@ namespace CustomMessageBox
             this.panel1.Size = new System.Drawing.Size(435, 154);
             this.panel1.TabIndex = 3;
             // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.BackColor = System.Drawing.Color.Red;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(387, 2);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.TabIndex = 1;
+            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnOk);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 235);
@@ -115,6 +138,7 @@ namespace CustomMessageBox
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblMessage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 154);
@@ -127,34 +151,20 @@ namespace CustomMessageBox
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(387, 2);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 1;
-            // 
             // MessageOK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(194)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(435, 335);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MessageOK";
             this.Text = "MessageOK";
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();

@@ -15,10 +15,7 @@ namespace AdminForm
         public AfterOrderForm()
         {
             InitializeComponent();
-            this.picTop.Parent = pictureBox1;
-            this.lblDanhGia.Parent = pictureBox1;
-            this.pnDanhGia.Parent = pictureBox1;
-            this.lblCamOn.Parent = pictureBox1;
+
         }
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {

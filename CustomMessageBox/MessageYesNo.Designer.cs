@@ -29,6 +29,7 @@ namespace CustomMessageBox
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageYesNo));
             this.btnYes = new Guna.UI.WinForms.GunaGradientButton();
             this.btnNo = new Guna.UI.WinForms.GunaGradientButton();
             this.picIcon = new System.Windows.Forms.PictureBox();
@@ -45,26 +46,29 @@ namespace CustomMessageBox
             // 
             // btnYes
             // 
+            this.btnYes.Animated = true;
             this.btnYes.AnimationHoverSpeed = 0.07F;
             this.btnYes.AnimationSpeed = 0.03F;
+            this.btnYes.BackColor = System.Drawing.Color.Transparent;
             this.btnYes.BaseColor1 = System.Drawing.Color.SlateBlue;
             this.btnYes.BaseColor2 = System.Drawing.Color.Fuchsia;
             this.btnYes.BorderColor = System.Drawing.Color.Black;
             this.btnYes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnYes.FocusedColor = System.Drawing.Color.Empty;
-            this.btnYes.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnYes.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnYes.ForeColor = System.Drawing.Color.White;
             this.btnYes.Image = null;
             this.btnYes.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnYes.Location = new System.Drawing.Point(89, 31);
+            this.btnYes.Location = new System.Drawing.Point(83, 31);
             this.btnYes.Name = "btnYes";
-            this.btnYes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnYes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnYes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(253)))), ((int)(((byte)(65)))));
+            this.btnYes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(253)))), ((int)(((byte)(69)))));
             this.btnYes.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnYes.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnYes.OnHoverForeColor = System.Drawing.Color.Black;
             this.btnYes.OnHoverImage = null;
             this.btnYes.OnPressedColor = System.Drawing.Color.Black;
-            this.btnYes.Size = new System.Drawing.Size(81, 42);
+            this.btnYes.Radius = 20;
+            this.btnYes.Size = new System.Drawing.Size(96, 42);
             this.btnYes.TabIndex = 2;
             this.btnYes.Text = "Yes";
             this.btnYes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -72,26 +76,29 @@ namespace CustomMessageBox
             // 
             // btnNo
             // 
+            this.btnNo.Animated = true;
             this.btnNo.AnimationHoverSpeed = 0.07F;
             this.btnNo.AnimationSpeed = 0.03F;
+            this.btnNo.BackColor = System.Drawing.Color.Transparent;
             this.btnNo.BaseColor1 = System.Drawing.Color.SlateBlue;
             this.btnNo.BaseColor2 = System.Drawing.Color.Fuchsia;
             this.btnNo.BorderColor = System.Drawing.Color.Black;
             this.btnNo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnNo.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNo.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnNo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnNo.ForeColor = System.Drawing.Color.White;
             this.btnNo.Image = null;
             this.btnNo.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNo.Location = new System.Drawing.Point(265, 31);
+            this.btnNo.Location = new System.Drawing.Point(259, 31);
             this.btnNo.Name = "btnNo";
-            this.btnNo.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnNo.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnNo.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(13)))), ((int)(((byte)(94)))));
+            this.btnNo.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(95)))), ((int)(((byte)(135)))));
             this.btnNo.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNo.OnHoverForeColor = System.Drawing.Color.Black;
             this.btnNo.OnHoverImage = null;
             this.btnNo.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNo.Size = new System.Drawing.Size(81, 42);
+            this.btnNo.Radius = 20;
+            this.btnNo.Size = new System.Drawing.Size(96, 42);
             this.btnNo.TabIndex = 2;
             this.btnNo.Text = "No";
             this.btnNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -113,7 +120,7 @@ namespace CustomMessageBox
             this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
             this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaControlBox1.BackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(387, 2);
@@ -126,6 +133,7 @@ namespace CustomMessageBox
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.picIcon);
             this.panel1.Controls.Add(this.gunaControlBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -136,6 +144,7 @@ namespace CustomMessageBox
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnNo);
             this.panel3.Controls.Add(this.btnYes);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -146,6 +155,7 @@ namespace CustomMessageBox
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblMessage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 155);
@@ -155,6 +165,7 @@ namespace CustomMessageBox
             // 
             // lblMessage
             // 
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMessage.Font = new System.Drawing.Font("SVN-Book Antiqua", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.Location = new System.Drawing.Point(0, 0);
@@ -169,6 +180,7 @@ namespace CustomMessageBox
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(194)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(435, 335);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);

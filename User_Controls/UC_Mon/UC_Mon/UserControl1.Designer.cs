@@ -53,11 +53,13 @@
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel1.Controls.Add(this.lblGiaTien);
             this.gunaGradient2Panel1.Controls.Add(this.gunaLabel3);
+            this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
             this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
             this.gunaGradient2Panel1.Location = new System.Drawing.Point(3, 3);
             this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(132, 48);
+            this.gunaGradient2Panel1.Radius = 20;
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(107, 59);
             this.gunaGradient2Panel1.TabIndex = 1;
             // 
             // lblGiaTien
@@ -67,9 +69,9 @@
             this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
             this.lblGiaTien.Location = new System.Drawing.Point(22, 0);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(110, 48);
+            this.lblGiaTien.Size = new System.Drawing.Size(85, 59);
             this.lblGiaTien.TabIndex = 0;
-            this.lblGiaTien.Text = "50000";
+            this.lblGiaTien.Text = "500";
             this.lblGiaTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gunaLabel3
@@ -79,7 +81,7 @@
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel3.Location = new System.Drawing.Point(0, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(22, 48);
+            this.gunaLabel3.Size = new System.Drawing.Size(22, 59);
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "$";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,23 +125,26 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.84211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.0559F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.47412F));
             this.tableLayoutPanel1.Controls.Add(this.btnOrder, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 275);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 263);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(483, 55);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(483, 67);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnOrder
             // 
+            this.btnOrder.Animated = true;
             this.btnOrder.AnimationHoverSpeed = 0.07F;
             this.btnOrder.AnimationSpeed = 0.03F;
+            this.btnOrder.BackColor = System.Drawing.Color.Transparent;
             this.btnOrder.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(60)))), ((int)(((byte)(208)))));
             this.btnOrder.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnOrder.BorderColor = System.Drawing.Color.Black;
+            this.btnOrder.BorderColor = System.Drawing.Color.White;
+            this.btnOrder.BorderSize = 2;
             this.btnOrder.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOrder.FocusedColor = System.Drawing.Color.Empty;
@@ -148,15 +153,16 @@
             this.btnOrder.Image = global::UC_Mon.Properties.Resources.download__1_;
             this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnOrder.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnOrder.Location = new System.Drawing.Point(307, 3);
+            this.btnOrder.Location = new System.Drawing.Point(304, 3);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(86)))), ((int)(((byte)(10)))));
             this.btnOrder.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
-            this.btnOrder.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnOrder.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnOrder.OnHoverForeColor = System.Drawing.Color.White;
             this.btnOrder.OnHoverImage = null;
             this.btnOrder.OnPressedColor = System.Drawing.Color.Black;
-            this.btnOrder.Size = new System.Drawing.Size(173, 49);
+            this.btnOrder.Radius = 24;
+            this.btnOrder.Size = new System.Drawing.Size(176, 61);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order Now";
             // 
@@ -164,15 +170,15 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.35345F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.64655F));
             this.tableLayoutPanel2.Controls.Add(this.gunaGradient2Panel1, 0, 0);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(464, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(464, 65);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // panel1

@@ -112,11 +112,13 @@
             // 
             // btnShow
             // 
+            this.btnShow.Animated = true;
             this.btnShow.AnimationHoverSpeed = 0.07F;
             this.btnShow.AnimationSpeed = 0.03F;
+            this.btnShow.BackColor = System.Drawing.Color.Transparent;
             this.btnShow.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.btnShow.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
-            this.btnShow.BorderColor = System.Drawing.Color.Black;
+            this.btnShow.BorderColor = System.Drawing.Color.White;
             this.btnShow.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnShow.FocusedColor = System.Drawing.Color.Empty;
             this.btnShow.Font = new System.Drawing.Font("SVN-Abril Fatface", 11F);
@@ -132,18 +134,21 @@
             this.btnShow.OnHoverForeColor = System.Drawing.Color.White;
             this.btnShow.OnHoverImage = null;
             this.btnShow.OnPressedColor = System.Drawing.Color.Black;
-            this.btnShow.Size = new System.Drawing.Size(184, 55);
+            this.btnShow.Radius = 24;
+            this.btnShow.Size = new System.Drawing.Size(184, 59);
             this.btnShow.TabIndex = 4;
             this.btnShow.Text = "Xem món";
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnChonAll
             // 
+            this.btnChonAll.Animated = true;
             this.btnChonAll.AnimationHoverSpeed = 0.07F;
             this.btnChonAll.AnimationSpeed = 0.03F;
+            this.btnChonAll.BackColor = System.Drawing.Color.Transparent;
             this.btnChonAll.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.btnChonAll.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
-            this.btnChonAll.BorderColor = System.Drawing.Color.Black;
+            this.btnChonAll.BorderColor = System.Drawing.Color.White;
             this.btnChonAll.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnChonAll.FocusedColor = System.Drawing.Color.Empty;
             this.btnChonAll.Font = new System.Drawing.Font("SVN-Abril Fatface", 11F);
@@ -159,7 +164,8 @@
             this.btnChonAll.OnHoverForeColor = System.Drawing.Color.White;
             this.btnChonAll.OnHoverImage = null;
             this.btnChonAll.OnPressedColor = System.Drawing.Color.Black;
-            this.btnChonAll.Size = new System.Drawing.Size(184, 64);
+            this.btnChonAll.Radius = 24;
+            this.btnChonAll.Size = new System.Drawing.Size(184, 59);
             this.btnChonAll.TabIndex = 4;
             this.btnChonAll.Text = "Thêm tất cả";
             this.btnChonAll.Click += new System.EventHandler(this.btnOrder_Click);
