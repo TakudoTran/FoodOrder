@@ -11,3 +11,16 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\CustomMessageBox\bin\Debug\Guna.UI.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.MessageOK.resources
 C:\Users\XUAN TRONG\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.MessageYesNo.resources
 C:\Users\XUAN TRONG\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.csproj.CopyComplete
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\bin\Debug\CustomMessageBox.exe.config
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\bin\Debug\CustomMessageBox.exe
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\bin\Debug\CustomMessageBox.pdb
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\bin\Debug\Guna.UI.dll
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.csprojAssemblyReference.cache
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.MessageOK.resources
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.MessageYesNo.resources
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.Properties.Resources.resources
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.csproj.GenerateResource.cache
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.csproj.CoreCompileInputs.cache
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.csproj.CopyComplete
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.exe
+C:\Users\hobat\OneDrive\Desktop\FoodOrder\CustomMessageBox\obj\Debug\CustomMessageBox.pdb
