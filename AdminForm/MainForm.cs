@@ -43,6 +43,16 @@ namespace AdminForm
         }
         private int CurrentBill = 0;
         #region QL Mon
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+        }
+        private void cboDanhMuc_Click(object sender, EventArgs e)
+        {
+            cboDanhMuc.Items.Clear();
+            BusinessLogicLayer.Instance.setCbbDanhMuc(cboDanhMuc);
+            cboDanhMuc.SelectedIndex = 0;
+        }
         private void Show(int idDanhmuc, string tenMon)
         {
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.GetMonByIdDanhMucAndTenMon(idDanhmuc, tenMon);
@@ -56,10 +66,14 @@ namespace AdminForm
         }
         private void btnTim_Click(object sender, EventArgs e)
         {
-            CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
-            int idDanhMuc = cbi.Value;
-            string st = txtSearch.Text;
-            Show(idDanhMuc, st);
+            txtSearch.ForeColor = Color.Black;
+            if(txtSearch.Text != "Tên món (không dấu), giá")
+            {
+                CBBItem cbi = cboDanhMuc.SelectedItem as CBBItem;
+                int idDanhMuc = cbi.Value;
+                string st = txtSearch.Text;
+                Show(idDanhMuc, st);
+            }
 
         }
 
@@ -161,17 +175,23 @@ namespace AdminForm
 
         private void btnSort_Click(object sender, EventArgs e)
         {
+
             if (cboSortType.SelectedIndex == -1)
             {
                 MessageBox.Show("Chọn kiểu sắp xếp!");
                 return;
             }
             string name = txtSearch.Text;
+            if (txtSearch.Text == "Tên món (không dấu) / giá tiền")
+            {
+                name = "";
+            }
             CBBItem cbLop = cboDanhMuc.SelectedItem as CBBItem;
             int IDLop = cbLop.Value;
             CBBItem cbSort = cboSortType.SelectedItem as CBBItem;
             int idSort = cbSort.Value;
             dgvDanhSachMon.DataSource = BusinessLogicLayer.Instance.Sort(idSort, IDLop, name);
+
         }
         #endregion
 
@@ -439,6 +459,9 @@ namespace AdminForm
             LayBillChuaThanhToan();
             ClearBilldetail();
         }
+
         #endregion
+
+
     }
 }

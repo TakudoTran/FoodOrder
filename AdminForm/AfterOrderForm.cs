@@ -29,7 +29,7 @@ namespace AdminForm
 
         private void gunaAdvenceButton3_Click(object sender, EventArgs e)
         {
-            lblDanhGia.Text = "@_@! Khá hài lòng ";
+            lblDanhGia.Text = "Hmm! Khá hài lòng ";
         }
 
         private void gunaAdvenceButton4_Click(object sender, EventArgs e)

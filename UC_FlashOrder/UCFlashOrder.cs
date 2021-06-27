@@ -92,7 +92,12 @@ namespace UC_FlashOrder
             {
                 try
                 {
-                    if (string.IsNullOrEmpty(txtTien.Text)) return;
+                    if (string.IsNullOrEmpty(txtTien.Text))
+                    {
+                        MyMessageBox.ShowMessage("Vui lòng nhập số tiền!", "",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     int Tien = int.Parse(txtTien.Text);
                     List<Mon> mons = MyAlgorithms.Instance.FlashOrder(AllMon, Tien);
                     _listMonFO = mons;

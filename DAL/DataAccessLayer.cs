@@ -9,6 +9,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace DAL
 {
@@ -294,6 +295,12 @@ namespace DAL
 
             };
         }
+        private static string convertToUnSign(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
         public List<Mon> GetMonByIdDanhMucAndTenMon(int idDanhMuc, string st)
         {
             List<Mon> data = new List<Mon>();
@@ -304,7 +311,7 @@ namespace DAL
                 {
                     foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                     {
-                        if (i.TenMon.ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString()) == st) data.Add(i);
+                        if (convertToUnSign(i.TenMon).ToLower().Contains(st.ToLower()) || ((i.GiaTien).ToString()) == st) data.Add(i);
                     }
                 }
             }
@@ -312,7 +319,7 @@ namespace DAL
             {
                 foreach (Mon i in DataAccessLayer.Instance.GetAllMon_DAL())
                 {
-                    if (i.IdDanhMuc == idDanhMuc && ((i.TenMon.ToLower().Contains(st.ToLower())) || (((i.GiaTien).ToString()).Contains(st) == true))) data.Add(i);
+                    if (i.IdDanhMuc == idDanhMuc && ((convertToUnSign(i.TenMon).ToLower().Contains(st.ToLower())) || (((i.GiaTien).ToString()).Contains(st) == true))) data.Add(i);
                 }
             }
 
