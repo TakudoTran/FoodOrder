@@ -48,6 +48,7 @@ namespace AdminForm
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Printer_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Bill_Printer_Form_Load);
             this.ResumeLayout(false);

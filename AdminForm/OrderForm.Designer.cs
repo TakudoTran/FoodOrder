@@ -170,7 +170,7 @@ namespace AdminForm
             this.btnContact.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnContact.ForeColor = System.Drawing.Color.DimGray;
             this.btnContact.Image = ((System.Drawing.Image)(resources.GetObject("btnContact.Image")));
-            this.btnContact.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnContact.ImageSize = new System.Drawing.Size(35, 35);
             this.btnContact.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(189)))));
             this.btnContact.LineLeft = 8;
             this.btnContact.Location = new System.Drawing.Point(0, 368);
@@ -179,7 +179,7 @@ namespace AdminForm
             this.btnContact.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnContact.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnContact.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnContact.OnHoverImage = null;
+            this.btnContact.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnContact.OnHoverImage")));
             this.btnContact.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnContact.OnPressedColor = System.Drawing.Color.Black;
             this.btnContact.OnPressedDepth = 0;
@@ -214,7 +214,7 @@ namespace AdminForm
             this.btnFlash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnFlash.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnFlash.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnFlash.OnHoverImage = null;
+            this.btnFlash.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnFlash.OnHoverImage")));
             this.btnFlash.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnFlash.OnPressedColor = System.Drawing.Color.Black;
             this.btnFlash.OnPressedDepth = 0;
@@ -250,7 +250,7 @@ namespace AdminForm
             this.btnDoUong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnDoUong.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoUong.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnDoUong.OnHoverImage = null;
+            this.btnDoUong.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnDoUong.OnHoverImage")));
             this.btnDoUong.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoUong.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoUong.OnPressedDepth = 0;
@@ -286,7 +286,7 @@ namespace AdminForm
             this.btnDoAn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnDoAn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoAn.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnDoAn.OnHoverImage = null;
+            this.btnDoAn.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnDoAn.OnHoverImage")));
             this.btnDoAn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnDoAn.OnPressedColor = System.Drawing.Color.Black;
             this.btnDoAn.OnPressedDepth = 0;
@@ -323,13 +323,14 @@ namespace AdminForm
             this.btnHome.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
             this.btnHome.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnHome.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnHome.OnHoverImage = null;
+            this.btnHome.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnHome.OnHoverImage")));
             this.btnHome.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(56)))));
             this.btnHome.OnPressedColor = System.Drawing.Color.Black;
             this.btnHome.OnPressedDepth = 0;
             this.btnHome.Size = new System.Drawing.Size(194, 92);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pnBill
