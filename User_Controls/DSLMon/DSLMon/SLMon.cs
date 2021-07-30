@@ -77,6 +77,7 @@ namespace DSLMon
             this.Parent.Controls.Remove(this);
         }
         public event EventHandler TextChanged;
+        public event EventHandler Removed;
         protected virtual void OnTextChanged(EventArgs e)
         {
             var handler = TextChanged;
