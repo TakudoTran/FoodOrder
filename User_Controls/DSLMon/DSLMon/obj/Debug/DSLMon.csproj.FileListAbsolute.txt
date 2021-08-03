@@ -24,3 +24,6 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\DSLM
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\DSLMon.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\Guna.UI.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\bin\Debug\Guna.UI.dll
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\FoodOrder\User_Controls\DSLMon\DSLMon\obj\Debug\DSLMon.csproj.CopyComplete

@@ -54,7 +54,6 @@ C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DBProvider\obj\Debug\DBProvider.cs
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DBProvider\obj\Debug\DBProvider.csproj.CoreCompileInputs.cache
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DBProvider\obj\Debug\DBProvider.dll
 C:\Users\hobat\OneDrive\Desktop\PBL\FoodOrder\DBProvider\obj\Debug\DBProvider.pdb
-C:\Users\Admin\Documents\GitHub\FoodOrder\DBProvider\obj\Debug\DBProvider.csprojAssemblyReference.cache
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DBProvider\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DBProvider\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\XUAN TRONG\Desktop\FoodOrder\DBProvider\bin\Debug\SqlServerTypes\x86\msvcr120.dll

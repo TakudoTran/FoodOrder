@@ -34,6 +34,7 @@ namespace AdminForm
             ucHome = new UserControlHome();
             ucFlashOrder = new UCFlashOrder();
             LoadUcHome();
+            pnDSL.ControlRemoved += pn_Remove;
         }
         #region support menthod
         private void ClearUCinPanel(Panel pn, UserControl uc)
@@ -238,6 +239,7 @@ namespace AdminForm
                     }
                     if (!CheckNameMon)
                     {
+
                         objMon.TextChanged += SLMon_Changed;
                         pnDSL.Controls.Add(objMon);
                         Tien += objMon.GiaTien;
@@ -253,13 +255,22 @@ namespace AdminForm
         }
         private void SLMon_Changed(object sender, EventArgs e)
         {
+            Change_label_money();
+        }
+        private void pn_Remove(object sender, ControlEventArgs e)
+        {
+            Change_label_money();
+        }
+        public void Change_label_money()
+        {
             int Tien = 0;
-            foreach(var SLMon in pnDSL.Controls.OfType<SLMon>())
+            foreach (var SLMon in pnDSL.Controls.OfType<SLMon>())
             {
                 Tien += Convert.ToInt32(SLMon.TongTien);
-            }    
+            }
             tongtien.Text = Tien.ToString();
         }
+
         private void tinhtien_Click(object sender, EventArgs e)
         {
             int Tien = 0;
