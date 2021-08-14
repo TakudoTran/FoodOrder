@@ -7,50 +7,70 @@ using DTO;
 
 namespace MyAlgo
 {
-    public class MyAlgorithms
+    public class Algorithms
     {
-        private static MyAlgorithms _Instance;
-        public static MyAlgorithms Instance
+        private static Algorithms _Instance;
+        public static Algorithms Instance
         {
             get
             {
-                if (_Instance == null) return _Instance = new MyAlgorithms();
+                if (_Instance == null) return _Instance = new Algorithms();
                 return _Instance;
             }
         }
-        private MyAlgorithms() { }
+        private Algorithms() { }
 
-        public delegate bool MyCompare(MonView s1, MonView s2);
-        public void SapXep(MonView[] arr, MyCompare cmp)
-        {
-            for (int i = 0; i < arr.Length - 1; ++i)
+        public delegate bool Compare(MonView s1, MonView s2);
+        public void SapXep(MonView[] arr,int left, int right, Compare cmp) {
+            if (arr.Length < 2) return;
+            else { 
+                int i = left;
+            int j = right;
+            MonView pivot = arr[left / 2 + right / 2];
+            do
             {
-                for (int j = i + 1; j < arr.Length; ++j)
-                {
-                    if (cmp(arr[i], arr[j]))
-                    {
-                        MonView temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
-                    }
+                while (cmp(pivot,arr[i])) i++;
+                while (cmp(arr[j],pivot)) j--;
+                if (i <= j) {
+                    MonView temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                    i++;j--;
                 }
+            } while (i <= j);
+            if (left < j) SapXep(arr, left, j, cmp);
+            if (right > i) SapXep(arr, i, right, cmp);
             }
         }
+
         public delegate bool SortType(Mon s1, Mon s2);
-        public List<Mon> MonsSapXep_FO(Mon[] arr, SortType cmp)
+        public void SortMon_FO(Mon[] arr, int left, int right, SortType cmp)
         {
-            for (int i = 0; i < arr.Length - 1; ++i)
+            if (arr.Length < 2) return;
+            else
             {
-                for (int j = i + 1; j < arr.Length; ++j)
+                int i = left;
+                int j = right;
+                Mon pivot = arr[left / 2 + right / 2];
+                do
                 {
-                    if (cmp(arr[i], arr[j]))
+                    while (cmp(pivot, arr[i])) i++;
+                    while (cmp(arr[j], pivot)) j--;
+                    if (i <= j)
                     {
                         Mon temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
+                        i++; j--;
                     }
-                }
+                } while (i <= j);
+                if (left < j) SortMon_FO(arr, left, j, cmp);
+                if (right > i) SortMon_FO(arr, i, right, cmp);
             }
+        }
+        public List<Mon> MonsSapXep_FO(Mon[] arr, SortType cmp)
+        {
+            SortMon_FO(arr, 0, arr.Length - 1, cmp);
             return arr.ToList();
 
         }

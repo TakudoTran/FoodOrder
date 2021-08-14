@@ -256,16 +256,16 @@ namespace BLL
             switch (idSort)
             {
                 case 1:
-                    MyAlgorithms.Instance.SapXep(arr, MonView.DesGiaTien);
+                    Algorithms.Instance.SapXep(arr,0,arr.Length-1, MonView.DesGiaTien);
                     break;
                 case 2:
-                    MyAlgorithms.Instance.SapXep(arr, MonView.AscGiaTien);
+                    Algorithms.Instance.SapXep(arr,0,arr.Length-1, MonView.AscGiaTien);
                     break;
                 case 3:
-                    MyAlgorithms.Instance.SapXep(arr, MonView.DesSoLanGoi);
+                    Algorithms.Instance.SapXep(arr, 0, arr.Length-1, MonView.DesSoLanGoi);
                     break;
                 case 4:
-                    MyAlgorithms.Instance.SapXep(arr, MonView.AscSoLanGoi);
+                    Algorithms.Instance.SapXep(arr, 0, arr.Length-1, MonView.AscSoLanGoi);
                     break;
             }
 

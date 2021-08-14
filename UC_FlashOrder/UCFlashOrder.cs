@@ -45,7 +45,7 @@ namespace UC_FlashOrder
             {
                 if (string.IsNullOrEmpty(txtTien.Text)) return;
                 int Tien = int.Parse(txtTien.Text);
-                List<Mon> mons = MyAlgorithms.Instance.FlashOrder(AllMon, Tien);
+                List<Mon> mons = Algorithms.Instance.FlashOrder(AllMon, Tien);
                 _listMonFO = mons;
                 pnMons.Controls.Clear();
                 for (int i = 0; i < mons.Count; i++)
@@ -99,7 +99,7 @@ namespace UC_FlashOrder
                         return;
                     }
                     int Tien = int.Parse(txtTien.Text);
-                    List<Mon> mons = MyAlgorithms.Instance.FlashOrder(AllMon, Tien);
+                    List<Mon> mons = Algorithms.Instance.FlashOrder(AllMon, Tien);
                     _listMonFO = mons;
                     pnMons.Controls.Clear();
                     for (int i = 0; i < mons.Count; i++)

@@ -92,7 +92,7 @@
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.Controls.Add(this.lblTen);
             this.gunaShadowPanel1.Controls.Add(this.gunaElipsePanel1);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(-27, 117);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(-14, 117);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel1.ShadowDepth = 50;
@@ -102,7 +102,7 @@
             // lblTen
             // 
             this.lblTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTen.Font = new System.Drawing.Font("SVN-Androgyne", 22F);
+            this.lblTen.Font = new System.Drawing.Font("SVN-Androgyne", 21F);
             this.lblTen.ForeColor = System.Drawing.Color.White;
             this.lblTen.Location = new System.Drawing.Point(0, 0);
             this.lblTen.Name = "lblTen";
