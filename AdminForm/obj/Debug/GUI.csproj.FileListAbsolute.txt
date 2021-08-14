@@ -37,8 +37,6 @@ C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\CustomMessageBox.exe.c
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\DTO.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\MyAlgo.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_FlashOrder.pdb
-C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.pdb
-C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\AfterOrderDialog.exe.config
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\DSLMon.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\UC_Mon.pdb
 C:\Users\XUAN TRONG\Desktop\FoodOrder\AdminForm\bin\Debug\DAL.pdb

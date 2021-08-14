@@ -138,7 +138,7 @@ namespace AdminForm
             if(danhMuc != null)
             {
                 List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
                 ShowMonByDanhMuc(pnMons, mons);
             }
         }
@@ -148,7 +148,7 @@ namespace AdminForm
             if (danhMuc != null)
             {
                 List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
                 ShowMonByDanhMuc(pnMons, mons);
             }
         }
@@ -158,7 +158,7 @@ namespace AdminForm
             if (danhMuc != null)
             {
                 List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
                 ShowMonByDanhMuc(pnMons, mons);
             }
         }
@@ -171,15 +171,15 @@ namespace AdminForm
             List<Mon> mons = BusinessLogicLayer.Instance.GetMonByIDDanhMuc(danhMuc.IdDanhMuc);
             if (radGiaGiam.Checked)
             {
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamGiaTien);
             }
             if (radGiaTang.Checked)
             {
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.TangGiaTien);
             }
             if (radTopOrder.Checked)
             {
-                mons = MyAlgorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
+                mons = Algorithms.Instance.MonsSapXep_FO(mons.ToArray(), Mon.GiamSoLanGoi);
             }
             ShowMonByDanhMuc(pnMons, mons);
         }
